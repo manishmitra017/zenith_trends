@@ -60,8 +60,15 @@ jobs:
         working-directory: ./cdk
         run: npm run build
 
+      - name: Bootstrap CDK
+        env:
+          AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
+        run: npx cdk bootstrap "aws://$AWS_ACCOUNT_ID/$AWS_REGION"
+
       - name: Deploy CDK Stack
         working-directory: ./cdk
+        env:
+          AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
         run: npx cdk deploy ZenithTrendsWebsiteStack --require-approval never --outputs-file outputs.json
 
       - name: Get Stack Outputs

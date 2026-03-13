@@ -42,11 +42,6 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Deployment
 
-### Prerequisites
-
-1. AWS account with CDK bootstrapped in `ap-southeast-2` and `us-east-1`
-2. Domain `zenithtrends.com.au` registered
-
 ### GitHub Secrets Required
 
 Add these to your repo's Settings > Secrets and variables > Actions:
@@ -55,37 +50,18 @@ Add these to your repo's Settings > Secrets and variables > Actions:
 |--------|-------------|
 | `AWS_ACCESS_KEY_ID` | IAM user access key with CDK deploy permissions |
 | `AWS_SECRET_ACCESS_KEY` | IAM user secret key |
+| `AWS_ACCOUNT_ID` | AWS account ID (e.g. `123456789012`) |
 
-### First-Time Setup
+### How It Works
 
-1. **Bootstrap CDK** (both regions):
-   ```bash
-   cd cdk && npm install
-   npx cdk bootstrap aws://ACCOUNT_ID/ap-southeast-2
-   npx cdk bootstrap aws://ACCOUNT_ID/us-east-1
-   ```
+Push to `main` triggers GitHub Actions which automatically:
+1. Builds the Next.js static site
+2. Bootstraps CDK (if not already done)
+3. Deploys the CDK stack (S3 + CloudFront)
+4. Syncs the built site to S3
+5. Invalidates CloudFront cache
 
-2. **Deploy certificate** (us-east-1):
-   ```bash
-   npx cdk deploy ZenithTrendsCertificateStack
-   ```
-   Complete DNS validation at your registrar, then copy the certificate ARN.
-
-3. **Update certificate ARN** in `cdk/bin/app.ts`:
-   ```ts
-   const certificateArn = 'arn:aws:acm:us-east-1:ACCOUNT:certificate/CERT-ID';
-   ```
-
-4. **Deploy website stack**:
-   ```bash
-   npx cdk deploy ZenithTrendsWebsiteStack
-   ```
-
-5. **Update nameservers** at your domain registrar with the Route53 nameservers from the stack output.
-
-### Ongoing Deploys
-
-Push to `main` triggers GitHub Actions which builds the site and syncs to S3 + invalidates CloudFront.
+No manual steps required — just add the 3 secrets and push.
 
 ## Architecture
 

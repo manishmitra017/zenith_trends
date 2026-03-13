@@ -6,7 +6,10 @@ import { CertificateStack } from '../lib/certificate-stack';
 
 const app = new cdk.App();
 
-const account = process.env.CDK_DEFAULT_ACCOUNT || '174405733301';
+const account = process.env.CDK_DEFAULT_ACCOUNT || process.env.AWS_ACCOUNT_ID || '';
+if (!account) {
+  throw new Error('AWS account ID required. Set CDK_DEFAULT_ACCOUNT or AWS_ACCOUNT_ID environment variable.');
+}
 const domainName = 'zenithtrends.com.au';
 
 // Certificate ARN - deploy CertificateStack first, then paste the ARN here
