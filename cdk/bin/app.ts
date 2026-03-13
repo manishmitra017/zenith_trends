@@ -6,7 +6,7 @@ import { CertificateStack } from '../lib/certificate-stack';
 
 const app = new cdk.App();
 
-const account = process.env.CDK_DEFAULT_ACCOUNT || '147845228831';
+const account = process.env.CDK_DEFAULT_ACCOUNT || '174405733301';
 const domainName = 'zenithtrends.com.au';
 
 // Certificate ARN - deploy CertificateStack first, then paste the ARN here
