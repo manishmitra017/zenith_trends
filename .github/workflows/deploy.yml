@@ -1,0 +1,101 @@
+name: Deploy Zenith Trends to AWS
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+env:
+  AWS_REGION: ap-southeast-2
+  NODE_VERSION: '20'
+
+jobs:
+  deploy:
+    name: Build & Deploy to S3 + CloudFront
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'pnpm'
+          cache-dependency-path: 'frontend/pnpm-lock.yaml'
+
+      - name: Install frontend dependencies
+        working-directory: ./frontend
+        run: pnpm install --frozen-lockfile
+
+      - name: Build Next.js static site
+        working-directory: ./frontend
+        run: pnpm run build
+        env:
+          NODE_ENV: production
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Install CDK dependencies
+        working-directory: ./cdk
+        run: npm install
+
+      - name: Build CDK
+        working-directory: ./cdk
+        run: npm run build
+
+      - name: Deploy CDK Stack
+        working-directory: ./cdk
+        run: npx cdk deploy ZenithTrendsWebsiteStack --require-approval never --outputs-file outputs.json
+
+      - name: Get Stack Outputs
+        id: stack-outputs
+        working-directory: ./cdk
+        run: |
+          BUCKET_NAME=$(jq -r '.[].BucketName // empty' outputs.json)
+          DISTRIBUTION_ID=$(jq -r '.[].DistributionId // empty' outputs.json)
+          echo "bucket_name=$BUCKET_NAME" >> "$GITHUB_OUTPUT"
+          echo "distribution_id=$DISTRIBUTION_ID" >> "$GITHUB_OUTPUT"
+
+      - name: Sync static site to S3
+        env:
+          BUCKET_NAME: ${{ steps.stack-outputs.outputs.bucket_name }}
+        run: |
+          aws s3 sync frontend/out "s3://$BUCKET_NAME" \
+            --delete \
+            --cache-control "public, max-age=3600"
+
+      - name: Invalidate CloudFront cache
+        if: steps.stack-outputs.outputs.distribution_id != ''
+        env:
+          DISTRIBUTION_ID: ${{ steps.stack-outputs.outputs.distribution_id }}
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "$DISTRIBUTION_ID" \
+            --paths "/*" \
+            --no-cli-pager
+
+      - name: Deployment summary
+        env:
+          BUCKET_NAME: ${{ steps.stack-outputs.outputs.bucket_name }}
+          DISTRIBUTION_ID: ${{ steps.stack-outputs.outputs.distribution_id }}
+        run: |
+          echo "Deployment successful!"
+          echo "S3 Bucket: $BUCKET_NAME"
+          echo "CloudFront: $DISTRIBUTION_ID"
