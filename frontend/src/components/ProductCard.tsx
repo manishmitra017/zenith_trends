@@ -1,14 +1,14 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import type { Product } from "@/data/products";
 
 interface ProductCardProps {
   product: Product;
+  showNewBadge?: boolean;
 }
 
-export default function ProductCard({ product }: ProductCardProps) {
+export default function ProductCard({ product, showNewBadge }: ProductCardProps) {
   return (
     <div className="group overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-black/5">
       {/* Image */}
@@ -16,13 +16,31 @@ export default function ProductCard({ product }: ProductCardProps) {
         href={`/products/${product.categorySlug}/${product.slug}`}
         className="relative block aspect-square overflow-hidden bg-slate-100"
       >
-        <Image
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src={product.image}
           alt={product.name}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-110"
-          sizes="(max-width: 640px) 72vw, (max-width: 1024px) 50vw, 25vw"
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+          className="transition-transform duration-500 group-hover:scale-110"
         />
+        {/* Badges */}
+        <div className="absolute left-2.5 top-2.5 flex flex-col gap-1.5">
+          {(product.isNew || showNewBadge) && (
+            <span className="rounded-md bg-[#2AB09C] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white shadow">
+              New
+            </span>
+          )}
+          {product.isOnSale && product.salePercent && (
+            <span className="rounded-md bg-rose-500 px-2 py-0.5 text-[10px] font-bold text-white shadow">
+              -{product.salePercent}%
+            </span>
+          )}
+          {product.isSustainable && (
+            <span className="rounded-md bg-emerald-500 px-2 py-0.5 text-[10px] font-bold text-white shadow">
+              Eco
+            </span>
+          )}
+        </div>
       </Link>
 
       {/* Content */}
@@ -39,7 +57,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           </h3>
         </Link>
 
-        {/* Description (truncated to 2 lines) */}
+        {/* Description */}
         <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-slate-500 sm:text-sm">
           {product.description}
         </p>
@@ -57,11 +75,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             stroke="currentColor"
             strokeWidth={2.5}
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M9 5l7 7-7 7"
-            />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
           </svg>
         </Link>
       </div>

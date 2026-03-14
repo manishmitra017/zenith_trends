@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   ChevronRight,
@@ -102,13 +101,11 @@ export default function ProductDetailContent({
               transition={{ duration: 0.5 }}
               className="relative aspect-square overflow-hidden rounded-2xl bg-slate-100 shadow-lg"
             >
-              <Image
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src={product.image}
                 alt={product.name}
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                priority
+                style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
               />
             </motion.div>
 
