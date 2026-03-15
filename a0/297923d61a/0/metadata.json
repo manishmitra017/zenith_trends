@@ -1,0 +1,35 @@
+{
+  "cli_version": "0.5.0",
+  "checkpoint_id": "a0297923d61a",
+  "session_id": "92da67fc-758f-4421-8871-e9ec0a881fd2",
+  "strategy": "manual-commit",
+  "created_at": "2026-03-15T07:12:57.8574Z",
+  "branch": "feat/local-quote-api",
+  "checkpoints_count": 2,
+  "files_touched": [
+    ".gitignore",
+    "frontend/src/app/api/quote/route.ts"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-opus-4-6",
+  "turn_id": "a42d7df7681c",
+  "token_usage": {
+    "input_tokens": 678,
+    "cache_creation_tokens": 1049863,
+    "cache_read_tokens": 19552580,
+    "output_tokens": 75808,
+    "api_call_count": 191
+  },
+  "session_metrics": {
+    "turn_count": 28
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-03-15T07:12:55.365267Z",
+    "agent_lines": 31,
+    "human_added": 0,
+    "human_modified": 0,
+    "human_removed": 3,
+    "total_committed": 31,
+    "agent_percentage": 100
+  }
+}

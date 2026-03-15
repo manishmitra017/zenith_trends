@@ -1,0 +1,26 @@
+{
+  "cli_version": "0.5.0",
+  "checkpoint_id": "a0297923d61a",
+  "strategy": "manual-commit",
+  "branch": "feat/local-quote-api",
+  "checkpoints_count": 2,
+  "files_touched": [
+    ".gitignore",
+    "frontend/src/app/api/quote/route.ts"
+  ],
+  "sessions": [
+    {
+      "metadata": "/a0/297923d61a/0/metadata.json",
+      "transcript": "/a0/297923d61a/0/full.jsonl",
+      "content_hash": "/a0/297923d61a/0/content_hash.txt",
+      "prompt": "/a0/297923d61a/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 678,
+    "cache_creation_tokens": 1049863,
+    "cache_read_tokens": 19552580,
+    "output_tokens": 75808,
+    "api_call_count": 191
+  }
+}
