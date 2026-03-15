@@ -49,7 +49,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative bg-gradient-to-br from-[#1a8a7a] via-[#2AB09C] to-[#1a6b5f] px-4 py-16 sm:py-20">
+      <section className="relative bg-gradient-to-br from-[#0F1D2F] via-[#1A2D44] to-[#0a1729] px-4 py-16 sm:py-20">
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/5" />
           <div className="absolute -bottom-16 -left-16 h-56 w-56 rounded-full bg-white/5" />
@@ -113,7 +113,7 @@ export default function ContactPage() {
                   const content = (
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0">
-                        <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#2AB09C]/10 text-[#2AB09C]">
+                        <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#4DB8A4]/10 text-[#4DB8A4]">
                           <Icon className="h-5 w-5" />
                         </div>
                       </div>
@@ -162,7 +162,7 @@ export default function ContactPage() {
                       href={`https://maps.google.com/?q=${encodeURIComponent(siteConfig.address)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-2 inline-block text-xs font-semibold text-[#2AB09C] hover:underline"
+                      className="mt-2 inline-block text-xs font-semibold text-[#4DB8A4] hover:underline"
                     >
                       Open in Google Maps
                     </a>

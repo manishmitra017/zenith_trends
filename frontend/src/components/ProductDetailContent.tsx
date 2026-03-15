@@ -89,21 +89,21 @@ export default function ProductDetailContent({
           >
             <Link
               href="/"
-              className="transition-colors hover:text-[#2AB09C]"
+              className="transition-colors hover:text-[#4DB8A4]"
             >
               Home
             </Link>
             <ChevronRight className="h-3.5 w-3.5" />
             <Link
               href="/products"
-              className="transition-colors hover:text-[#2AB09C]"
+              className="transition-colors hover:text-[#4DB8A4]"
             >
               Products
             </Link>
             <ChevronRight className="h-3.5 w-3.5" />
             <Link
               href={`/products/${categorySlug}`}
-              className="transition-colors hover:text-[#2AB09C]"
+              className="transition-colors hover:text-[#4DB8A4]"
             >
               {category.name}
             </Link>
@@ -141,7 +141,7 @@ export default function ProductDetailContent({
               {/* Category Badge */}
               <Link
                 href={`/products/${categorySlug}`}
-                className="mb-3 inline-block rounded-full bg-[#2AB09C]/10 px-3 py-1 text-xs font-semibold text-[#2AB09C] transition-colors hover:bg-[#2AB09C]/20"
+                className="mb-3 inline-block rounded-full bg-[#4DB8A4]/10 px-3 py-1 text-xs font-semibold text-[#4DB8A4] transition-colors hover:bg-[#4DB8A4]/20"
               >
                 {product.category}
               </Link>
@@ -161,19 +161,19 @@ export default function ProductDetailContent({
                 </h3>
                 <ul className="mt-3 space-y-2 text-sm text-slate-600">
                   <li className="flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-[#2AB09C]" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#4DB8A4]" />
                     Custom branding with your logo
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-[#2AB09C]" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#4DB8A4]" />
                     Minimum order quantities apply
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-[#2AB09C]" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#4DB8A4]" />
                     Available in multiple colours
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-[#2AB09C]" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#4DB8A4]" />
                     Fast turnaround available
                   </li>
                 </ul>
@@ -189,7 +189,7 @@ export default function ProductDetailContent({
                   <div className="flex items-center rounded-xl border border-slate-200">
                     <button
                       onClick={() => setQty((q) => Math.max(1, q - 1))}
-                      className="flex h-11 w-11 items-center justify-center rounded-l-xl text-slate-500 transition-colors hover:bg-slate-50 hover:text-[#2AB09C]"
+                      className="flex h-11 w-11 items-center justify-center rounded-l-xl text-slate-500 transition-colors hover:bg-slate-50 hover:text-[#4DB8A4]"
                       aria-label="Decrease quantity"
                     >
                       <Minus className="h-4 w-4" />
@@ -199,7 +199,7 @@ export default function ProductDetailContent({
                     </span>
                     <button
                       onClick={() => setQty((q) => q + 1)}
-                      className="flex h-11 w-11 items-center justify-center rounded-r-xl text-slate-500 transition-colors hover:bg-slate-50 hover:text-[#2AB09C]"
+                      className="flex h-11 w-11 items-center justify-center rounded-r-xl text-slate-500 transition-colors hover:bg-slate-50 hover:text-[#4DB8A4]"
                       aria-label="Increase quantity"
                     >
                       <Plus className="h-4 w-4" />
@@ -211,7 +211,7 @@ export default function ProductDetailContent({
                     className={`inline-flex flex-1 items-center justify-center gap-2 rounded-xl px-6 py-3 text-sm font-bold shadow-lg transition-all hover:shadow-xl ${
                       inCart
                         ? "bg-emerald-500 text-white hover:bg-emerald-600 shadow-emerald-500/20"
-                        : "bg-[#2AB09C] text-white hover:bg-[#1E8F7E] shadow-[#2AB09C]/20"
+                        : "bg-[#4DB8A4] text-white hover:bg-[#3A9A8D] shadow-[#4DB8A4]/20"
                     }`}
                   >
                     {inCart ? (
@@ -245,13 +245,13 @@ export default function ProductDetailContent({
               <div className="mt-4 flex flex-col gap-2 sm:flex-row">
                 <Link
                   href={`/products/${categorySlug}`}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 px-6 py-3 text-sm font-semibold text-slate-700 transition-all hover:border-[#2AB09C] hover:text-[#2AB09C]"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 px-6 py-3 text-sm font-semibold text-slate-700 transition-all hover:border-[#4DB8A4] hover:text-[#4DB8A4]"
                 >
                   View All {category.name}
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 px-6 py-3 text-sm font-semibold text-slate-700 transition-all hover:border-[#2AB09C] hover:text-[#2AB09C]"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 px-6 py-3 text-sm font-semibold text-slate-700 transition-all hover:border-[#4DB8A4] hover:text-[#4DB8A4]"
                 >
                   Enquire Directly
                   <ArrowRight className="h-4 w-4" />
@@ -266,7 +266,7 @@ export default function ProductDetailContent({
       <section className="bg-slate-50 px-4 py-14 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 text-center">
-            <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#2AB09C]">
+            <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">
               Customisation Options
             </span>
             <h2 className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">
@@ -284,9 +284,9 @@ export default function ProductDetailContent({
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.08 }}
-                  className="flex flex-col items-center rounded-2xl border border-slate-100 bg-white p-5 text-center shadow-sm transition-all hover:border-[#2AB09C]/20 hover:shadow-md"
+                  className="flex flex-col items-center rounded-2xl border border-slate-100 bg-white p-5 text-center shadow-sm transition-all hover:border-[#4DB8A4]/20 hover:shadow-md"
                 >
-                  <div className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[#2AB09C]/10 text-[#2AB09C]">
+                  <div className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[#4DB8A4]/10 text-[#4DB8A4]">
                     <Icon className="h-5 w-5" />
                   </div>
                   <h3 className="text-sm font-bold text-slate-900">
@@ -308,7 +308,7 @@ export default function ProductDetailContent({
           <div className="mx-auto max-w-7xl">
             <div className="mb-10 flex items-center justify-between">
               <div>
-                <span className="mb-2 inline-block text-sm font-semibold uppercase tracking-widest text-[#2AB09C]">
+                <span className="mb-2 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">
                   You May Also Like
                 </span>
                 <h2 className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">
@@ -317,7 +317,7 @@ export default function ProductDetailContent({
               </div>
               <Link
                 href={`/products/${categorySlug}`}
-                className="hidden items-center gap-1.5 text-sm font-semibold text-[#2AB09C] transition-colors hover:text-[#1E8F7E] sm:inline-flex"
+                className="hidden items-center gap-1.5 text-sm font-semibold text-[#4DB8A4] transition-colors hover:text-[#3A9A8D] sm:inline-flex"
               >
                 View All
                 <ArrowRight className="h-4 w-4" />

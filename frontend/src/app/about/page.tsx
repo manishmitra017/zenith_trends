@@ -47,7 +47,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative bg-gradient-to-br from-[#1a8a7a] via-[#2AB09C] to-[#1a6b5f] px-4 py-16 sm:py-20">
+      <section className="relative bg-gradient-to-br from-[#0F1D2F] via-[#1A2D44] to-[#0a1729] px-4 py-16 sm:py-20">
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/5" />
           <div className="absolute -bottom-16 -left-16 h-56 w-56 rounded-full bg-white/5" />
@@ -124,7 +124,7 @@ export default function AboutPage() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition-all ${
                     activeTab === tab.id
-                      ? "bg-[#2AB09C] text-white shadow-lg shadow-[#2AB09C]/20"
+                      ? "bg-[#4DB8A4] text-white shadow-lg shadow-[#4DB8A4]/20"
                       : "bg-white text-slate-600 hover:bg-slate-100"
                   }`}
                 >
@@ -162,8 +162,8 @@ export default function AboutPage() {
 
             {activeTab === "ethical" && (
               <div className="rounded-2xl border border-slate-100 bg-white p-8 shadow-sm sm:p-10">
-                <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#2AB09C]/10">
-                  <ShieldCheck className="h-6 w-6 text-[#2AB09C]" />
+                <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#4DB8A4]/10">
+                  <ShieldCheck className="h-6 w-6 text-[#4DB8A4]" />
                 </div>
                 <h3 className="mb-4 text-2xl font-bold text-slate-900">
                   {aboutContent.ethical.title}
@@ -182,7 +182,7 @@ export default function AboutPage() {
                       variants={fadeUp}
                       className="flex items-start gap-3"
                     >
-                      <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#2AB09C]" />
+                      <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#4DB8A4]" />
                       <span className="text-sm text-slate-600">{standard}</span>
                     </motion.li>
                   ))}
@@ -192,8 +192,8 @@ export default function AboutPage() {
 
             {activeTab === "sustainability" && (
               <div className="rounded-2xl border border-slate-100 bg-white p-8 shadow-sm sm:p-10">
-                <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#2AB09C]/10">
-                  <Leaf className="h-6 w-6 text-[#2AB09C]" />
+                <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#4DB8A4]/10">
+                  <Leaf className="h-6 w-6 text-[#4DB8A4]" />
                 </div>
                 <h3 className="mb-4 text-2xl font-bold text-slate-900">
                   {aboutContent.sustainability.title}
@@ -212,7 +212,7 @@ export default function AboutPage() {
                       variants={fadeUp}
                       className="flex items-start gap-3"
                     >
-                      <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#2AB09C]" />
+                      <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#4DB8A4]" />
                       <span className="text-sm text-slate-600">
                         {practice}
                       </span>
@@ -229,7 +229,7 @@ export default function AboutPage() {
       <section className="bg-white px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
-            <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#2AB09C]">
+            <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">
               Who We Serve
             </span>
             <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
@@ -252,9 +252,9 @@ export default function AboutPage() {
                   whileInView="visible"
                   viewport={{ once: true }}
                   variants={fadeUp}
-                  className="flex flex-col items-center rounded-2xl border border-slate-100 bg-slate-50 p-6 text-center transition-all hover:border-[#2AB09C]/20 hover:shadow-md"
+                  className="flex flex-col items-center rounded-2xl border border-slate-100 bg-slate-50 p-6 text-center transition-all hover:border-[#4DB8A4]/20 hover:shadow-md"
                 >
-                  <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#2AB09C]/10 text-[#2AB09C]">
+                  <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#4DB8A4]/10 text-[#4DB8A4]">
                     <Icon className="h-6 w-6" />
                   </div>
                   <p className="text-sm font-semibold text-slate-700">

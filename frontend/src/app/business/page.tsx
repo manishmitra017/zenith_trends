@@ -54,7 +54,7 @@ export default function BusinessPage() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative bg-gradient-to-br from-[#1a8a7a] via-[#2AB09C] to-[#1a6b5f] px-4 py-16 sm:py-20">
+      <section className="relative bg-gradient-to-br from-[#0F1D2F] via-[#1A2D44] to-[#0a1729] px-4 py-16 sm:py-20">
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/5" />
           <div className="absolute -bottom-16 -left-16 h-56 w-56 rounded-full bg-white/5" />
@@ -100,7 +100,7 @@ export default function BusinessPage() {
       <section className="bg-slate-50 px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
-            <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#2AB09C]">
+            <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">
               How We Work
             </span>
             <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
@@ -125,7 +125,7 @@ export default function BusinessPage() {
                   className="flex gap-5 rounded-2xl border border-slate-100 bg-white p-6 shadow-sm transition-all hover:shadow-md lg:p-8"
                 >
                   <div className="flex-shrink-0">
-                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#2AB09C]/10 text-[#2AB09C]">
+                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#4DB8A4]/10 text-[#4DB8A4]">
                       <Icon className="h-6 w-6" />
                     </div>
                   </div>
@@ -147,7 +147,7 @@ export default function BusinessPage() {
       {/* Industries Served */}
       <section className="bg-white px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-4xl text-center">
-          <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#2AB09C]">
+          <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">
             Our Reach
           </span>
           <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
@@ -171,7 +171,7 @@ export default function BusinessPage() {
           >
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-xl bg-[#2AB09C] px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#2AB09C]/20 transition-all hover:bg-[#1E8F7E] hover:shadow-xl"
+              className="inline-flex items-center gap-2 rounded-xl bg-[#4DB8A4] px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#4DB8A4]/20 transition-all hover:bg-[#3A9A8D] hover:shadow-xl"
             >
               Get in Touch
               <ArrowRight className="h-4 w-4" />
