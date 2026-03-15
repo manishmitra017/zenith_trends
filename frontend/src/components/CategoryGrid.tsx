@@ -24,11 +24,11 @@ const cardVariants = {
 
 export default function CategoryGrid() {
   return (
-    <section className="bg-slate-50 px-4 py-16 sm:py-20 lg:py-24">
+    <section className="relative bg-gradient-to-b from-slate-50 to-white px-4 py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="mb-12 text-center">
-          <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#2AB09C]">
+          <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">
             Explore Our Range
           </span>
           <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
@@ -64,14 +64,14 @@ export default function CategoryGrid() {
                 />
 
                 {/* Dark Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10 transition-all duration-300 group-hover:from-black/60 group-hover:via-black/20 group-hover:to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0F1D2F]/80 via-[#0F1D2F]/30 to-[#0F1D2F]/10 transition-all duration-300 group-hover:from-[#0F1D2F]/65 group-hover:via-[#0F1D2F]/20 group-hover:to-transparent" />
 
                 {/* Content */}
                 <div className="absolute inset-0 flex flex-col justify-end p-3 sm:p-4 lg:p-5">
                   <h3 className="text-sm font-bold text-white sm:text-base lg:text-lg">
                     {cat.name}
                   </h3>
-                  <span className="mt-1 inline-flex w-fit items-center rounded-full bg-white/20 px-2 py-0.5 text-[10px] font-medium text-white/90 backdrop-blur-sm sm:text-xs">
+                  <span className="mt-1 inline-flex w-fit items-center rounded-full bg-white/15 px-2 py-0.5 text-[10px] font-medium text-white/90 backdrop-blur-sm sm:text-xs">
                     {cat.productCount}{" "}
                     {cat.productCount === 1 ? "product" : "products"}
                   </span>

@@ -115,11 +115,11 @@ export default function HomePage() {
       <FeaturedProducts />
 
       {/* New Arrivals Teaser */}
-      <section className="bg-white px-4 py-16 sm:py-20 lg:py-24">
+      <section className="bg-gradient-to-b from-white to-slate-50 px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>
-              <span className="mb-2 inline-flex items-center gap-1.5 text-sm font-semibold uppercase tracking-widest text-[#2AB09C]">
+              <span className="mb-2 inline-flex items-center gap-1.5 text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">
                 <Sparkles className="h-4 w-4" />
                 Just Arrived
               </span>
@@ -130,7 +130,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/new"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#2AB09C] transition-colors hover:text-[#239485]"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#4DB8A4] transition-colors hover:text-[#3A9A8D]"
             >
               View All New Products <ArrowRight className="h-4 w-4" />
             </Link>
@@ -153,10 +153,10 @@ export default function HomePage() {
       </section>
 
       {/* Collections Teaser */}
-      <section className="bg-slate-50 px-4 py-16 sm:py-20 lg:py-24">
+      <section className="relative overflow-hidden bg-[#F0FAF7] px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 text-center">
-            <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#2AB09C]">
+            <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">
               Curated for Every Occasion
             </span>
             <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
@@ -189,7 +189,7 @@ export default function HomePage() {
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                       sizes="(max-width: 640px) 50vw, (max-width: 768px) 25vw, 14vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/5 transition-all duration-300 group-hover:from-black/60" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0F1D2F]/75 via-[#0F1D2F]/30 to-[#0F1D2F]/5 transition-all duration-300 group-hover:from-[#0F1D2F]/60" />
                     <div className="absolute inset-0 flex flex-col items-center justify-end p-2 text-center sm:p-3">
                       <div className="mb-1 flex h-7 w-7 items-center justify-center rounded-lg bg-white/20 backdrop-blur-sm sm:h-8 sm:w-8">
                         <Icon className="h-3.5 w-3.5 text-white sm:h-4 sm:w-4" />
@@ -207,7 +207,7 @@ export default function HomePage() {
           <div className="mt-8 text-center">
             <Link
               href="/collections"
-              className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition-all hover:border-[#2AB09C] hover:text-[#2AB09C]"
+              className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition-all hover:border-[#4DB8A4] hover:text-[#4DB8A4]"
             >
               View All Collections <ArrowRight className="h-4 w-4" />
             </Link>
@@ -219,7 +219,7 @@ export default function HomePage() {
       <CapabilitiesSection />
 
       {/* About Us Summary */}
-      <section className="bg-white px-4 py-16 sm:py-20 lg:py-24">
+      <section className="bg-gradient-to-b from-slate-50 to-white px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
             <motion.div
@@ -228,7 +228,7 @@ export default function HomePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#2AB09C]">
+              <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">
                 Who We Are
               </span>
               <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
@@ -243,7 +243,7 @@ export default function HomePage() {
               <div className="mt-6 flex flex-wrap gap-4">
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#2AB09C] transition-colors hover:text-[#1E8F7E]"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#4DB8A4] transition-colors hover:text-[#3A9A8D]"
                 >
                   Learn More About Us
                   <ArrowRight className="h-4 w-4" />
@@ -273,9 +273,9 @@ export default function HomePage() {
               ].map((stat) => (
                 <div
                   key={stat.label}
-                  className="rounded-2xl border border-slate-100 bg-slate-50 p-6 text-center"
+                  className="rounded-2xl border border-[#4DB8A4]/15 bg-gradient-to-br from-[#F0FAF7] to-white p-6 text-center shadow-sm"
                 >
-                  <p className="text-3xl font-extrabold text-[#2AB09C]">{stat.value}</p>
+                  <p className="text-3xl font-extrabold text-[#4DB8A4]">{stat.value}</p>
                   <p className="mt-1 text-sm font-medium text-slate-500">{stat.label}</p>
                 </div>
               ))}
@@ -285,11 +285,11 @@ export default function HomePage() {
       </section>
 
       {/* Blog/News Preview */}
-      <section className="bg-slate-50 px-4 py-16 sm:py-20 lg:py-24">
+      <section className="bg-gradient-to-b from-white to-slate-50 px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>
-              <span className="mb-2 inline-block text-sm font-semibold uppercase tracking-widest text-[#2AB09C]">
+              <span className="mb-2 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">
                 Latest Insights
               </span>
               <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
@@ -298,7 +298,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/blog"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#2AB09C] transition-colors hover:text-[#239485]"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#4DB8A4] transition-colors hover:text-[#3A9A8D]"
             >
               View All Articles <ArrowRight className="h-4 w-4" />
             </Link>
@@ -326,18 +326,18 @@ export default function HomePage() {
                   </div>
                   <div className="p-5">
                     <div className="mb-2 flex items-center gap-3">
-                      <span className="rounded-full bg-[#2AB09C]/10 px-2.5 py-0.5 text-[11px] font-semibold text-[#2AB09C]">
+                      <span className="rounded-full bg-[#4DB8A4]/10 px-2.5 py-0.5 text-[11px] font-semibold text-[#3A9A8D]">
                         {post.category}
                       </span>
                       <span className="flex items-center gap-1 text-xs text-slate-400">
                         <Calendar className="h-3 w-3" />{post.date}
                       </span>
                     </div>
-                    <h3 className="text-sm font-bold text-slate-900 line-clamp-2 transition-colors group-hover:text-[#2AB09C] sm:text-base">
+                    <h3 className="text-sm font-bold text-slate-900 line-clamp-2 transition-colors group-hover:text-[#4DB8A4] sm:text-base">
                       {post.title}
                     </h3>
                     <p className="mt-1.5 text-xs leading-relaxed text-slate-500 line-clamp-2">{post.excerpt}</p>
-                    <div className="mt-3 text-xs font-semibold text-[#2AB09C]">Read more →</div>
+                    <div className="mt-3 text-xs font-semibold text-[#4DB8A4]">Read more &#8594;</div>
                   </div>
                 </Link>
               </motion.article>
@@ -347,7 +347,7 @@ export default function HomePage() {
       </section>
 
       {/* Impact Aware Banner */}
-      <section className="bg-emerald-50 px-4 py-12 sm:py-14">
+      <section className="bg-gradient-to-r from-emerald-50 via-white to-emerald-50 px-4 py-12 sm:py-14">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}

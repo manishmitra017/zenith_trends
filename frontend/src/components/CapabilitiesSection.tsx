@@ -41,17 +41,22 @@ const cardVariants = {
 
 export default function CapabilitiesSection() {
   return (
-    <section className="bg-white px-4 py-16 sm:py-20 lg:py-24">
-      <div className="mx-auto max-w-7xl">
+    <section className="relative overflow-hidden bg-[#0F1D2F] px-4 py-16 sm:py-20 lg:py-24">
+      {/* Decorative background */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute right-0 top-0 h-80 w-80 rounded-full bg-[#4DB8A4]/5 blur-3xl" />
+        <div className="absolute -bottom-10 left-1/4 h-60 w-60 rounded-full bg-[#D4A853]/5 blur-2xl" />
+      </div>
+      <div className="relative z-10 mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="mb-12 text-center lg:mb-16">
-          <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#2AB09C]">
+          <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">
             Our Strengths
           </span>
-          <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
             Why Choose Zenith Trends
           </h2>
-          <p className="mx-auto mt-3 max-w-2xl text-base text-slate-500">
+          <p className="mx-auto mt-3 max-w-2xl text-base text-slate-400">
             With over 25 years of industry experience, we deliver end-to-end
             merchandise solutions that elevate your brand.
           </p>
@@ -71,15 +76,15 @@ export default function CapabilitiesSection() {
               <motion.div
                 key={cap.title}
                 variants={cardVariants}
-                className="group rounded-2xl border border-slate-100 bg-white p-6 shadow-sm transition-all duration-300 hover:border-[#2AB09C]/20 hover:shadow-lg hover:shadow-[#2AB09C]/5 lg:p-8"
+                className="group rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:border-[#4DB8A4]/30 hover:bg-white/10 lg:p-8"
               >
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#2AB09C]/10 text-[#2AB09C] transition-colors duration-300 group-hover:bg-[#2AB09C] group-hover:text-white">
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#4DB8A4]/15 text-[#4DB8A4] transition-colors duration-300 group-hover:bg-[#4DB8A4] group-hover:text-white">
                   <Icon className="h-6 w-6" />
                 </div>
-                <h3 className="mb-2 text-lg font-bold text-slate-900">
+                <h3 className="mb-2 text-lg font-bold text-white">
                   {cap.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-slate-500">
+                <p className="text-sm leading-relaxed text-slate-400">
                   {cap.description}
                 </p>
               </motion.div>

@@ -33,7 +33,7 @@ export default async function ProductDetailPage({
           </h1>
           <Link
             href="/products"
-            className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#2AB09C]"
+            className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#4DB8A4]"
           >
             Back to Products
             <ArrowRight className="h-4 w-4" />

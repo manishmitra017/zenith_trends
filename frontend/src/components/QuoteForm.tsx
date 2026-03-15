@@ -12,7 +12,7 @@ export default function QuoteForm() {
       <div className="mx-auto max-w-3xl">
         {/* Header */}
         <div className="mb-10 text-center">
-          <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#2AB09C]">
+          <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">
             Get In Touch
           </span>
           <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
@@ -25,9 +25,9 @@ export default function QuoteForm() {
         </div>
 
         {submitted ? (
-          <div className="rounded-2xl border border-[#2AB09C]/20 bg-[#2AB09C]/5 p-8 text-center">
-            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#2AB09C]/10">
-              <Send className="h-7 w-7 text-[#2AB09C]" />
+          <div className="rounded-2xl border border-[#4DB8A4]/20 bg-[#4DB8A4]/5 p-8 text-center">
+            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#4DB8A4]/10">
+              <Send className="h-7 w-7 text-[#4DB8A4]" />
             </div>
             <h3 className="text-xl font-bold text-slate-900">
               Thank you for your enquiry!
@@ -62,7 +62,7 @@ export default function QuoteForm() {
                   name="fullName"
                   required
                   placeholder="John Smith"
-                  className="w-full rounded-lg border border-slate-200 px-4 py-2.5 text-sm text-slate-700 outline-none transition-colors placeholder:text-slate-400 focus:border-[#2AB09C] focus:ring-2 focus:ring-[#2AB09C]/20"
+                  className="w-full rounded-lg border border-slate-200 px-4 py-2.5 text-sm text-slate-700 outline-none transition-colors placeholder:text-slate-400 focus:border-[#4DB8A4] focus:ring-2 focus:ring-[#4DB8A4]/20"
                 />
               </div>
 
@@ -79,7 +79,7 @@ export default function QuoteForm() {
                   id="company"
                   name="company"
                   placeholder="Your Company Pty Ltd"
-                  className="w-full rounded-lg border border-slate-200 px-4 py-2.5 text-sm text-slate-700 outline-none transition-colors placeholder:text-slate-400 focus:border-[#2AB09C] focus:ring-2 focus:ring-[#2AB09C]/20"
+                  className="w-full rounded-lg border border-slate-200 px-4 py-2.5 text-sm text-slate-700 outline-none transition-colors placeholder:text-slate-400 focus:border-[#4DB8A4] focus:ring-2 focus:ring-[#4DB8A4]/20"
                 />
               </div>
 
@@ -97,7 +97,7 @@ export default function QuoteForm() {
                   name="email"
                   required
                   placeholder="john@company.com.au"
-                  className="w-full rounded-lg border border-slate-200 px-4 py-2.5 text-sm text-slate-700 outline-none transition-colors placeholder:text-slate-400 focus:border-[#2AB09C] focus:ring-2 focus:ring-[#2AB09C]/20"
+                  className="w-full rounded-lg border border-slate-200 px-4 py-2.5 text-sm text-slate-700 outline-none transition-colors placeholder:text-slate-400 focus:border-[#4DB8A4] focus:ring-2 focus:ring-[#4DB8A4]/20"
                 />
               </div>
 
@@ -115,7 +115,7 @@ export default function QuoteForm() {
                   name="phone"
                   required
                   placeholder="04XX XXX XXX"
-                  className="w-full rounded-lg border border-slate-200 px-4 py-2.5 text-sm text-slate-700 outline-none transition-colors placeholder:text-slate-400 focus:border-[#2AB09C] focus:ring-2 focus:ring-[#2AB09C]/20"
+                  className="w-full rounded-lg border border-slate-200 px-4 py-2.5 text-sm text-slate-700 outline-none transition-colors placeholder:text-slate-400 focus:border-[#4DB8A4] focus:ring-2 focus:ring-[#4DB8A4]/20"
                 />
               </div>
 
@@ -130,7 +130,7 @@ export default function QuoteForm() {
                 <select
                   id="productInterest"
                   name="productInterest"
-                  className="w-full rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-700 outline-none transition-colors focus:border-[#2AB09C] focus:ring-2 focus:ring-[#2AB09C]/20"
+                  className="w-full rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-700 outline-none transition-colors focus:border-[#4DB8A4] focus:ring-2 focus:ring-[#4DB8A4]/20"
                 >
                   <option value="">Select a category</option>
                   {categories.map((cat) => (
@@ -153,7 +153,7 @@ export default function QuoteForm() {
                 <select
                   id="quantity"
                   name="quantity"
-                  className="w-full rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-700 outline-none transition-colors focus:border-[#2AB09C] focus:ring-2 focus:ring-[#2AB09C]/20"
+                  className="w-full rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-700 outline-none transition-colors focus:border-[#4DB8A4] focus:ring-2 focus:ring-[#4DB8A4]/20"
                 >
                   <option value="">Select quantity range</option>
                   <option value="50-100">50 - 100 units</option>
@@ -179,7 +179,7 @@ export default function QuoteForm() {
                   required
                   rows={5}
                   placeholder="Tell us about your project, branding requirements, deadlines..."
-                  className="w-full resize-none rounded-lg border border-slate-200 px-4 py-2.5 text-sm text-slate-700 outline-none transition-colors placeholder:text-slate-400 focus:border-[#2AB09C] focus:ring-2 focus:ring-[#2AB09C]/20"
+                  className="w-full resize-none rounded-lg border border-slate-200 px-4 py-2.5 text-sm text-slate-700 outline-none transition-colors placeholder:text-slate-400 focus:border-[#4DB8A4] focus:ring-2 focus:ring-[#4DB8A4]/20"
                 />
               </div>
             </div>
@@ -191,7 +191,7 @@ export default function QuoteForm() {
               </p>
               <button
                 type="submit"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#2AB09C] px-8 py-3 text-sm font-bold text-white shadow-lg shadow-[#2AB09C]/20 transition-all hover:bg-[#239485] hover:shadow-xl sm:w-auto"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#4DB8A4] px-8 py-3 text-sm font-bold text-white shadow-lg shadow-[#4DB8A4]/20 transition-all hover:bg-[#3A9A8D] hover:shadow-xl sm:w-auto"
               >
                 Submit Enquiry
                 <Send className="h-4 w-4" />
