@@ -103,7 +103,7 @@ export default function PrivacyPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-gradient-to-br from-[#0F1D2F] via-[#1A2D44] to-[#0a1729] px-4 py-14 sm:py-16">
+      <section className="relative bg-gradient-to-br from-[#1a8a7a] via-[#2AB09C] to-[#1a6b5f] px-4 py-14 sm:py-16">
         <div className="relative z-10 mx-auto max-w-7xl">
           <motion.nav
             initial={{ opacity: 0 }}
@@ -141,7 +141,7 @@ export default function PrivacyPage() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-8 rounded-2xl border border-[#4DB8A4]/20 bg-[#4DB8A4]/5 p-6 text-sm text-slate-600"
+            className="mb-8 rounded-2xl border border-[#2AB09C]/20 bg-[#2AB09C]/5 p-6 text-sm text-slate-600"
           >
             <strong className="text-slate-800">Summary:</strong> We collect your business and contact details to process orders and enquiries, communicate with you, and improve our services. We do not sell your data. You can access, correct or delete your information at any time by contacting us.
           </motion.div>
@@ -165,12 +165,12 @@ export default function PrivacyPage() {
 
           <div className="mt-12 border-t border-slate-100 pt-10 text-center">
             <p className="text-sm text-slate-500">Questions? Contact us at{" "}
-              <a href={`mailto:${siteConfig.email}`} className="font-semibold text-[#4DB8A4] hover:underline">{siteConfig.email}</a>
+              <a href={`mailto:${siteConfig.email}`} className="font-semibold text-[#2AB09C] hover:underline">{siteConfig.email}</a>
             </p>
             <div className="mt-4 flex justify-center gap-4 text-sm">
-              <Link href="/terms" className="text-[#4DB8A4] hover:underline">Terms &amp; Conditions</Link>
+              <Link href="/terms" className="text-[#2AB09C] hover:underline">Terms &amp; Conditions</Link>
               <span className="text-slate-300">|</span>
-              <Link href="/contact" className="text-[#4DB8A4] hover:underline">Contact Us</Link>
+              <Link href="/contact" className="text-[#2AB09C] hover:underline">Contact Us</Link>
             </div>
           </div>
         </div>

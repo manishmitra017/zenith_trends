@@ -77,8 +77,8 @@ export default function HeroSection() {
   const banner = banners[current];
 
   return (
-    <section className="relative h-[420px] overflow-hidden bg-[#0F1D2F] sm:h-[480px] lg:h-[560px]">
-      {/* Banner images */}
+    <section className="relative h-[420px] overflow-hidden bg-[#1a8a7a] sm:h-[480px] lg:h-[540px]">
+      {/* Banner images — plain <img> to avoid Next.js fill constraints */}
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={current}
@@ -100,7 +100,7 @@ export default function HeroSection() {
             style={{
               position: "absolute",
               inset: 0,
-              background: "linear-gradient(to right, rgba(15,29,47,0.85) 0%, rgba(15,29,47,0.5) 50%, rgba(15,29,47,0.15) 100%)",
+              background: "linear-gradient(to right, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.05) 100%)",
             }}
           />
         </motion.div>
@@ -117,42 +117,42 @@ export default function HeroSection() {
               exit={{ opacity: 0, y: -16 }}
               transition={{ duration: 0.45, ease: "easeOut" }}
             >
-              <span className="mb-3 inline-block rounded-full border border-[#4DB8A4]/40 bg-[#4DB8A4]/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-[#4DB8A4] backdrop-blur-sm sm:text-sm">
+              <span className="mb-3 inline-block rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white/90 backdrop-blur-sm sm:text-sm">
                 Zenith Trends Australia
               </span>
               <h1 className="mt-2 text-3xl font-extrabold leading-tight tracking-tight text-white drop-shadow-md sm:text-4xl lg:text-5xl">
                 {banner.heading}
               </h1>
-              <p className="mt-3 max-w-md text-sm leading-relaxed text-white/80 drop-shadow sm:text-base">
+              <p className="mt-3 max-w-md text-sm leading-relaxed text-white/85 drop-shadow sm:text-base">
                 {banner.sub}
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <Link
                   href="/products"
-                  className="inline-flex items-center gap-2 rounded-xl bg-[#4DB8A4] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-[#4DB8A4]/25 transition-all hover:bg-[#3A9A8D] hover:shadow-xl"
+                  className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-bold text-[#2AB09C] shadow-lg transition-all hover:bg-white/90 hover:shadow-xl"
                 >
                   Browse Products <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-xl border-2 border-white/30 px-6 py-3 text-sm font-bold text-white backdrop-blur-sm transition-all hover:border-white hover:bg-white/10"
+                  className="inline-flex items-center gap-2 rounded-xl border-2 border-white/40 px-6 py-3 text-sm font-bold text-white backdrop-blur-sm transition-all hover:border-white hover:bg-white/10"
                 >
                   Get a Quote
                 </Link>
               </div>
 
               {/* Trust badges */}
-              <div className="mt-6 flex flex-wrap gap-4 text-xs font-medium text-white/60 sm:text-sm">
+              <div className="mt-6 flex flex-wrap gap-4 text-xs font-medium text-white/70 sm:text-sm">
                 <span className="flex items-center gap-1.5">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#4DB8A4]" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#2AB09C]" />
                   25+ Years Experience
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#4DB8A4]" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#2AB09C]" />
                   Australian Owned
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#4DB8A4]" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#2AB09C]" />
                   2,700+ Products
                 </span>
               </div>
@@ -164,14 +164,14 @@ export default function HeroSection() {
       {/* Prev / Next arrows */}
       <button
         onClick={prev}
-        className="absolute left-3 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/10 p-2 text-white backdrop-blur-sm transition hover:bg-white/25 sm:left-5 sm:p-3"
+        className="absolute left-3 top-1/2 z-20 -translate-y-1/2 rounded-full bg-black/25 p-2 text-white backdrop-blur-sm transition hover:bg-black/50 sm:left-5 sm:p-3"
         aria-label="Previous slide"
       >
         <ChevronLeft className="h-5 w-5" />
       </button>
       <button
         onClick={next}
-        className="absolute right-3 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/10 p-2 text-white backdrop-blur-sm transition hover:bg-white/25 sm:right-5 sm:p-3"
+        className="absolute right-3 top-1/2 z-20 -translate-y-1/2 rounded-full bg-black/25 p-2 text-white backdrop-blur-sm transition hover:bg-black/50 sm:right-5 sm:p-3"
         aria-label="Next slide"
       >
         <ChevronRight className="h-5 w-5" />
@@ -184,7 +184,7 @@ export default function HeroSection() {
             key={i}
             onClick={() => goTo(i)}
             className={`h-2 rounded-full transition-all duration-300 ${
-              i === current ? "w-6 bg-[#4DB8A4]" : "w-2 bg-white/30 hover:bg-white/60"
+              i === current ? "w-6 bg-white" : "w-2 bg-white/40 hover:bg-white/70"
             }`}
             aria-label={`Slide ${i + 1}`}
           />

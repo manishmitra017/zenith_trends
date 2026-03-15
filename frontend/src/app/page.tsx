@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Calendar, Leaf } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
@@ -182,12 +181,12 @@ export default function HomePage() {
                     href={`/collections/${col.slug}`}
                     className="group relative block aspect-square overflow-hidden rounded-xl sm:rounded-2xl"
                   >
-                    <Image
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
                       src={col.image}
                       alt={col.name}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                      sizes="(max-width: 640px) 50vw, (max-width: 768px) 25vw, 14vw"
+                      style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+                      className="transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0F1D2F]/75 via-[#0F1D2F]/30 to-[#0F1D2F]/5 transition-all duration-300 group-hover:from-[#0F1D2F]/60" />
                     <div className="absolute inset-0 flex flex-col items-center justify-end p-2 text-center sm:p-3">

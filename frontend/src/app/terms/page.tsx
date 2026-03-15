@@ -96,7 +96,7 @@ export default function TermsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-gradient-to-br from-[#0F1D2F] via-[#1A2D44] to-[#0a1729] px-4 py-14 sm:py-16">
+      <section className="relative bg-gradient-to-br from-[#1a8a7a] via-[#2AB09C] to-[#1a6b5f] px-4 py-14 sm:py-16">
         <div className="relative z-10 mx-auto max-w-7xl">
           <motion.nav
             initial={{ opacity: 0 }}
@@ -134,10 +134,10 @@ export default function TermsPage() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-8 rounded-2xl border border-[#4DB8A4]/20 bg-[#4DB8A4]/5 p-6 text-sm text-slate-600"
+            className="mb-8 rounded-2xl border border-[#2AB09C]/20 bg-[#2AB09C]/5 p-6 text-sm text-slate-600"
           >
             <strong className="text-slate-800">Important:</strong> These terms govern all transactions and interactions with Zenith Trends Pty. Ltd. Please read them carefully before placing an order. If you have questions, contact us at{" "}
-            <a href={`mailto:${siteConfig.email}`} className="font-semibold text-[#4DB8A4] hover:underline">{siteConfig.email}</a>.
+            <a href={`mailto:${siteConfig.email}`} className="font-semibold text-[#2AB09C] hover:underline">{siteConfig.email}</a>.
           </motion.div>
 
           <div className="space-y-10">
@@ -159,12 +159,12 @@ export default function TermsPage() {
 
           <div className="mt-12 border-t border-slate-100 pt-10 text-center">
             <p className="text-sm text-slate-500">Questions? Contact us at{" "}
-              <a href={`mailto:${siteConfig.email}`} className="font-semibold text-[#4DB8A4] hover:underline">{siteConfig.email}</a>
+              <a href={`mailto:${siteConfig.email}`} className="font-semibold text-[#2AB09C] hover:underline">{siteConfig.email}</a>
             </p>
             <div className="mt-4 flex justify-center gap-4 text-sm">
-              <Link href="/privacy" className="text-[#4DB8A4] hover:underline">Privacy Policy</Link>
+              <Link href="/privacy" className="text-[#2AB09C] hover:underline">Privacy Policy</Link>
               <span className="text-slate-300">|</span>
-              <Link href="/contact" className="text-[#4DB8A4] hover:underline">Contact Us</Link>
+              <Link href="/contact" className="text-[#2AB09C] hover:underline">Contact Us</Link>
             </div>
           </div>
         </div>

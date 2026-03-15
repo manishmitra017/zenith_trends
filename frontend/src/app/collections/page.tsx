@@ -30,7 +30,7 @@ export default function CollectionsPage() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative bg-gradient-to-br from-[#0F1D2F] via-[#1A2D44] to-[#0a1729] px-4 py-16 sm:py-20">
+      <section className="relative bg-gradient-to-br from-[#1a8a7a] via-[#2AB09C] to-[#1a6b5f] px-4 py-16 sm:py-20">
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/5" />
           <div className="absolute -bottom-16 -left-16 h-56 w-56 rounded-full bg-white/5" />
@@ -104,13 +104,13 @@ export default function CollectionsPage() {
 
                     {/* Content */}
                     <div className="p-6">
-                      <h3 className="text-xl font-bold text-slate-900 transition-colors group-hover:text-[#4DB8A4]">
+                      <h3 className="text-xl font-bold text-slate-900 transition-colors group-hover:text-[#2AB09C]">
                         {col.name}
                       </h3>
                       <p className="mt-2 text-sm leading-relaxed text-slate-500">
                         {col.description}
                       </p>
-                      <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#4DB8A4] transition-colors group-hover:text-[#3A9A8D]">
+                      <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#2AB09C] transition-colors group-hover:text-[#1E8F7E]">
                         Browse collection
                         <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </div>
@@ -124,7 +124,7 @@ export default function CollectionsPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-[#0F1D2F] via-[#1A2D44] to-[#0F1D2F] px-4 py-14 sm:py-16">
+      <section className="relative overflow-hidden bg-gradient-to-r from-[#1a8a7a] via-[#2AB09C] to-[#1a8a7a] px-4 py-14 sm:py-16">
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute -left-16 -top-16 h-64 w-64 rounded-full bg-white/5" />
           <div className="absolute -bottom-10 -right-10 h-48 w-48 rounded-full bg-white/5" />
@@ -151,7 +151,7 @@ export default function CollectionsPage() {
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-bold text-[#4DB8A4] shadow-lg transition-all hover:bg-white/90"
+              className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-bold text-[#2AB09C] shadow-lg transition-all hover:bg-white/90"
             >
               Talk to Our Team
               <ArrowRight className="h-4 w-4" />

@@ -70,27 +70,21 @@ export default function FeaturedProducts() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#0F1D2F] px-4 py-16 sm:py-20 lg:py-24">
-      {/* Decorative background elements */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -left-32 -top-32 h-96 w-96 rounded-full bg-[#4DB8A4]/5" />
-        <div className="absolute -bottom-20 -right-20 h-72 w-72 rounded-full bg-[#4DB8A4]/5" />
-        <div className="absolute left-1/2 top-0 h-px w-1/2 bg-gradient-to-r from-transparent via-[#4DB8A4]/20 to-transparent" />
-      </div>
-      <div className="relative z-10 mx-auto max-w-7xl">
+    <section className="bg-slate-50 px-4 py-16 sm:py-20 lg:py-24">
+      <div className="mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="mb-12 flex flex-col items-center justify-between gap-4 sm:flex-row">
           <div>
-            <span className="mb-2 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">
+            <span className="mb-2 inline-block text-sm font-semibold uppercase tracking-widest text-[#2AB09C]">
               Top Picks
             </span>
-            <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+            <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
               Featured Products
             </h2>
           </div>
           <Link
             href="/products"
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#4DB8A4] transition-colors hover:text-[#3A9A8D]"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#2AB09C] transition-colors hover:text-[#239485]"
           >
             View All Products
             <ArrowRight className="h-4 w-4" />
@@ -102,14 +96,14 @@ export default function FeaturedProducts() {
           {/* Prev / Next Arrows */}
           <button
             onClick={prev}
-            className="absolute -left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-sm shadow-lg transition-all hover:bg-[#4DB8A4] hover:text-white sm:-left-5 sm:h-12 sm:w-12"
+            className="absolute -left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-slate-600 shadow-lg transition-all hover:bg-[#2AB09C] hover:text-white sm:-left-5 sm:h-12 sm:w-12"
             aria-label="Previous products"
           >
             <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
           </button>
           <button
             onClick={next}
-            className="absolute -right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-sm shadow-lg transition-all hover:bg-[#4DB8A4] hover:text-white sm:-right-5 sm:h-12 sm:w-12"
+            className="absolute -right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-slate-600 shadow-lg transition-all hover:bg-[#2AB09C] hover:text-white sm:-right-5 sm:h-12 sm:w-12"
             aria-label="Next products"
           >
             <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
@@ -150,8 +144,8 @@ export default function FeaturedProducts() {
                 aria-label={`Go to slide ${i + 1}`}
                 className={`h-2.5 rounded-full transition-all duration-300 ${
                   i === currentIndex
-                    ? "w-8 bg-[#4DB8A4]"
-                    : "w-2.5 bg-white/30 hover:bg-white/50"
+                    ? "w-8 bg-[#2AB09C]"
+                    : "w-2.5 bg-slate-300 hover:bg-slate-400"
                 }`}
               />
             ))}
