@@ -1426,3 +1426,12 @@ are terminated then try again. If it still fails, a git process
 may have crashed in this repository earlier:
 remove the file manually to continue.
 fatal: unable to update HEAD
+
+---
+
+Now look at https://www.chillipromotions.com.au/
+
+I will want to add all the products from here as well. But 
+
+I want to add the Add to Quote process ( You can start adding API's for it)
+If you see in the other project with in this folder,  you can use Amazon SES to send the email to the Email info@zenithtrends.com.au and cc : manish.bvc@gmail.com , when user submits that
