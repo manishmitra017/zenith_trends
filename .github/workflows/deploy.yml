@@ -90,9 +90,20 @@ jobs:
         env:
           BUCKET_NAME: ${{ steps.stack-outputs.outputs.bucket_name }}
         run: |
+          # Boost parallel uploads: 20 concurrent transfers (default is 10)
+          aws configure set default.s3.max_concurrent_requests 20
+
+          # Hashed assets (_next/static) — immutable, cache 1 year
+          aws s3 sync frontend/out/_next/static "s3://$BUCKET_NAME/_next/static" \
+            --size-only \
+            --cache-control "public, max-age=31536000, immutable"
+
+          # Everything else (HTML pages, images, etc) — short cache
           aws s3 sync frontend/out "s3://$BUCKET_NAME" \
             --delete \
-            --cache-control "public, max-age=3600"
+            --size-only \
+            --exclude "_next/static/*" \
+            --cache-control "public, max-age=60, s-maxage=3600"
 
       - name: Invalidate CloudFront cache
         if: steps.stack-outputs.outputs.distribution_id != ''
