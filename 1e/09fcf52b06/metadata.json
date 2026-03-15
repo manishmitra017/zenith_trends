@@ -1,0 +1,52 @@
+{
+  "cli_version": "0.5.0",
+  "checkpoint_id": "1e09fcf52b06",
+  "strategy": "manual-commit",
+  "branch": "feat/redesign-theme",
+  "checkpoints_count": 4,
+  "files_touched": [
+    "frontend/src/app/about/page.tsx",
+    "frontend/src/app/blog/page.tsx",
+    "frontend/src/app/business/page.tsx",
+    "frontend/src/app/collections/[slug]/page.tsx",
+    "frontend/src/app/collections/page.tsx",
+    "frontend/src/app/contact/page.tsx",
+    "frontend/src/app/globals.css",
+    "frontend/src/app/kitting/page.tsx",
+    "frontend/src/app/new/page.tsx",
+    "frontend/src/app/privacy/page.tsx",
+    "frontend/src/app/products/[category]/[slug]/page.tsx",
+    "frontend/src/app/products/[category]/page.tsx",
+    "frontend/src/app/products/page.tsx",
+    "frontend/src/app/sale/page.tsx",
+    "frontend/src/app/terms/page.tsx",
+    "frontend/src/components/CTABanner.tsx",
+    "frontend/src/components/CapabilitiesSection.tsx",
+    "frontend/src/components/CategoryGrid.tsx",
+    "frontend/src/components/CategoryPageContent.tsx",
+    "frontend/src/components/CollectionPageContent.tsx",
+    "frontend/src/components/FeaturedProducts.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/Header.tsx",
+    "frontend/src/components/HeroSection.tsx",
+    "frontend/src/components/ProductCard.tsx",
+    "frontend/src/components/ProductDetailContent.tsx",
+    "frontend/src/components/QuoteCart.tsx",
+    "frontend/src/components/QuoteForm.tsx"
+  ],
+  "sessions": [
+    {
+      "metadata": "/1e/09fcf52b06/0/metadata.json",
+      "transcript": "/1e/09fcf52b06/0/full.jsonl",
+      "content_hash": "/1e/09fcf52b06/0/content_hash.txt",
+      "prompt": "/1e/09fcf52b06/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 3979,
+    "cache_creation_tokens": 1535631,
+    "cache_read_tokens": 31870216,
+    "output_tokens": 132361,
+    "api_call_count": 312
+  }
+}
