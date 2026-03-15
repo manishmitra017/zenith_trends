@@ -1455,3 +1455,19 @@ Can i test this in local?
 ---
 
 can you create PR and i will merge and test
+
+---
+
+You are sure it is right , look at the PR , it hass no changes!
+
+---
+
+where is lambda changes!
+
+---
+
+all good I merged , for next it is through PR
+
+---
+
+Can you see what you can do this step in pipeline runs for 20 mins every time
