@@ -1,0 +1,52 @@
+{
+  "cli_version": "0.5.0",
+  "checkpoint_id": "078de65bd9fd",
+  "session_id": "92da67fc-758f-4421-8871-e9ec0a881fd2",
+  "strategy": "manual-commit",
+  "created_at": "2026-03-15T11:55:53.880843Z",
+  "branch": "feat/redesign-theme",
+  "checkpoints_count": 6,
+  "files_touched": [
+    "frontend/src/app/about/page.tsx",
+    "frontend/src/app/blog/page.tsx",
+    "frontend/src/app/business/page.tsx",
+    "frontend/src/app/collections/page.tsx",
+    "frontend/src/app/contact/page.tsx",
+    "frontend/src/app/impact-aware/page.tsx",
+    "frontend/src/app/kitting/page.tsx",
+    "frontend/src/app/new/page.tsx",
+    "frontend/src/app/page.tsx",
+    "frontend/src/app/privacy/page.tsx",
+    "frontend/src/app/products/page.tsx",
+    "frontend/src/app/sale/page.tsx",
+    "frontend/src/app/terms/page.tsx",
+    "frontend/src/components/CategoryGrid.tsx",
+    "frontend/src/components/CategoryPageContent.tsx",
+    "frontend/src/components/CollectionPageContent.tsx",
+    "frontend/src/components/Header.tsx",
+    "frontend/src/components/ProductDetailContent.tsx",
+    "frontend/src/components/QuoteForm.tsx"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-opus-4-6",
+  "turn_id": "f022188b78fe",
+  "token_usage": {
+    "input_tokens": 4051,
+    "cache_creation_tokens": 1590012,
+    "cache_read_tokens": 38054759,
+    "output_tokens": 142805,
+    "api_call_count": 366
+  },
+  "session_metrics": {
+    "turn_count": 49
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-03-15T11:55:49.541427Z",
+    "agent_lines": 46,
+    "human_added": 10,
+    "human_modified": 0,
+    "human_removed": 0,
+    "total_committed": 56,
+    "agent_percentage": 82.14285714285714
+  }
+}
