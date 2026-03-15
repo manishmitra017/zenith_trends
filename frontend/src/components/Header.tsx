@@ -52,8 +52,8 @@ export default function Header() {
       }`}
     >
       {/* Top Bar */}
-      <div className="bg-[#0F1D2F] text-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 text-xs sm:text-sm">
+      <div className="bg-gradient-to-r from-[#0F1D2F] via-[#1A7A6D] to-[#0F1D2F] text-white">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2.5 text-xs sm:text-sm">
           <div className="flex items-center gap-4 sm:gap-6">
             <a
               href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
@@ -79,7 +79,7 @@ export default function Header() {
       </div>
 
       {/* Main Header */}
-      <div className="bg-white">
+      <div className="bg-gradient-to-r from-[#B8E4DB] via-[#E0F5F0] to-[#B8E4DB]">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:py-4">
           {/* Brand Logo */}
           <Link href="/" className="flex-shrink-0">

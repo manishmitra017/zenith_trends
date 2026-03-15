@@ -8,7 +8,7 @@ export default function QuoteForm() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <section className="bg-white px-4 py-16 sm:py-20 lg:py-24">
+    <section className="bg-gradient-to-br from-[#B8E4DB] via-[#D9F0EB] to-[#E8D5A0] px-4 py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-3xl">
         {/* Header */}
         <div className="mb-10 text-center">

@@ -85,7 +85,7 @@ export default function CategoryPageContent({
       </section>
 
       {/* Main Content */}
-      <section className="bg-slate-50 px-4 py-12 sm:py-16 lg:py-20">
+      <section className="bg-gradient-to-br from-[#B8E4DB] via-[#D9F0EB] to-[#E8D5A0] px-4 py-12 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col gap-10 lg:flex-row lg:gap-12">
             {/* Sidebar */}

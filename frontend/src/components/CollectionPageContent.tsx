@@ -72,7 +72,7 @@ export default function CollectionPageContent({ collection, products }: Collecti
       </section>
 
       {/* Products Grid */}
-      <section className="bg-slate-50 px-4 py-12 sm:py-16 lg:py-20">
+      <section className="bg-gradient-to-br from-[#A8DDD0] via-[#C8EBE3] to-[#A8DDD0] px-4 py-12 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           {products.length > 0 ? (
             <motion.div

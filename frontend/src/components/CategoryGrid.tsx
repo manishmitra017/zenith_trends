@@ -24,17 +24,17 @@ const cardVariants = {
 
 export default function CategoryGrid() {
   return (
-    <section className="relative bg-gradient-to-b from-slate-50 to-white px-4 py-16 sm:py-20 lg:py-24">
+    <section className="relative bg-gradient-to-br from-[#0F1D2F] via-[#163B4E] to-[#1A7A6D] px-4 py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="mb-12 text-center">
           <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">
             Explore Our Range
           </span>
-          <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
             Product Categories
           </h2>
-          <p className="mx-auto mt-3 max-w-2xl text-base text-slate-500">
+          <p className="mx-auto mt-3 max-w-2xl text-base text-white/70">
             From corporate apparel to eco-friendly solutions, find the perfect
             promotional products for your brand.
           </p>

@@ -88,7 +88,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Content */}
-      <section className="bg-slate-50 px-4 py-14 sm:py-16 lg:py-20">
+      <section className="bg-gradient-to-br from-[#B8E4DB] via-[#D9F0EB] to-[#E8D5A0] px-4 py-14 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-5 lg:gap-14">
             {/* Contact Info Column */}

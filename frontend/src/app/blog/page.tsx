@@ -147,7 +147,7 @@ export default function BlogPage() {
       </section>
 
       {/* Featured Posts */}
-      <section className="bg-white px-4 py-12 sm:py-16">
+      <section className="bg-gradient-to-br from-[#B8E4DB] via-[#D9F0EB] to-[#E8D5A0] px-4 py-12 sm:py-16">
         <div className="mx-auto max-w-7xl">
           <h2 className="mb-8 text-xl font-bold text-slate-900">Featured Articles</h2>
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
@@ -193,7 +193,7 @@ export default function BlogPage() {
       </section>
 
       {/* Category filter + All Posts */}
-      <section className="bg-slate-50 px-4 py-12 sm:py-16 lg:py-20">
+      <section className="bg-gradient-to-r from-[#F0DFA0] via-[#F5EAC0] to-[#F0DFA0] px-4 py-12 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           {/* Filter */}
           <div className="mb-8 flex flex-wrap items-center gap-2">

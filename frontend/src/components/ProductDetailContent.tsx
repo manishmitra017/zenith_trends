@@ -114,7 +114,7 @@ export default function ProductDetailContent({
       </section>
 
       {/* Product Detail */}
-      <section className="bg-white px-4 py-10 sm:py-14 lg:py-20">
+      <section className="bg-gradient-to-br from-[#B8E4DB] via-[#D9F0EB] to-[#E8D5A0] px-4 py-10 sm:py-14 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16">
             {/* Product Image */}
@@ -263,7 +263,7 @@ export default function ProductDetailContent({
       </section>
 
       {/* Branding Methods */}
-      <section className="bg-slate-50 px-4 py-14 sm:py-16 lg:py-20">
+      <section className="bg-gradient-to-r from-[#F0DFA0] via-[#F5EAC0] to-[#F0DFA0] px-4 py-14 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 text-center">
             <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">
@@ -304,7 +304,7 @@ export default function ProductDetailContent({
 
       {/* Related Products */}
       {relatedProducts.length > 0 && (
-        <section className="bg-white px-4 py-14 sm:py-16 lg:py-20">
+        <section className="bg-gradient-to-r from-[#A8DDD0] via-[#C8EBE3] to-[#A8DDD0] px-4 py-14 sm:py-16 lg:py-20">
           <div className="mx-auto max-w-7xl">
             <div className="mb-10 flex items-center justify-between">
               <div>

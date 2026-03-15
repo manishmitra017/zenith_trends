@@ -114,7 +114,7 @@ export default function HomePage() {
       <FeaturedProducts />
 
       {/* New Arrivals Teaser */}
-      <section className="bg-gradient-to-b from-white to-slate-50 px-4 py-16 sm:py-20 lg:py-24">
+      <section className="bg-gradient-to-r from-[#A8DDD0] via-[#C8EBE3] to-[#A8DDD0] px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>
@@ -152,16 +152,16 @@ export default function HomePage() {
       </section>
 
       {/* Collections Teaser */}
-      <section className="relative overflow-hidden bg-[#F0FAF7] px-4 py-16 sm:py-20 lg:py-24">
+      <section className="relative overflow-hidden bg-gradient-to-r from-[#0F1D2F] via-[#163B4E] to-[#0F1D2F] px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 text-center">
             <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">
               Curated for Every Occasion
             </span>
-            <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+            <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
               Collections
             </h2>
-            <p className="mx-auto mt-3 max-w-2xl text-base text-slate-500">
+            <p className="mx-auto mt-3 max-w-2xl text-base text-white/70">
               Hand-picked product bundles designed for specific occasions — from conference packs to golf days, eco kits and executive gifts.
             </p>
           </div>
@@ -206,7 +206,7 @@ export default function HomePage() {
           <div className="mt-8 text-center">
             <Link
               href="/collections"
-              className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition-all hover:border-[#4DB8A4] hover:text-[#4DB8A4]"
+              className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-[#4DB8A4] hover:bg-[#4DB8A4] hover:text-white"
             >
               View All Collections <ArrowRight className="h-4 w-4" />
             </Link>
@@ -218,7 +218,7 @@ export default function HomePage() {
       <CapabilitiesSection />
 
       {/* About Us Summary */}
-      <section className="bg-gradient-to-b from-slate-50 to-white px-4 py-16 sm:py-20 lg:py-24">
+      <section className="bg-gradient-to-r from-[#F0DFA0] via-[#F5EAC0] to-[#F0DFA0] px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
             <motion.div
@@ -284,7 +284,7 @@ export default function HomePage() {
       </section>
 
       {/* Blog/News Preview */}
-      <section className="bg-gradient-to-b from-white to-slate-50 px-4 py-16 sm:py-20 lg:py-24">
+      <section className="bg-gradient-to-r from-[#A8DDD0] via-[#C8EBE3] to-[#A8DDD0] px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>

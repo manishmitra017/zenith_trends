@@ -123,7 +123,7 @@ export default function SalePage() {
       </section>
 
       {/* Products Grid */}
-      <section className="bg-slate-50 px-4 py-12 sm:py-16 lg:py-20">
+      <section className="bg-gradient-to-r from-[#F0DFA0] via-[#F5EAC0] to-[#F0DFA0] px-4 py-12 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <motion.div
             key={sortBy}

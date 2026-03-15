@@ -97,7 +97,7 @@ export default function BusinessPage() {
       <CapabilitiesSection />
 
       {/* Business Model */}
-      <section className="bg-slate-50 px-4 py-16 sm:py-20 lg:py-24">
+      <section className="bg-gradient-to-r from-[#F0DFA0] via-[#F5EAC0] to-[#F0DFA0] px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
             <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">
@@ -145,12 +145,12 @@ export default function BusinessPage() {
       </section>
 
       {/* Industries Served */}
-      <section className="bg-white px-4 py-16 sm:py-20 lg:py-24">
+      <section className="bg-gradient-to-br from-[#0F1D2F] via-[#163B4E] to-[#1A7A6D] px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-4xl text-center">
           <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">
             Our Reach
           </span>
-          <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
             Serving All of Australia
           </h2>
           <motion.p
@@ -158,7 +158,7 @@ export default function BusinessPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="mt-4 text-base leading-relaxed text-slate-600"
+            className="mt-4 text-base leading-relaxed text-white/70"
           >
             {aboutContent.industries}
           </motion.p>

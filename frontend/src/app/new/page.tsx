@@ -99,7 +99,7 @@ export default function NewArrivalsPage() {
       </section>
 
       {/* Products */}
-      <section className="bg-slate-50 px-4 py-12 sm:py-16 lg:py-20">
+      <section className="bg-gradient-to-br from-[#B8E4DB] via-[#D9F0EB] to-[#E8D5A0] px-4 py-12 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           {filtered.length > 0 ? (
             <motion.div

@@ -191,7 +191,7 @@ export default function KittingPage() {
       </section>
 
       {/* How It Works */}
-      <section className="bg-white px-4 py-16 sm:py-20 lg:py-24">
+      <section className="bg-gradient-to-br from-[#B8E4DB] via-[#D9F0EB] to-[#E8D5A0] px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-14 text-center">
             <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">Our Process</span>
@@ -230,7 +230,7 @@ export default function KittingPage() {
       </section>
 
       {/* Kit Types */}
-      <section className="bg-slate-50 px-4 py-16 sm:py-20 lg:py-24">
+      <section className="bg-gradient-to-r from-[#F0DFA0] via-[#F5EAC0] to-[#F0DFA0] px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
             <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">Popular Kits</span>
@@ -274,11 +274,11 @@ export default function KittingPage() {
       </section>
 
       {/* Industries */}
-      <section className="bg-white px-4 py-16 sm:py-20">
+      <section className="bg-gradient-to-br from-[#0F1D2F] via-[#163B4E] to-[#1A7A6D] px-4 py-16 sm:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 text-center">
             <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">Who We Help</span>
-            <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">Industries We Serve</h2>
+            <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Industries We Serve</h2>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-4">
             {industries.map((ind, i) => {
@@ -291,10 +291,10 @@ export default function KittingPage() {
                   whileInView="visible"
                   viewport={{ once: true }}
                   variants={fadeUp}
-                  className="flex items-center gap-3 rounded-xl border border-slate-100 bg-slate-50 px-6 py-4"
+                  className="flex items-center gap-3 rounded-xl border border-white/15 bg-white/10 px-6 py-4"
                 >
                   <Icon className="h-5 w-5 text-[#4DB8A4]" />
-                  <span className="text-sm font-semibold text-slate-700">{ind.label}</span>
+                  <span className="text-sm font-semibold text-white">{ind.label}</span>
                 </motion.div>
               );
             })}

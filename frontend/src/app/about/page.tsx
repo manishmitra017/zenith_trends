@@ -86,7 +86,7 @@ export default function AboutPage() {
       </section>
 
       {/* Company Overview */}
-      <section className="bg-white px-4 py-16 sm:py-20 lg:py-24">
+      <section className="bg-gradient-to-br from-[#B8E4DB] via-[#D9F0EB] to-[#E8D5A0] px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
             <motion.p
@@ -112,7 +112,7 @@ export default function AboutPage() {
       </section>
 
       {/* Tabs Section */}
-      <section className="bg-slate-50 px-4 py-16 sm:py-20 lg:py-24">
+      <section className="bg-gradient-to-r from-[#F0DFA0] via-[#F5EAC0] to-[#F0DFA0] px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
           {/* Tab Navigation */}
           <div className="mb-10 flex flex-wrap justify-center gap-2">
@@ -226,16 +226,16 @@ export default function AboutPage() {
       </section>
 
       {/* Our Industries */}
-      <section className="bg-white px-4 py-16 sm:py-20 lg:py-24">
+      <section className="bg-gradient-to-br from-[#0F1D2F] via-[#163B4E] to-[#1A7A6D] px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
             <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">
               Who We Serve
             </span>
-            <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+            <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
               Our Industries
             </h2>
-            <p className="mx-auto mt-3 max-w-2xl text-base text-slate-500">
+            <p className="mx-auto mt-3 max-w-2xl text-base text-white/70">
               We partner with organisations across every sector to deliver
               branded merchandise that makes an impact.
             </p>
