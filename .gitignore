@@ -17,9 +17,6 @@ bags_category_snapshot.md
 frontend/products_scraped.json
 frontend/public/image-audit.html
 
-# Temp API route used during scraping (no longer needed)
-frontend/src/app/api/
-
 # Secrets / env
 .env
 .env.local
