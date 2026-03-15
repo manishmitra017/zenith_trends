@@ -94,7 +94,7 @@ export default function KittingPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-gradient-to-br from-[#1a8a7a] via-[#2AB09C] to-[#1a6b5f] px-4 py-16 sm:py-20 lg:py-28">
+      <section className="relative bg-gradient-to-br from-[#0F1D2F] via-[#1A2D44] to-[#0a1729] px-4 py-16 sm:py-20 lg:py-28">
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="absolute -right-24 -top-24 h-96 w-96 rounded-full bg-white/5" />
           <div className="absolute -bottom-16 -left-16 h-72 w-72 rounded-full bg-white/5" />
@@ -153,7 +153,7 @@ export default function KittingPage() {
               >
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-xl bg-white px-7 py-3.5 text-sm font-bold text-[#2AB09C] shadow-lg transition-all hover:bg-white/90"
+                  className="inline-flex items-center gap-2 rounded-xl bg-white px-7 py-3.5 text-sm font-bold text-[#4DB8A4] shadow-lg transition-all hover:bg-white/90"
                 >
                   Start a Kitting Project
                   <ArrowRight className="h-4 w-4" />
@@ -191,10 +191,10 @@ export default function KittingPage() {
       </section>
 
       {/* How It Works */}
-      <section className="bg-white px-4 py-16 sm:py-20 lg:py-24">
+      <section className="bg-gradient-to-br from-[#B8E4DB] via-[#D9F0EB] to-[#E8D5A0] px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-14 text-center">
-            <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#2AB09C]">Our Process</span>
+            <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">Our Process</span>
             <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">How Kitting Works</h2>
             <p className="mx-auto mt-3 max-w-2xl text-base text-slate-500">
               A simple, end-to-end process managed by our experienced team — from initial brief to final delivery.
@@ -212,12 +212,12 @@ export default function KittingPage() {
                   whileInView="visible"
                   viewport={{ once: true }}
                   variants={fadeUp}
-                  className="group relative rounded-2xl border border-slate-100 bg-white p-6 shadow-sm transition-all hover:border-[#2AB09C]/20 hover:shadow-lg lg:p-8"
+                  className="group relative rounded-2xl border border-slate-100 bg-white p-6 shadow-sm transition-all hover:border-[#4DB8A4]/20 hover:shadow-lg lg:p-8"
                 >
-                  <span className="absolute right-5 top-5 text-5xl font-black text-slate-50 transition-colors group-hover:text-[#2AB09C]/10">
+                  <span className="absolute right-5 top-5 text-5xl font-black text-slate-50 transition-colors group-hover:text-[#4DB8A4]/10">
                     {step.step}
                   </span>
-                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#2AB09C]/10 text-[#2AB09C] transition-all group-hover:bg-[#2AB09C] group-hover:text-white">
+                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#4DB8A4]/10 text-[#4DB8A4] transition-all group-hover:bg-[#4DB8A4] group-hover:text-white">
                     <Icon className="h-6 w-6" />
                   </div>
                   <h3 className="mb-2 text-lg font-bold text-slate-900">{step.title}</h3>
@@ -230,10 +230,10 @@ export default function KittingPage() {
       </section>
 
       {/* Kit Types */}
-      <section className="bg-slate-50 px-4 py-16 sm:py-20 lg:py-24">
+      <section className="bg-gradient-to-r from-[#F0DFA0] via-[#F5EAC0] to-[#F0DFA0] px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
-            <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#2AB09C]">Popular Kits</span>
+            <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">Popular Kits</span>
             <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">Kit Types We Build</h2>
             <p className="mx-auto mt-3 max-w-xl text-base text-slate-500">
               Every kit is fully customisable. These are some of our most popular configurations.
@@ -261,7 +261,7 @@ export default function KittingPage() {
                   <ul className="mt-4 space-y-1.5">
                     {kit.examples.map((ex) => (
                       <li key={ex} className="flex items-center gap-2 text-xs text-slate-600">
-                        <CheckCircle2 className="h-3.5 w-3.5 flex-shrink-0 text-[#2AB09C]" />
+                        <CheckCircle2 className="h-3.5 w-3.5 flex-shrink-0 text-[#4DB8A4]" />
                         {ex}
                       </li>
                     ))}
@@ -274,11 +274,11 @@ export default function KittingPage() {
       </section>
 
       {/* Industries */}
-      <section className="bg-white px-4 py-16 sm:py-20">
+      <section className="bg-gradient-to-br from-[#0F1D2F] via-[#163B4E] to-[#1A7A6D] px-4 py-16 sm:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 text-center">
-            <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#2AB09C]">Who We Help</span>
-            <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">Industries We Serve</h2>
+            <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">Who We Help</span>
+            <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Industries We Serve</h2>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-4">
             {industries.map((ind, i) => {
@@ -291,10 +291,10 @@ export default function KittingPage() {
                   whileInView="visible"
                   viewport={{ once: true }}
                   variants={fadeUp}
-                  className="flex items-center gap-3 rounded-xl border border-slate-100 bg-slate-50 px-6 py-4"
+                  className="flex items-center gap-3 rounded-xl border border-white/15 bg-white/10 px-6 py-4"
                 >
-                  <Icon className="h-5 w-5 text-[#2AB09C]" />
-                  <span className="text-sm font-semibold text-slate-700">{ind.label}</span>
+                  <Icon className="h-5 w-5 text-[#4DB8A4]" />
+                  <span className="text-sm font-semibold text-white">{ind.label}</span>
                 </motion.div>
               );
             })}

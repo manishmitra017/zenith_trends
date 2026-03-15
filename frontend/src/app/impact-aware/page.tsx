@@ -165,7 +165,7 @@ export default function ImpactAwarePage() {
       </section>
 
       {/* Our Pillars */}
-      <section className="bg-white px-4 py-16 sm:py-20 lg:py-24">
+      <section className="bg-gradient-to-br from-[#B8E4DB] via-[#D9F0EB] to-[#E8D5A0] px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
             <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-emerald-600">Our Commitment</span>
@@ -201,7 +201,7 @@ export default function ImpactAwarePage() {
       </section>
 
       {/* Certifications */}
-      <section className="bg-slate-50 px-4 py-14 sm:py-16">
+      <section className="bg-gradient-to-r from-[#F0DFA0] via-[#F5EAC0] to-[#F0DFA0] px-4 py-14 sm:py-16">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 text-center">
             <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-emerald-600">Verified & Certified</span>
@@ -230,7 +230,7 @@ export default function ImpactAwarePage() {
       </section>
 
       {/* Sustainable Products */}
-      <section id="products" className="bg-white px-4 py-16 sm:py-20 lg:py-24">
+      <section id="products" className="bg-gradient-to-r from-[#A8DDD0] via-[#C8EBE3] to-[#A8DDD0] px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>

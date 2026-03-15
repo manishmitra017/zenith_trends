@@ -36,7 +36,7 @@ export default function ProductsPage() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative bg-gradient-to-br from-[#1a8a7a] via-[#2AB09C] to-[#1a6b5f] px-4 py-16 sm:py-20">
+      <section className="relative bg-gradient-to-br from-[#0F1D2F] via-[#1A2D44] to-[#0a1729] px-4 py-16 sm:py-20">
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/5" />
           <div className="absolute -bottom-16 -left-16 h-56 w-56 rounded-full bg-white/5" />
@@ -76,7 +76,7 @@ export default function ProductsPage() {
       </section>
 
       {/* Search + Category Grid */}
-      <section className="bg-slate-50 px-4 py-12 sm:py-16 lg:py-20">
+      <section className="bg-gradient-to-br from-[#A8DDD0] via-[#C8EBE3] to-[#A8DDD0] px-4 py-12 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           {/* Search Bar */}
           <div className="mx-auto mb-10 max-w-xl">
@@ -87,7 +87,7 @@ export default function ProductsPage() {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search categories..."
-                className="w-full rounded-xl border border-slate-200 bg-white py-3 pl-12 pr-4 text-sm text-slate-700 shadow-sm outline-none transition-all placeholder:text-slate-400 focus:border-[#2AB09C] focus:ring-2 focus:ring-[#2AB09C]/20"
+                className="w-full rounded-xl border border-slate-200 bg-white py-3 pl-12 pr-4 text-sm text-slate-700 shadow-sm outline-none transition-all placeholder:text-slate-400 focus:border-[#4DB8A4] focus:ring-2 focus:ring-[#4DB8A4]/20"
               />
             </div>
           </div>
@@ -122,7 +122,7 @@ export default function ProductsPage() {
 
                   {/* Content */}
                   <div className="p-5">
-                    <h3 className="text-base font-bold text-slate-900 transition-colors group-hover:text-[#2AB09C]">
+                    <h3 className="text-base font-bold text-slate-900 transition-colors group-hover:text-[#4DB8A4]">
                       {cat.name}
                     </h3>
                     <p className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-slate-500">

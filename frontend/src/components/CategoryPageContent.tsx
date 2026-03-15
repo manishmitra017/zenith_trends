@@ -39,7 +39,7 @@ export default function CategoryPageContent({
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative bg-gradient-to-br from-[#1a8a7a] via-[#2AB09C] to-[#1a6b5f] px-4 py-16 sm:py-20">
+      <section className="relative bg-gradient-to-br from-[#0F1D2F] via-[#1A2D44] to-[#0a1729] px-4 py-16 sm:py-20">
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/5" />
           <div className="absolute -bottom-16 -left-16 h-56 w-56 rounded-full bg-white/5" />
@@ -85,7 +85,7 @@ export default function CategoryPageContent({
       </section>
 
       {/* Main Content */}
-      <section className="bg-slate-50 px-4 py-12 sm:py-16 lg:py-20">
+      <section className="bg-gradient-to-br from-[#B8E4DB] via-[#D9F0EB] to-[#E8D5A0] px-4 py-12 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col gap-10 lg:flex-row lg:gap-12">
             {/* Sidebar */}
@@ -101,15 +101,15 @@ export default function CategoryPageContent({
                       href={`/products/${cat.slug}`}
                       className={`flex items-center justify-between rounded-lg px-3 py-2.5 text-sm transition-all ${
                         cat.slug === categorySlug
-                          ? "bg-[#2AB09C]/10 font-semibold text-[#2AB09C]"
-                          : "text-slate-600 hover:bg-slate-50 hover:text-[#2AB09C]"
+                          ? "bg-[#4DB8A4]/10 font-semibold text-[#4DB8A4]"
+                          : "text-slate-600 hover:bg-slate-50 hover:text-[#4DB8A4]"
                       }`}
                     >
                       <span>{cat.name}</span>
                       <span
                         className={`rounded-full px-2 py-0.5 text-xs ${
                           cat.slug === categorySlug
-                            ? "bg-[#2AB09C]/10 text-[#2AB09C]"
+                            ? "bg-[#4DB8A4]/10 text-[#4DB8A4]"
                             : "bg-slate-100 text-slate-500"
                         }`}
                       >
@@ -149,7 +149,7 @@ export default function CategoryPageContent({
           </div>
 
           {/* Request a Quote CTA */}
-          <div className="mt-16 rounded-2xl bg-gradient-to-r from-[#1a8a7a] via-[#2AB09C] to-[#1a8a7a] p-8 text-center sm:p-12">
+          <div className="mt-16 rounded-2xl bg-gradient-to-r from-[#0F1D2F] via-[#1A2D44] to-[#0F1D2F] p-8 text-center sm:p-12">
             <h2 className="text-2xl font-extrabold text-white sm:text-3xl">
               Need a custom quote for {category.name}?
             </h2>
@@ -159,7 +159,7 @@ export default function CategoryPageContent({
             </p>
             <Link
               href="/contact"
-              className="mt-6 inline-flex items-center gap-2 rounded-xl bg-white px-7 py-3.5 text-sm font-bold text-[#2AB09C] shadow-lg transition-all hover:bg-white/90 hover:shadow-xl"
+              className="mt-6 inline-flex items-center gap-2 rounded-xl bg-white px-7 py-3.5 text-sm font-bold text-[#4DB8A4] shadow-lg transition-all hover:bg-white/90 hover:shadow-xl"
             >
               Request a Quote
               <ArrowRight className="h-4 w-4" />

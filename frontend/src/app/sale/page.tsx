@@ -123,7 +123,7 @@ export default function SalePage() {
       </section>
 
       {/* Products Grid */}
-      <section className="bg-slate-50 px-4 py-12 sm:py-16 lg:py-20">
+      <section className="bg-gradient-to-r from-[#F0DFA0] via-[#F5EAC0] to-[#F0DFA0] px-4 py-12 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <motion.div
             key={sortBy}
@@ -158,7 +158,7 @@ export default function SalePage() {
                     <span className="text-xs font-medium text-rose-500 uppercase tracking-wide">
                       {product.category}
                     </span>
-                    <h3 className="mt-1 text-sm font-bold text-slate-900 transition-colors group-hover:text-[#2AB09C] line-clamp-2">
+                    <h3 className="mt-1 text-sm font-bold text-slate-900 transition-colors group-hover:text-[#4DB8A4] line-clamp-2">
                       {product.name}
                     </h3>
                     <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-slate-500">
@@ -168,7 +168,7 @@ export default function SalePage() {
                       <span className="rounded-full bg-rose-50 px-2.5 py-1 text-xs font-semibold text-rose-600">
                         Save {product.salePercent}%
                       </span>
-                      <span className="text-xs font-semibold text-[#2AB09C]">Get Quote →</span>
+                      <span className="text-xs font-semibold text-[#4DB8A4]">Get Quote →</span>
                     </div>
                   </div>
                 </Link>
