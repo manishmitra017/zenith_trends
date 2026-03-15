@@ -1,0 +1,62 @@
+{
+  "cli_version": "0.5.0",
+  "checkpoint_id": "b4c2119e33eb",
+  "session_id": "92da67fc-758f-4421-8871-e9ec0a881fd2",
+  "strategy": "manual-commit",
+  "created_at": "2026-03-15T23:31:48.442709Z",
+  "branch": "feat/redesign-theme",
+  "checkpoints_count": 2,
+  "files_touched": [
+    "frontend/src/app/about/page.tsx",
+    "frontend/src/app/blog/page.tsx",
+    "frontend/src/app/business/page.tsx",
+    "frontend/src/app/collections/[slug]/page.tsx",
+    "frontend/src/app/collections/page.tsx",
+    "frontend/src/app/contact/page.tsx",
+    "frontend/src/app/globals.css",
+    "frontend/src/app/impact-aware/page.tsx",
+    "frontend/src/app/kitting/page.tsx",
+    "frontend/src/app/new/page.tsx",
+    "frontend/src/app/page.tsx",
+    "frontend/src/app/privacy/page.tsx",
+    "frontend/src/app/products/[category]/[slug]/page.tsx",
+    "frontend/src/app/products/[category]/page.tsx",
+    "frontend/src/app/products/page.tsx",
+    "frontend/src/app/sale/page.tsx",
+    "frontend/src/app/terms/page.tsx",
+    "frontend/src/components/CapabilitiesSection.tsx",
+    "frontend/src/components/CategoryGrid.tsx",
+    "frontend/src/components/CategoryPageContent.tsx",
+    "frontend/src/components/CollectionPageContent.tsx",
+    "frontend/src/components/FeaturedProducts.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/Header.tsx",
+    "frontend/src/components/HeroSection.tsx",
+    "frontend/src/components/ProductCard.tsx",
+    "frontend/src/components/ProductDetailContent.tsx",
+    "frontend/src/components/QuoteCart.tsx",
+    "frontend/src/components/QuoteForm.tsx"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-opus-4-6",
+  "turn_id": "49e5975021d4",
+  "token_usage": {
+    "input_tokens": 4075,
+    "cache_creation_tokens": 1957207,
+    "cache_read_tokens": 39739242,
+    "output_tokens": 146181,
+    "api_call_count": 382
+  },
+  "session_metrics": {
+    "turn_count": 50
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-03-15T23:31:43.999445Z",
+    "agent_lines": 202,
+    "human_added": 0,
+    "human_modified": 0,
+    "human_removed": 0,
+    "total_committed": 202,
+    "agent_percentage": 100
+  }
+}
