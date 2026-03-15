@@ -62,41 +62,6 @@ export class WebsiteStack extends cdk.Stack {
       })
     );
 
-    // ── API Gateway HTTP API with CORS + rate limiting ───────────
-    const api = new apigatewayv2.HttpApi(this, 'QuoteApi', {
-      apiName: 'zenith-trends-quote-api',
-      description: 'Zenith Trends quote submission API',
-      corsPreflight: {
-        allowOrigins: [
-          `https://${domainName}`,
-          `https://${wwwDomainName}`,
-          'http://localhost:3000',
-        ],
-        allowMethods: [
-          apigatewayv2.CorsHttpMethod.POST,
-          apigatewayv2.CorsHttpMethod.OPTIONS,
-        ],
-        allowHeaders: ['Content-Type'],
-        maxAge: cdk.Duration.hours(24),
-      },
-    });
-
-    // Rate limiting: 10 requests/second burst, 5 requests/second sustained
-    const defaultStage = api.defaultStage?.node.defaultChild as apigatewayv2.CfnStage;
-    defaultStage.defaultRouteSettings = {
-      throttlingBurstLimit: 10,
-      throttlingRateLimit: 5,
-    };
-
-    api.addRoutes({
-      path: '/quote',
-      methods: [apigatewayv2.HttpMethod.POST],
-      integration: new integrations.HttpLambdaIntegration(
-        'QuoteIntegration',
-        quoteFunction
-      ),
-    });
-
     // ── ACM Certificate (us-east-1, for CloudFront) ──────────────
     const certificate = props?.certificateArn
       ? acm.Certificate.fromCertificateArn(this, 'ImportedCertificate', props.certificateArn)
@@ -152,6 +117,42 @@ function handler(event) {
       ],
       priceClass: cloudfront.PriceClass.PRICE_CLASS_100,
       minimumProtocolVersion: cloudfront.SecurityPolicyProtocol.TLS_V1_2_2021,
+    });
+
+    // ── API Gateway HTTP API with CORS + rate limiting ───────────
+    const api = new apigatewayv2.HttpApi(this, 'QuoteApi', {
+      apiName: 'zenith-trends-quote-api',
+      description: 'Zenith Trends quote submission API',
+      corsPreflight: {
+        allowOrigins: [
+          `https://${domainName}`,
+          `https://${wwwDomainName}`,
+          `https://${distribution.distributionDomainName}`,
+          'http://localhost:3000',
+        ],
+        allowMethods: [
+          apigatewayv2.CorsHttpMethod.POST,
+          apigatewayv2.CorsHttpMethod.OPTIONS,
+        ],
+        allowHeaders: ['Content-Type'],
+        maxAge: cdk.Duration.hours(24),
+      },
+    });
+
+    // Rate limiting: 10 requests/second burst, 5 requests/second sustained
+    const defaultStage = api.defaultStage?.node.defaultChild as apigatewayv2.CfnStage;
+    defaultStage.defaultRouteSettings = {
+      throttlingBurstLimit: 10,
+      throttlingRateLimit: 5,
+    };
+
+    api.addRoutes({
+      path: '/quote',
+      methods: [apigatewayv2.HttpMethod.POST],
+      integration: new integrations.HttpLambdaIntegration(
+        'QuoteIntegration',
+        quoteFunction
+      ),
     });
 
     // ── Route53 A records ────────────────────────────────────────
