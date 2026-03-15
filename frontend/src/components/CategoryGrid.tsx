@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { categories } from "@/data/products";
 
@@ -56,12 +55,12 @@ export default function CategoryGrid() {
                 className="group relative block aspect-[4/3] overflow-hidden rounded-xl sm:rounded-2xl"
               >
                 {/* Background Image */}
-                <Image
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
                   src={cat.image}
                   alt={cat.name}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
+                  style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+                  className="transition-transform duration-500 group-hover:scale-110"
                 />
 
                 {/* Dark Overlay */}

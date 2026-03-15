@@ -1,3 +1,26 @@
+# OS
 .DS_Store
+
+# Claude / AI tooling
 .claude/
 .entire/
+.playwright-mcp/
+context_portal/
+
+# Screenshots & reference images captured during development
+*.png
+*.jpg
+*.jpeg
+
+# Scraping artefacts & temp dev files
+bags_category_snapshot.md
+frontend/products_scraped.json
+frontend/public/image-audit.html
+
+# Temp API route used during scraping (no longer needed)
+frontend/src/app/api/
+
+# Secrets / env
+.env
+.env.local
+.env*.local

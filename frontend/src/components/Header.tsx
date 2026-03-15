@@ -34,10 +34,13 @@ export default function Header() {
 
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "About Us", href: "/about" },
     { label: "Products", href: "/products", hasDropdown: true },
-    { label: "Our Business", href: "/business" },
-    { label: "Contact Us", href: "/contact" },
+    { label: "Collections", href: "/collections" },
+    { label: "New", href: "/new" },
+    { label: "Sale", href: "/sale" },
+    { label: "Kitting", href: "/kitting" },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (
@@ -134,6 +137,23 @@ export default function Header() {
                     )}
                   </AnimatePresence>
                 </div>
+              ) : link.label === "Sale" ? (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="rounded-lg px-4 py-2 text-sm font-semibold text-rose-500 transition-colors hover:bg-rose-50"
+                >
+                  {link.label}
+                </Link>
+              ) : link.label === "New" ? (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="flex items-center gap-1 rounded-lg px-4 py-2 text-sm font-semibold text-[#2AB09C] transition-colors hover:bg-[#2AB09C]/10"
+                >
+                  {link.label}
+                  <span className="rounded-full bg-[#2AB09C] px-1.5 py-0.5 text-[9px] font-bold text-white leading-none">✦</span>
+                </Link>
               ) : (
                 <Link
                   key={link.label}

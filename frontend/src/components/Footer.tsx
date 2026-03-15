@@ -17,9 +17,14 @@ export default function Footer() {
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
     { label: "All Products", href: "/products" },
+    { label: "Collections", href: "/collections" },
+    { label: "New Arrivals", href: "/new" },
+    { label: "Sale", href: "/sale" },
+    { label: "Kitting Service", href: "/kitting" },
+    { label: "Impact Aware", href: "/impact-aware" },
     { label: "Our Business", href: "/business" },
+    { label: "News & Blog", href: "/blog" },
     { label: "Contact Us", href: "/contact" },
-    { label: "Request a Quote", href: "/contact" },
   ];
 
   const socialLinks = [
@@ -185,22 +190,16 @@ export default function Footer() {
       <div className="border-t border-slate-800">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-5 sm:flex-row">
           <p className="text-xs text-slate-500">
-            &copy; 2025 Zenith Trends Pty. Ltd. All rights reserved.
+            &copy; 2026 Zenith Trends Pty. Ltd. All rights reserved.
           </p>
-          <div className="flex items-center gap-4 text-xs text-slate-500">
-            <Link
-              href="/privacy"
-              className="transition-colors hover:text-[#2AB09C]"
-            >
-              Privacy Policy
-            </Link>
+          <div className="flex flex-wrap items-center justify-center gap-3 text-xs text-slate-500">
+            <Link href="/privacy" className="transition-colors hover:text-[#2AB09C]">Privacy Policy</Link>
             <span className="text-slate-700">|</span>
-            <Link
-              href="/terms"
-              className="transition-colors hover:text-[#2AB09C]"
-            >
-              Terms &amp; Conditions
-            </Link>
+            <Link href="/terms" className="transition-colors hover:text-[#2AB09C]">Terms &amp; Conditions</Link>
+            <span className="text-slate-700">|</span>
+            <Link href="/impact-aware" className="transition-colors hover:text-emerald-400">Impact Aware</Link>
+            <span className="text-slate-700">|</span>
+            <Link href="/blog" className="transition-colors hover:text-[#2AB09C]">Blog</Link>
           </div>
         </div>
       </div>
