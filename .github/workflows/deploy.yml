@@ -94,14 +94,15 @@ jobs:
           aws configure set default.s3.max_concurrent_requests 20
 
           # Hashed assets (_next/static) — immutable, cache 1 year
+          # These filenames contain content hashes so --size-only is safe
           aws s3 sync frontend/out/_next/static "s3://$BUCKET_NAME/_next/static" \
             --size-only \
             --cache-control "public, max-age=31536000, immutable"
 
           # Everything else (HTML pages, images, etc) — short cache
+          # No --size-only here: content can change without size changing (e.g. color hex swaps)
           aws s3 sync frontend/out "s3://$BUCKET_NAME" \
             --delete \
-            --size-only \
             --exclude "_next/static/*" \
             --cache-control "public, max-age=60, s-maxage=3600"
 
