@@ -67,7 +67,7 @@ export default function CollectionsPage() {
       </section>
 
       {/* Collections Grid */}
-      <section className="bg-gradient-to-br from-[#A8DDD0] via-[#C8EBE3] to-[#A8DDD0] px-4 py-14 sm:py-16 lg:py-20">
+      <section className="bg-gradient-to-br from-[#B4A0F4] via-[#D8D0FC] to-[#B4A0F4] px-4 py-14 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <motion.div
             variants={containerVariants}
@@ -104,13 +104,13 @@ export default function CollectionsPage() {
 
                     {/* Content */}
                     <div className="p-6">
-                      <h3 className="text-xl font-bold text-slate-900 transition-colors group-hover:text-[#4DB8A4]">
+                      <h3 className="text-xl font-bold text-slate-900 transition-colors group-hover:text-[#7C3AED]">
                         {col.name}
                       </h3>
                       <p className="mt-2 text-sm leading-relaxed text-slate-500">
                         {col.description}
                       </p>
-                      <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#4DB8A4] transition-colors group-hover:text-[#3A9A8D]">
+                      <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#7C3AED] transition-colors group-hover:text-[#6D28D9]">
                         Browse collection
                         <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </div>
@@ -151,7 +151,7 @@ export default function CollectionsPage() {
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-bold text-[#4DB8A4] shadow-lg transition-all hover:bg-white/90"
+              className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-bold text-[#7C3AED] shadow-lg transition-all hover:bg-white/90"
             >
               Talk to Our Team
               <ArrowRight className="h-4 w-4" />

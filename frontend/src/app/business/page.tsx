@@ -100,7 +100,7 @@ export default function BusinessPage() {
       <section className="bg-gradient-to-r from-[#F0DFA0] via-[#F5EAC0] to-[#F0DFA0] px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
-            <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">
+            <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#7C3AED]">
               How We Work
             </span>
             <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
@@ -125,7 +125,7 @@ export default function BusinessPage() {
                   className="flex gap-5 rounded-2xl border border-slate-100 bg-white p-6 shadow-sm transition-all hover:shadow-md lg:p-8"
                 >
                   <div className="flex-shrink-0">
-                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#4DB8A4]/10 text-[#4DB8A4]">
+                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#7C3AED]/10 text-[#7C3AED]">
                       <Icon className="h-6 w-6" />
                     </div>
                   </div>
@@ -145,9 +145,9 @@ export default function BusinessPage() {
       </section>
 
       {/* Industries Served */}
-      <section className="bg-gradient-to-br from-[#0F1D2F] via-[#163B4E] to-[#1A7A6D] px-4 py-16 sm:py-20 lg:py-24">
+      <section className="bg-gradient-to-br from-[#0F1D2F] via-[#163B4E] to-[#5B21B6] px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-4xl text-center">
-          <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">
+          <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#7C3AED]">
             Our Reach
           </span>
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
@@ -171,7 +171,7 @@ export default function BusinessPage() {
           >
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-xl bg-[#4DB8A4] px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#4DB8A4]/20 transition-all hover:bg-[#3A9A8D] hover:shadow-xl"
+              className="inline-flex items-center gap-2 rounded-xl bg-[#7C3AED] px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#7C3AED]/20 transition-all hover:bg-[#6D28D9] hover:shadow-xl"
             >
               Get in Touch
               <ArrowRight className="h-4 w-4" />

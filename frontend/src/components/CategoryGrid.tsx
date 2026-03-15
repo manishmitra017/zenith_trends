@@ -24,11 +24,11 @@ const cardVariants = {
 
 export default function CategoryGrid() {
   return (
-    <section className="relative bg-gradient-to-br from-[#0F1D2F] via-[#163B4E] to-[#1A7A6D] px-4 py-16 sm:py-20 lg:py-24">
+    <section className="relative bg-gradient-to-br from-[#0F1D2F] via-[#163B4E] to-[#5B21B6] px-4 py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="mb-12 text-center">
-          <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">
+          <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#7C3AED]">
             Explore Our Range
           </span>
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">

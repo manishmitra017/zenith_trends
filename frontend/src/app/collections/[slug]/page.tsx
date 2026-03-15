@@ -23,7 +23,7 @@ export default async function CollectionPage({
           <h1 className="text-2xl font-bold text-slate-900">Collection Not Found</h1>
           <Link
             href="/collections"
-            className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#4DB8A4]"
+            className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#7C3AED]"
           >
             Back to Collections
             <ArrowRight className="h-4 w-4" />

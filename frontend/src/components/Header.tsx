@@ -52,19 +52,19 @@ export default function Header() {
       }`}
     >
       {/* Top Bar */}
-      <div className="bg-gradient-to-r from-[#0F1D2F] via-[#1A7A6D] to-[#0F1D2F] text-white">
+      <div className="bg-gradient-to-r from-[#0F1D2F] via-[#5B21B6] to-[#0F1D2F] text-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2.5 text-xs sm:text-sm">
           <div className="flex items-center gap-4 sm:gap-6">
             <a
               href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
-              className="flex items-center gap-1.5 transition-colors hover:text-[#4DB8A4]"
+              className="flex items-center gap-1.5 transition-colors hover:text-[#7C3AED]"
             >
               <Phone className="h-3.5 w-3.5" />
               <span className="hidden sm:inline">{siteConfig.phone}</span>
             </a>
             <a
               href={`mailto:${siteConfig.email}`}
-              className="flex items-center gap-1.5 transition-colors hover:text-[#4DB8A4]"
+              className="flex items-center gap-1.5 transition-colors hover:text-[#7C3AED]"
             >
               <Mail className="h-3.5 w-3.5" />
               <span className="hidden sm:inline">{siteConfig.email}</span>
@@ -79,7 +79,7 @@ export default function Header() {
       </div>
 
       {/* Main Header */}
-      <div className="bg-gradient-to-r from-[#B8E4DB] via-[#E0F5F0] to-[#B8E4DB]">
+      <div className="bg-gradient-to-r from-[#C4B5FD] via-[#EDE9FE] to-[#C4B5FD]">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:py-4">
           {/* Brand Logo */}
           <Link href="/" className="flex-shrink-0">
@@ -105,7 +105,7 @@ export default function Header() {
                 >
                   <Link
                     href={link.href}
-                    className="flex items-center gap-1 rounded-lg px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-[#F0FAF7] hover:text-[#3A9A8D]"
+                    className="flex items-center gap-1 rounded-lg px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-[#F5F3FF] hover:text-[#6D28D9]"
                   >
                     {link.label}
                     <ChevronDown
@@ -127,7 +127,7 @@ export default function Header() {
                           <Link
                             key={cat.slug}
                             href={`/products/${cat.slug}`}
-                            className="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm text-slate-600 transition-colors hover:bg-[#F0FAF7] hover:text-[#3A9A8D]"
+                            className="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm text-slate-600 transition-colors hover:bg-[#F5F3FF] hover:text-[#6D28D9]"
                           >
                             <span>{cat.name}</span>
                             <span className="rounded-full bg-slate-100 px-2 py-0.5 text-xs text-slate-500">
@@ -151,16 +151,16 @@ export default function Header() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="flex items-center gap-1 rounded-lg px-4 py-2 text-sm font-semibold text-[#4DB8A4] transition-colors hover:bg-[#F0FAF7]"
+                  className="flex items-center gap-1 rounded-lg px-4 py-2 text-sm font-semibold text-[#7C3AED] transition-colors hover:bg-[#F5F3FF]"
                 >
                   {link.label}
-                  <span className="rounded-full bg-[#4DB8A4] px-1.5 py-0.5 text-[9px] font-bold text-white leading-none">&#10022;</span>
+                  <span className="rounded-full bg-[#7C3AED] px-1.5 py-0.5 text-[9px] font-bold text-white leading-none">&#10022;</span>
                 </Link>
               ) : (
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="rounded-lg px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-[#F0FAF7] hover:text-[#3A9A8D]"
+                  className="rounded-lg px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-[#F5F3FF] hover:text-[#6D28D9]"
                 >
                   {link.label}
                 </Link>
@@ -173,7 +173,7 @@ export default function Header() {
             {/* Search Toggle */}
             <button
               onClick={() => setSearchOpen(!searchOpen)}
-              className="rounded-lg p-2 text-slate-600 transition-colors hover:bg-slate-100 hover:text-[#4DB8A4]"
+              className="rounded-lg p-2 text-slate-600 transition-colors hover:bg-slate-100 hover:text-[#7C3AED]"
               aria-label="Search"
             >
               <Search className="h-5 w-5" />
@@ -182,7 +182,7 @@ export default function Header() {
             {/* Quote List Icon */}
             <button
               onClick={openDrawer}
-              className="relative rounded-lg p-2 text-slate-600 transition-colors hover:bg-slate-100 hover:text-[#4DB8A4]"
+              className="relative rounded-lg p-2 text-slate-600 transition-colors hover:bg-slate-100 hover:text-[#7C3AED]"
               aria-label={`Quote list — ${totalItems} items`}
             >
               <ShoppingBag className="h-5 w-5" />
@@ -196,7 +196,7 @@ export default function Header() {
             {/* Request Quote CTA (desktop) */}
             <Link
               href="/contact"
-              className="hidden rounded-lg bg-[#4DB8A4] px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-[#3A9A8D] lg:inline-flex"
+              className="hidden rounded-lg bg-[#7C3AED] px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-[#6D28D9] lg:inline-flex"
             >
               Get a Quote
             </Link>
@@ -232,7 +232,7 @@ export default function Header() {
                   <input
                     type="text"
                     placeholder="Search products..."
-                    className="w-full rounded-lg border border-slate-200 py-2.5 pl-10 pr-4 text-sm text-slate-700 outline-none transition-colors focus:border-[#4DB8A4] focus:ring-2 focus:ring-[#4DB8A4]/20"
+                    className="w-full rounded-lg border border-slate-200 py-2.5 pl-10 pr-4 text-sm text-slate-700 outline-none transition-colors focus:border-[#7C3AED] focus:ring-2 focus:ring-[#7C3AED]/20"
                     autoFocus
                   />
                 </div>
@@ -306,11 +306,11 @@ export default function Header() {
                             transition={{ duration: 0.2 }}
                             className="overflow-hidden"
                           >
-                            <div className="ml-3 border-l-2 border-[#4DB8A4]/20 pl-3">
+                            <div className="ml-3 border-l-2 border-[#7C3AED]/20 pl-3">
                               <Link
                                 href="/products"
                                 onClick={() => setMobileOpen(false)}
-                                className="block rounded-lg px-3 py-2 text-sm font-medium text-[#4DB8A4]"
+                                className="block rounded-lg px-3 py-2 text-sm font-medium text-[#7C3AED]"
                               >
                                 All Products
                               </Link>
@@ -319,7 +319,7 @@ export default function Header() {
                                   key={cat.slug}
                                   href={`/products/${cat.slug}`}
                                   onClick={() => setMobileOpen(false)}
-                                  className="block rounded-lg px-3 py-2 text-sm text-slate-600 hover:text-[#4DB8A4]"
+                                  className="block rounded-lg px-3 py-2 text-sm text-slate-600 hover:text-[#7C3AED]"
                                 >
                                   {cat.name}
                                 </Link>
@@ -334,7 +334,7 @@ export default function Header() {
                       key={link.label}
                       href={link.href}
                       onClick={() => setMobileOpen(false)}
-                      className="block rounded-lg px-3 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-[#4DB8A4]"
+                      className="block rounded-lg px-3 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-[#7C3AED]"
                     >
                       {link.label}
                     </Link>
@@ -346,7 +346,7 @@ export default function Header() {
                 <Link
                   href="/contact"
                   onClick={() => setMobileOpen(false)}
-                  className="block w-full rounded-lg bg-[#4DB8A4] py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-[#3A9A8D]"
+                  className="block w-full rounded-lg bg-[#7C3AED] py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-[#6D28D9]"
                 >
                   Get a Quote
                 </Link>

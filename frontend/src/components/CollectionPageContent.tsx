@@ -72,7 +72,7 @@ export default function CollectionPageContent({ collection, products }: Collecti
       </section>
 
       {/* Products Grid */}
-      <section className="bg-gradient-to-br from-[#A8DDD0] via-[#C8EBE3] to-[#A8DDD0] px-4 py-12 sm:py-16 lg:py-20">
+      <section className="bg-gradient-to-br from-[#B4A0F4] via-[#D8D0FC] to-[#B4A0F4] px-4 py-12 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           {products.length > 0 ? (
             <motion.div
@@ -103,14 +103,14 @@ export default function CollectionPageContent({ collection, products }: Collecti
           >
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-xl bg-[#4DB8A4] px-8 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#4DB8A4]/20 transition-all hover:bg-[#3A9A8D]"
+              className="inline-flex items-center gap-2 rounded-xl bg-[#7C3AED] px-8 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#7C3AED]/20 transition-all hover:bg-[#6D28D9]"
             >
               Request a Quote for this Collection
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="/collections"
-              className="inline-flex items-center gap-2 rounded-xl border border-slate-200 px-8 py-3.5 text-sm font-semibold text-slate-700 transition-all hover:border-[#4DB8A4] hover:text-[#4DB8A4]"
+              className="inline-flex items-center gap-2 rounded-xl border border-slate-200 px-8 py-3.5 text-sm font-semibold text-slate-700 transition-all hover:border-[#7C3AED] hover:text-[#7C3AED]"
             >
               View All Collections
             </Link>

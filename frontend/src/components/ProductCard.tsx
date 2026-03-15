@@ -37,7 +37,7 @@ export default function ProductCard({ product, showNewBadge }: ProductCardProps)
         {/* Badges */}
         <div className="absolute left-2.5 top-2.5 flex flex-col gap-1.5">
           {(product.isNew || showNewBadge) && (
-            <span className="rounded-md bg-[#4DB8A4] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white shadow">
+            <span className="rounded-md bg-[#7C3AED] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white shadow">
               New
             </span>
           )}
@@ -57,13 +57,13 @@ export default function ProductCard({ product, showNewBadge }: ProductCardProps)
       {/* Content */}
       <div className="p-4">
         {/* Category Badge */}
-        <span className="mb-2 inline-block rounded-full bg-[#4DB8A4]/10 px-2.5 py-0.5 text-[11px] font-semibold text-[#3A9A8D]">
+        <span className="mb-2 inline-block rounded-full bg-[#7C3AED]/10 px-2.5 py-0.5 text-[11px] font-semibold text-[#6D28D9]">
           {product.category}
         </span>
 
         {/* Product Name */}
         <Link href={`/products/${product.categorySlug}/${product.slug}`}>
-          <h3 className="text-sm font-bold text-slate-900 transition-colors group-hover:text-[#4DB8A4] sm:text-base">
+          <h3 className="text-sm font-bold text-slate-900 transition-colors group-hover:text-[#7C3AED] sm:text-base">
             {product.name}
           </h3>
         </Link>
@@ -80,7 +80,7 @@ export default function ProductCard({ product, showNewBadge }: ProductCardProps)
             className={`inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl px-3 py-2 text-xs font-bold transition-all ${
               inCart
                 ? "bg-emerald-50 text-emerald-600 hover:bg-emerald-100"
-                : "bg-[#4DB8A4] text-white shadow-sm shadow-[#4DB8A4]/20 hover:bg-[#3A9A8D]"
+                : "bg-[#7C3AED] text-white shadow-sm shadow-[#7C3AED]/20 hover:bg-[#6D28D9]"
             }`}
           >
             {inCart ? (
