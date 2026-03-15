@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import { ShoppingBag, Check } from "lucide-react";
 import type { Product } from "@/data/products";
+import { useQuoteCart } from "@/contexts/QuoteCartContext";
 
 interface ProductCardProps {
   product: Product;
@@ -9,6 +11,15 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product, showNewBadge }: ProductCardProps) {
+  const { addItem, isInCart, openDrawer } = useQuoteCart();
+  const inCart = isInCart(product.id);
+
+  const handleAddToQuote = (e: React.MouseEvent) => {
+    e.preventDefault();
+    addItem(product);
+    openDrawer();
+  };
+
   return (
     <div className="group overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-black/5">
       {/* Image */}
@@ -62,22 +73,29 @@ export default function ProductCard({ product, showNewBadge }: ProductCardProps)
           {product.description}
         </p>
 
-        {/* Enquire Now */}
-        <Link
-          href={`/contact?product=${product.slug}`}
-          className="mt-3 inline-flex items-center text-xs font-semibold text-[#2AB09C] transition-colors hover:text-[#239485] sm:text-sm"
-        >
-          Enquire Now
-          <svg
-            className="ml-1 h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2.5}
+        {/* Actions */}
+        <div className="mt-3 flex items-center gap-2">
+          <button
+            onClick={handleAddToQuote}
+            className={`inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl px-3 py-2 text-xs font-bold transition-all ${
+              inCart
+                ? "bg-emerald-50 text-emerald-600 hover:bg-emerald-100"
+                : "bg-[#2AB09C] text-white shadow-sm shadow-[#2AB09C]/20 hover:bg-[#1E8F7E]"
+            }`}
           >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
+            {inCart ? (
+              <>
+                <Check className="h-3.5 w-3.5" />
+                In Quote
+              </>
+            ) : (
+              <>
+                <ShoppingBag className="h-3.5 w-3.5" />
+                Add to Quote
+              </>
+            )}
+          </button>
+        </div>
       </div>
     </div>
   );

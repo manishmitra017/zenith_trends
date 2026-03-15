@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
@@ -10,7 +11,12 @@ import {
   Zap,
   Layers,
   Stamp,
+  ShoppingBag,
+  Check,
+  Plus,
+  Minus,
 } from "lucide-react";
+import { useQuoteCart } from "@/contexts/QuoteCartContext";
 import ProductCard from "@/components/ProductCard";
 import type { Category, Product } from "@/data/products";
 
@@ -55,6 +61,23 @@ export default function ProductDetailContent({
   categorySlug,
   relatedProducts,
 }: ProductDetailContentProps) {
+  const { addItem, updateQty, isInCart, items, openDrawer } = useQuoteCart();
+  const [qty, setQty] = useState(1);
+  const inCart = isInCart(product.id);
+  const cartItem = items.find((i) => i.product.id === product.id);
+
+  const handleAddToQuote = () => {
+    if (inCart) {
+      // Update quantity of existing item
+      updateQty(product.id, (cartItem?.quantity ?? 0) + qty);
+    } else {
+      // Add item then set the chosen quantity
+      addItem(product);
+      if (qty > 1) updateQty(product.id, qty);
+    }
+    openDrawer();
+  };
+
   return (
     <>
       {/* Breadcrumb Bar */}
@@ -156,20 +179,82 @@ export default function ProductDetailContent({
                 </ul>
               </div>
 
-              {/* CTA */}
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Link
-                  href={`/contact?product=${product.slug}`}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#2AB09C] px-8 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#2AB09C]/20 transition-all hover:bg-[#1E8F7E] hover:shadow-xl"
-                >
-                  Request a Quote
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
+              {/* Quantity + Add to Quote */}
+              <div className="mt-8">
+                {/* Qty selector */}
+                <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
+                  Quantity
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="flex items-center rounded-xl border border-slate-200">
+                    <button
+                      onClick={() => setQty((q) => Math.max(1, q - 1))}
+                      className="flex h-11 w-11 items-center justify-center rounded-l-xl text-slate-500 transition-colors hover:bg-slate-50 hover:text-[#2AB09C]"
+                      aria-label="Decrease quantity"
+                    >
+                      <Minus className="h-4 w-4" />
+                    </button>
+                    <span className="w-12 text-center text-base font-bold text-slate-900">
+                      {qty}
+                    </span>
+                    <button
+                      onClick={() => setQty((q) => q + 1)}
+                      className="flex h-11 w-11 items-center justify-center rounded-r-xl text-slate-500 transition-colors hover:bg-slate-50 hover:text-[#2AB09C]"
+                      aria-label="Increase quantity"
+                    >
+                      <Plus className="h-4 w-4" />
+                    </button>
+                  </div>
+
+                  <button
+                    onClick={handleAddToQuote}
+                    className={`inline-flex flex-1 items-center justify-center gap-2 rounded-xl px-6 py-3 text-sm font-bold shadow-lg transition-all hover:shadow-xl ${
+                      inCart
+                        ? "bg-emerald-500 text-white hover:bg-emerald-600 shadow-emerald-500/20"
+                        : "bg-[#2AB09C] text-white hover:bg-[#1E8F7E] shadow-[#2AB09C]/20"
+                    }`}
+                  >
+                    {inCart ? (
+                      <>
+                        <Check className="h-4 w-4" />
+                        Add More to Quote
+                      </>
+                    ) : (
+                      <>
+                        <ShoppingBag className="h-4 w-4" />
+                        Add to Quote
+                      </>
+                    )}
+                  </button>
+                </div>
+
+                {inCart && (
+                  <p className="mt-2 text-xs text-emerald-600">
+                    ✓ Already in your quote list ({cartItem?.quantity} × added) —{" "}
+                    <button
+                      onClick={openDrawer}
+                      className="font-semibold underline hover:text-emerald-700"
+                    >
+                      view list
+                    </button>
+                  </p>
+                )}
+              </div>
+
+              {/* Secondary actions */}
+              <div className="mt-4 flex flex-col gap-2 sm:flex-row">
                 <Link
                   href={`/products/${categorySlug}`}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 px-8 py-3.5 text-sm font-semibold text-slate-700 transition-all hover:border-[#2AB09C] hover:text-[#2AB09C]"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 px-6 py-3 text-sm font-semibold text-slate-700 transition-all hover:border-[#2AB09C] hover:text-[#2AB09C]"
                 >
                   View All {category.name}
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 px-6 py-3 text-sm font-semibold text-slate-700 transition-all hover:border-[#2AB09C] hover:text-[#2AB09C]"
+                >
+                  Enquire Directly
+                  <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
             </motion.div>

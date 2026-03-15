@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import QuoteCart from "@/components/QuoteCart";
+import { QuoteCartProvider } from "@/contexts/QuoteCartContext";
 import { siteConfig } from "@/data/content";
 import "./globals.css";
 
@@ -32,9 +34,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
-        <Header />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+        <QuoteCartProvider>
+          <Header />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+          <QuoteCart />
+        </QuoteCartProvider>
       </body>
     </html>
   );

@@ -3,10 +3,11 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Mail, Clock, Search, Menu, X, ChevronDown } from "lucide-react";
+import { Phone, Mail, Clock, Search, Menu, X, ChevronDown, ShoppingBag } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { categories } from "@/data/products";
 import { siteConfig } from "@/data/content";
+import { useQuoteCart } from "@/contexts/QuoteCartContext";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -14,6 +15,7 @@ export default function Header() {
   const [productsOpen, setProductsOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const { totalItems, openDrawer } = useQuoteCart();
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 10);
@@ -175,6 +177,20 @@ export default function Header() {
               aria-label="Search"
             >
               <Search className="h-5 w-5" />
+            </button>
+
+            {/* Quote List Icon */}
+            <button
+              onClick={openDrawer}
+              className="relative rounded-lg p-2 text-slate-600 transition-colors hover:bg-slate-100 hover:text-[#2AB09C]"
+              aria-label={`Quote list — ${totalItems} items`}
+            >
+              <ShoppingBag className="h-5 w-5" />
+              {totalItems > 0 && (
+                <span className="absolute -right-0.5 -top-0.5 flex h-4.5 w-4.5 items-center justify-center rounded-full bg-rose-500 text-[9px] font-bold text-white shadow-sm">
+                  {totalItems > 99 ? "99+" : totalItems}
+                </span>
+              )}
             </button>
 
             {/* Request Quote CTA (desktop) */}
