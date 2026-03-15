@@ -62,7 +62,7 @@ export class WebsiteStack extends cdk.Stack {
       })
     );
 
-    // ── API Gateway HTTP API with CORS ───────────────────────────
+    // ── API Gateway HTTP API with CORS + rate limiting ───────────
     const api = new apigatewayv2.HttpApi(this, 'QuoteApi', {
       apiName: 'zenith-trends-quote-api',
       description: 'Zenith Trends quote submission API',
@@ -80,6 +80,13 @@ export class WebsiteStack extends cdk.Stack {
         maxAge: cdk.Duration.hours(24),
       },
     });
+
+    // Rate limiting: 10 requests/second burst, 5 requests/second sustained
+    const defaultStage = api.defaultStage?.node.defaultChild as apigatewayv2.CfnStage;
+    defaultStage.defaultRouteSettings = {
+      throttlingBurstLimit: 10,
+      throttlingRateLimit: 5,
+    };
 
     api.addRoutes({
       path: '/quote',
