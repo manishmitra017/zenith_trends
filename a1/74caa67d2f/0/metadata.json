@@ -1,0 +1,23 @@
+{
+  "cli_version": "0.5.0",
+  "checkpoint_id": "a174caa67d2f",
+  "session_id": "92da67fc-758f-4421-8871-e9ec0a881fd2",
+  "strategy": "manual-commit",
+  "created_at": "2026-03-15T08:01:11.239654Z",
+  "branch": "fix/cors-cloudfront-origin",
+  "checkpoints_count": 1,
+  "files_touched": [],
+  "agent": "Claude Code",
+  "model": "claude-opus-4-6",
+  "turn_id": "04106ade3e78",
+  "token_usage": {
+    "input_tokens": 761,
+    "cache_creation_tokens": 1159078,
+    "cache_read_tokens": 25963980,
+    "output_tokens": 88665,
+    "api_call_count": 248
+  },
+  "session_metrics": {
+    "turn_count": 39
+  }
+}

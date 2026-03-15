@@ -1,0 +1,23 @@
+{
+  "cli_version": "0.5.0",
+  "checkpoint_id": "a174caa67d2f",
+  "strategy": "manual-commit",
+  "branch": "fix/cors-cloudfront-origin",
+  "checkpoints_count": 1,
+  "files_touched": null,
+  "sessions": [
+    {
+      "metadata": "/a1/74caa67d2f/0/metadata.json",
+      "transcript": "/a1/74caa67d2f/0/full.jsonl",
+      "content_hash": "/a1/74caa67d2f/0/content_hash.txt",
+      "prompt": "/a1/74caa67d2f/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 761,
+    "cache_creation_tokens": 1159078,
+    "cache_read_tokens": 25963980,
+    "output_tokens": 88665,
+    "api_call_count": 248
+  }
+}
