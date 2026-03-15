@@ -87,7 +87,7 @@ export default function NewArrivalsPage() {
                 onClick={() => setSelected(cat)}
                 className={`flex-shrink-0 rounded-lg px-4 py-1.5 text-sm font-medium capitalize transition-all ${
                   selected === cat
-                    ? "bg-[#4DB8A4] text-white shadow-sm"
+                    ? "bg-[#7C3AED] text-white shadow-sm"
                     : "bg-slate-100 text-slate-600 hover:bg-slate-200"
                 }`}
               >
@@ -99,7 +99,7 @@ export default function NewArrivalsPage() {
       </section>
 
       {/* Products */}
-      <section className="bg-gradient-to-br from-[#B8E4DB] via-[#D9F0EB] to-[#E8D5A0] px-4 py-12 sm:py-16 lg:py-20">
+      <section className="bg-gradient-to-br from-[#C4B5FD] via-[#DDD6FE] to-[#E8D5A0] px-4 py-12 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           {filtered.length > 0 ? (
             <motion.div
@@ -129,7 +129,7 @@ export default function NewArrivalsPage() {
           >
             <Link
               href="/products"
-              className="inline-flex items-center gap-2 rounded-xl border border-slate-200 px-8 py-3.5 text-sm font-semibold text-slate-700 transition-all hover:border-[#4DB8A4] hover:text-[#4DB8A4]"
+              className="inline-flex items-center gap-2 rounded-xl border border-slate-200 px-8 py-3.5 text-sm font-semibold text-slate-700 transition-all hover:border-[#7C3AED] hover:text-[#7C3AED]"
             >
               View All Products
               <ArrowRight className="h-4 w-4" />

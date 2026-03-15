@@ -57,25 +57,25 @@ export default function Footer() {
             </p>
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-2.5">
-                <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#4DB8A4]" />
+                <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#7C3AED]" />
                 <span className="text-slate-400">{siteConfig.address}</span>
               </div>
               <a
                 href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
-                className="flex items-center gap-2.5 transition-colors hover:text-[#4DB8A4]"
+                className="flex items-center gap-2.5 transition-colors hover:text-[#7C3AED]"
               >
-                <Phone className="h-4 w-4 flex-shrink-0 text-[#4DB8A4]" />
+                <Phone className="h-4 w-4 flex-shrink-0 text-[#7C3AED]" />
                 {siteConfig.phone}
               </a>
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="flex items-center gap-2.5 transition-colors hover:text-[#4DB8A4]"
+                className="flex items-center gap-2.5 transition-colors hover:text-[#7C3AED]"
               >
-                <Mail className="h-4 w-4 flex-shrink-0 text-[#4DB8A4]" />
+                <Mail className="h-4 w-4 flex-shrink-0 text-[#7C3AED]" />
                 {siteConfig.email}
               </a>
               <div className="flex items-center gap-2.5">
-                <Clock className="h-4 w-4 flex-shrink-0 text-[#4DB8A4]" />
+                <Clock className="h-4 w-4 flex-shrink-0 text-[#7C3AED]" />
                 <span className="text-slate-400">{siteConfig.hours}</span>
               </div>
             </div>
@@ -91,7 +91,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-slate-400 transition-colors hover:text-[#4DB8A4]"
+                    className="text-sm text-slate-400 transition-colors hover:text-[#7C3AED]"
                   >
                     {link.label}
                   </Link>
@@ -110,7 +110,7 @@ export default function Footer() {
                 <li key={cat.slug}>
                   <Link
                     href={`/products/${cat.slug}`}
-                    className="text-sm text-slate-400 transition-colors hover:text-[#4DB8A4]"
+                    className="text-sm text-slate-400 transition-colors hover:text-[#7C3AED]"
                   >
                     {cat.name}
                   </Link>
@@ -139,12 +139,12 @@ export default function Footer() {
                   type="email"
                   placeholder="Your email address"
                   required
-                  className="w-full rounded-lg border border-[#243B56] bg-[#1A2D44] px-4 py-2.5 text-sm text-white placeholder-slate-500 outline-none transition-colors focus:border-[#4DB8A4] focus:ring-2 focus:ring-[#4DB8A4]/20"
+                  className="w-full rounded-lg border border-[#243B56] bg-[#1A2D44] px-4 py-2.5 text-sm text-white placeholder-slate-500 outline-none transition-colors focus:border-[#7C3AED] focus:ring-2 focus:ring-[#7C3AED]/20"
                 />
               </div>
               <button
                 type="submit"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#4DB8A4] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#3A9A8D]"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#7C3AED] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#6D28D9]"
               >
                 Subscribe
                 <Send className="h-4 w-4" />
@@ -162,7 +162,7 @@ export default function Footer() {
                     key={social.label}
                     href={social.href}
                     aria-label={social.label}
-                    className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#1A2D44] text-slate-400 transition-all hover:bg-[#4DB8A4] hover:text-white"
+                    className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#1A2D44] text-slate-400 transition-all hover:bg-[#7C3AED] hover:text-white"
                   >
                     <social.icon className="h-4 w-4" />
                   </a>
@@ -193,13 +193,13 @@ export default function Footer() {
             &copy; 2026 Zenith Trends Pty. Ltd. All rights reserved.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3 text-xs text-slate-500">
-            <Link href="/privacy" className="transition-colors hover:text-[#4DB8A4]">Privacy Policy</Link>
+            <Link href="/privacy" className="transition-colors hover:text-[#7C3AED]">Privacy Policy</Link>
             <span className="text-slate-700">|</span>
-            <Link href="/terms" className="transition-colors hover:text-[#4DB8A4]">Terms &amp; Conditions</Link>
+            <Link href="/terms" className="transition-colors hover:text-[#7C3AED]">Terms &amp; Conditions</Link>
             <span className="text-slate-700">|</span>
             <Link href="/impact-aware" className="transition-colors hover:text-emerald-400">Impact Aware</Link>
             <span className="text-slate-700">|</span>
-            <Link href="/blog" className="transition-colors hover:text-[#4DB8A4]">Blog</Link>
+            <Link href="/blog" className="transition-colors hover:text-[#7C3AED]">Blog</Link>
           </div>
         </div>
       </div>

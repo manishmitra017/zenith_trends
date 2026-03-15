@@ -86,7 +86,7 @@ export default function AboutPage() {
       </section>
 
       {/* Company Overview */}
-      <section className="bg-gradient-to-br from-[#B8E4DB] via-[#D9F0EB] to-[#E8D5A0] px-4 py-16 sm:py-20 lg:py-24">
+      <section className="bg-gradient-to-br from-[#C4B5FD] via-[#DDD6FE] to-[#E8D5A0] px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
             <motion.p
@@ -124,7 +124,7 @@ export default function AboutPage() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition-all ${
                     activeTab === tab.id
-                      ? "bg-[#4DB8A4] text-white shadow-lg shadow-[#4DB8A4]/20"
+                      ? "bg-[#7C3AED] text-white shadow-lg shadow-[#7C3AED]/20"
                       : "bg-white text-slate-600 hover:bg-slate-100"
                   }`}
                 >
@@ -162,8 +162,8 @@ export default function AboutPage() {
 
             {activeTab === "ethical" && (
               <div className="rounded-2xl border border-slate-100 bg-white p-8 shadow-sm sm:p-10">
-                <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#4DB8A4]/10">
-                  <ShieldCheck className="h-6 w-6 text-[#4DB8A4]" />
+                <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#7C3AED]/10">
+                  <ShieldCheck className="h-6 w-6 text-[#7C3AED]" />
                 </div>
                 <h3 className="mb-4 text-2xl font-bold text-slate-900">
                   {aboutContent.ethical.title}
@@ -182,7 +182,7 @@ export default function AboutPage() {
                       variants={fadeUp}
                       className="flex items-start gap-3"
                     >
-                      <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#4DB8A4]" />
+                      <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#7C3AED]" />
                       <span className="text-sm text-slate-600">{standard}</span>
                     </motion.li>
                   ))}
@@ -192,8 +192,8 @@ export default function AboutPage() {
 
             {activeTab === "sustainability" && (
               <div className="rounded-2xl border border-slate-100 bg-white p-8 shadow-sm sm:p-10">
-                <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#4DB8A4]/10">
-                  <Leaf className="h-6 w-6 text-[#4DB8A4]" />
+                <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#7C3AED]/10">
+                  <Leaf className="h-6 w-6 text-[#7C3AED]" />
                 </div>
                 <h3 className="mb-4 text-2xl font-bold text-slate-900">
                   {aboutContent.sustainability.title}
@@ -212,7 +212,7 @@ export default function AboutPage() {
                       variants={fadeUp}
                       className="flex items-start gap-3"
                     >
-                      <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#4DB8A4]" />
+                      <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#7C3AED]" />
                       <span className="text-sm text-slate-600">
                         {practice}
                       </span>
@@ -226,10 +226,10 @@ export default function AboutPage() {
       </section>
 
       {/* Our Industries */}
-      <section className="bg-gradient-to-br from-[#0F1D2F] via-[#163B4E] to-[#1A7A6D] px-4 py-16 sm:py-20 lg:py-24">
+      <section className="bg-gradient-to-br from-[#0F1D2F] via-[#163B4E] to-[#5B21B6] px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
-            <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">
+            <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#7C3AED]">
               Who We Serve
             </span>
             <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
@@ -252,9 +252,9 @@ export default function AboutPage() {
                   whileInView="visible"
                   viewport={{ once: true }}
                   variants={fadeUp}
-                  className="flex flex-col items-center rounded-2xl border border-slate-100 bg-slate-50 p-6 text-center transition-all hover:border-[#4DB8A4]/20 hover:shadow-md"
+                  className="flex flex-col items-center rounded-2xl border border-slate-100 bg-slate-50 p-6 text-center transition-all hover:border-[#7C3AED]/20 hover:shadow-md"
                 >
-                  <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#4DB8A4]/10 text-[#4DB8A4]">
+                  <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#7C3AED]/10 text-[#7C3AED]">
                     <Icon className="h-6 w-6" />
                   </div>
                   <p className="text-sm font-semibold text-slate-700">

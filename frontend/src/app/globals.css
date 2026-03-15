@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* ── Brand palette (matched to logo) ─────────────────────── */
-  --color-brand: #4DB8A4;
-  --color-brand-dark: #3A9A8D;
-  --color-brand-deeper: #1A7A6D;
-  --color-brand-light: #E8F6F3;
-  --color-brand-50: #F0FAF7;
+  /* ── Brand palette (purple) ────────────────────────────── */
+  --color-brand: #7C3AED;
+  --color-brand-dark: #6D28D9;
+  --color-brand-deeper: #5B21B6;
+  --color-brand-light: #EDE9FE;
+  --color-brand-50: #F5F3FF;
 
   /* ── Accent (warm gold for CTAs and contrast) ────────────── */
   --color-accent: #D4A853;

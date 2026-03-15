@@ -135,13 +135,13 @@ export default function PrivacyPage() {
       </section>
 
       {/* Content */}
-      <section className="bg-gradient-to-br from-[#B8E4DB] via-[#D9F0EB] to-[#E8D5A0] px-4 py-14 sm:py-16 lg:py-20">
+      <section className="bg-gradient-to-br from-[#C4B5FD] via-[#DDD6FE] to-[#E8D5A0] px-4 py-14 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-8 rounded-2xl border border-[#4DB8A4]/20 bg-[#4DB8A4]/5 p-6 text-sm text-slate-600"
+            className="mb-8 rounded-2xl border border-[#7C3AED]/20 bg-[#7C3AED]/5 p-6 text-sm text-slate-600"
           >
             <strong className="text-slate-800">Summary:</strong> We collect your business and contact details to process orders and enquiries, communicate with you, and improve our services. We do not sell your data. You can access, correct or delete your information at any time by contacting us.
           </motion.div>
@@ -165,12 +165,12 @@ export default function PrivacyPage() {
 
           <div className="mt-12 border-t border-slate-100 pt-10 text-center">
             <p className="text-sm text-slate-500">Questions? Contact us at{" "}
-              <a href={`mailto:${siteConfig.email}`} className="font-semibold text-[#4DB8A4] hover:underline">{siteConfig.email}</a>
+              <a href={`mailto:${siteConfig.email}`} className="font-semibold text-[#7C3AED] hover:underline">{siteConfig.email}</a>
             </p>
             <div className="mt-4 flex justify-center gap-4 text-sm">
-              <Link href="/terms" className="text-[#4DB8A4] hover:underline">Terms &amp; Conditions</Link>
+              <Link href="/terms" className="text-[#7C3AED] hover:underline">Terms &amp; Conditions</Link>
               <span className="text-slate-300">|</span>
-              <Link href="/contact" className="text-[#4DB8A4] hover:underline">Contact Us</Link>
+              <Link href="/contact" className="text-[#7C3AED] hover:underline">Contact Us</Link>
             </div>
           </div>
         </div>

@@ -117,7 +117,7 @@ export default function HeroSection() {
               exit={{ opacity: 0, y: -16 }}
               transition={{ duration: 0.45, ease: "easeOut" }}
             >
-              <span className="mb-3 inline-block rounded-full border border-[#4DB8A4]/40 bg-[#4DB8A4]/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-[#4DB8A4] backdrop-blur-sm sm:text-sm">
+              <span className="mb-3 inline-block rounded-full border border-[#7C3AED]/40 bg-[#7C3AED]/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-[#7C3AED] backdrop-blur-sm sm:text-sm">
                 Zenith Trends Australia
               </span>
               <h1 className="mt-2 text-3xl font-extrabold leading-tight tracking-tight text-white drop-shadow-md sm:text-4xl lg:text-5xl">
@@ -129,7 +129,7 @@ export default function HeroSection() {
               <div className="mt-7 flex flex-wrap gap-3">
                 <Link
                   href="/products"
-                  className="inline-flex items-center gap-2 rounded-xl bg-[#4DB8A4] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-[#4DB8A4]/25 transition-all hover:bg-[#3A9A8D] hover:shadow-xl"
+                  className="inline-flex items-center gap-2 rounded-xl bg-[#7C3AED] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-[#7C3AED]/25 transition-all hover:bg-[#6D28D9] hover:shadow-xl"
                 >
                   Browse Products <ArrowRight className="h-4 w-4" />
                 </Link>
@@ -144,15 +144,15 @@ export default function HeroSection() {
               {/* Trust badges */}
               <div className="mt-6 flex flex-wrap gap-4 text-xs font-medium text-white/60 sm:text-sm">
                 <span className="flex items-center gap-1.5">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#4DB8A4]" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#7C3AED]" />
                   25+ Years Experience
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#4DB8A4]" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#7C3AED]" />
                   Australian Owned
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#4DB8A4]" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#7C3AED]" />
                   2,700+ Products
                 </span>
               </div>
@@ -184,7 +184,7 @@ export default function HeroSection() {
             key={i}
             onClick={() => goTo(i)}
             className={`h-2 rounded-full transition-all duration-300 ${
-              i === current ? "w-6 bg-[#4DB8A4]" : "w-2 bg-white/30 hover:bg-white/60"
+              i === current ? "w-6 bg-[#7C3AED]" : "w-2 bg-white/30 hover:bg-white/60"
             }`}
             aria-label={`Slide ${i + 1}`}
           />

@@ -114,11 +114,11 @@ export default function HomePage() {
       <FeaturedProducts />
 
       {/* New Arrivals Teaser */}
-      <section className="bg-gradient-to-r from-[#A8DDD0] via-[#C8EBE3] to-[#A8DDD0] px-4 py-16 sm:py-20 lg:py-24">
+      <section className="bg-gradient-to-r from-[#B4A0F4] via-[#D8D0FC] to-[#B4A0F4] px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>
-              <span className="mb-2 inline-flex items-center gap-1.5 text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">
+              <span className="mb-2 inline-flex items-center gap-1.5 text-sm font-semibold uppercase tracking-widest text-[#7C3AED]">
                 <Sparkles className="h-4 w-4" />
                 Just Arrived
               </span>
@@ -129,7 +129,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/new"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#4DB8A4] transition-colors hover:text-[#3A9A8D]"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#7C3AED] transition-colors hover:text-[#6D28D9]"
             >
               View All New Products <ArrowRight className="h-4 w-4" />
             </Link>
@@ -155,7 +155,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-gradient-to-r from-[#0F1D2F] via-[#163B4E] to-[#0F1D2F] px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 text-center">
-            <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">
+            <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#7C3AED]">
               Curated for Every Occasion
             </span>
             <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
@@ -206,7 +206,7 @@ export default function HomePage() {
           <div className="mt-8 text-center">
             <Link
               href="/collections"
-              className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-[#4DB8A4] hover:bg-[#4DB8A4] hover:text-white"
+              className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-[#7C3AED] hover:bg-[#7C3AED] hover:text-white"
             >
               View All Collections <ArrowRight className="h-4 w-4" />
             </Link>
@@ -227,7 +227,7 @@ export default function HomePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">
+              <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-[#7C3AED]">
                 Who We Are
               </span>
               <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
@@ -242,7 +242,7 @@ export default function HomePage() {
               <div className="mt-6 flex flex-wrap gap-4">
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#4DB8A4] transition-colors hover:text-[#3A9A8D]"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#7C3AED] transition-colors hover:text-[#6D28D9]"
                 >
                   Learn More About Us
                   <ArrowRight className="h-4 w-4" />
@@ -272,9 +272,9 @@ export default function HomePage() {
               ].map((stat) => (
                 <div
                   key={stat.label}
-                  className="rounded-2xl border border-[#4DB8A4]/15 bg-gradient-to-br from-[#F0FAF7] to-white p-6 text-center shadow-sm"
+                  className="rounded-2xl border border-[#7C3AED]/15 bg-gradient-to-br from-[#F5F3FF] to-white p-6 text-center shadow-sm"
                 >
-                  <p className="text-3xl font-extrabold text-[#4DB8A4]">{stat.value}</p>
+                  <p className="text-3xl font-extrabold text-[#7C3AED]">{stat.value}</p>
                   <p className="mt-1 text-sm font-medium text-slate-500">{stat.label}</p>
                 </div>
               ))}
@@ -284,11 +284,11 @@ export default function HomePage() {
       </section>
 
       {/* Blog/News Preview */}
-      <section className="bg-gradient-to-r from-[#A8DDD0] via-[#C8EBE3] to-[#A8DDD0] px-4 py-16 sm:py-20 lg:py-24">
+      <section className="bg-gradient-to-r from-[#B4A0F4] via-[#D8D0FC] to-[#B4A0F4] px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>
-              <span className="mb-2 inline-block text-sm font-semibold uppercase tracking-widest text-[#4DB8A4]">
+              <span className="mb-2 inline-block text-sm font-semibold uppercase tracking-widest text-[#7C3AED]">
                 Latest Insights
               </span>
               <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
@@ -297,7 +297,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/blog"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#4DB8A4] transition-colors hover:text-[#3A9A8D]"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#7C3AED] transition-colors hover:text-[#6D28D9]"
             >
               View All Articles <ArrowRight className="h-4 w-4" />
             </Link>
@@ -325,18 +325,18 @@ export default function HomePage() {
                   </div>
                   <div className="p-5">
                     <div className="mb-2 flex items-center gap-3">
-                      <span className="rounded-full bg-[#4DB8A4]/10 px-2.5 py-0.5 text-[11px] font-semibold text-[#3A9A8D]">
+                      <span className="rounded-full bg-[#7C3AED]/10 px-2.5 py-0.5 text-[11px] font-semibold text-[#6D28D9]">
                         {post.category}
                       </span>
                       <span className="flex items-center gap-1 text-xs text-slate-400">
                         <Calendar className="h-3 w-3" />{post.date}
                       </span>
                     </div>
-                    <h3 className="text-sm font-bold text-slate-900 line-clamp-2 transition-colors group-hover:text-[#4DB8A4] sm:text-base">
+                    <h3 className="text-sm font-bold text-slate-900 line-clamp-2 transition-colors group-hover:text-[#7C3AED] sm:text-base">
                       {post.title}
                     </h3>
                     <p className="mt-1.5 text-xs leading-relaxed text-slate-500 line-clamp-2">{post.excerpt}</p>
-                    <div className="mt-3 text-xs font-semibold text-[#4DB8A4]">Read more &#8594;</div>
+                    <div className="mt-3 text-xs font-semibold text-[#7C3AED]">Read more &#8594;</div>
                   </div>
                 </Link>
               </motion.article>

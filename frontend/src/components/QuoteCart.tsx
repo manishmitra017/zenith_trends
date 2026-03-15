@@ -95,10 +95,10 @@ export default function QuoteCart() {
   );
 
   const inputCls = (key: keyof FormState) =>
-    `w-full rounded-xl border px-3.5 py-2.5 text-sm outline-none transition-all focus:ring-2 focus:ring-[#4DB8A4]/20 ${
+    `w-full rounded-xl border px-3.5 py-2.5 text-sm outline-none transition-all focus:ring-2 focus:ring-[#7C3AED]/20 ${
       errors[key]
         ? "border-rose-300 focus:border-rose-400"
-        : "border-slate-200 focus:border-[#4DB8A4]"
+        : "border-slate-200 focus:border-[#7C3AED]"
     }`;
 
   const validate = (): boolean => {
@@ -162,7 +162,7 @@ export default function QuoteCart() {
       <button
         onClick={toggleDrawer}
         aria-label={`Quote list — ${totalItems} item${totalItems !== 1 ? "s" : ""}`}
-        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#4DB8A4] text-white shadow-2xl shadow-[#4DB8A4]/30 transition-all hover:scale-105 hover:bg-[#3A9A8D] focus:outline-none focus:ring-2 focus:ring-[#4DB8A4] focus:ring-offset-2"
+        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#7C3AED] text-white shadow-2xl shadow-[#7C3AED]/30 transition-all hover:scale-105 hover:bg-[#6D28D9] focus:outline-none focus:ring-2 focus:ring-[#7C3AED] focus:ring-offset-2"
       >
         <ShoppingBag className="h-6 w-6" />
         {totalItems > 0 && (
@@ -201,7 +201,7 @@ export default function QuoteCart() {
             {/* Header */}
             <div className="flex items-center justify-between bg-[#0F1D2F] px-5 py-4">
               <div className="flex items-center gap-2.5">
-                <ClipboardList className="h-5 w-5 text-[#4DB8A4]" />
+                <ClipboardList className="h-5 w-5 text-[#7C3AED]" />
                 <div>
                   <h2 className="text-base font-bold text-white leading-none">
                     Quote Request
@@ -228,13 +228,13 @@ export default function QuoteCart() {
                     key={s}
                     className={`flex flex-1 items-center justify-center gap-1.5 py-2.5 text-xs font-semibold transition-colors ${
                       step === s
-                        ? "border-b-2 border-[#4DB8A4] text-[#4DB8A4]"
+                        ? "border-b-2 border-[#7C3AED] text-[#7C3AED]"
                         : "text-slate-400"
                     }`}
                   >
                     <span
                       className={`flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold ${
-                        step === s ? "bg-[#4DB8A4] text-white" : "bg-slate-100 text-slate-400"
+                        step === s ? "bg-[#7C3AED] text-white" : "bg-slate-100 text-slate-400"
                       }`}
                     >
                       {i + 1}
@@ -264,7 +264,7 @@ export default function QuoteCart() {
                       </p>
                       <button
                         onClick={closeDrawer}
-                        className="mt-6 rounded-xl bg-[#4DB8A4] px-6 py-2.5 text-sm font-bold text-white shadow-md hover:bg-[#3A9A8D]"
+                        className="mt-6 rounded-xl bg-[#7C3AED] px-6 py-2.5 text-sm font-bold text-white shadow-md hover:bg-[#6D28D9]"
                       >
                         Browse Products
                       </button>
@@ -283,7 +283,7 @@ export default function QuoteCart() {
                             <Link
                               href={`/products/${product.categorySlug}/${product.slug}`}
                               onClick={closeDrawer}
-                              className="text-sm font-semibold text-slate-900 line-clamp-2 hover:text-[#4DB8A4] transition-colors"
+                              className="text-sm font-semibold text-slate-900 line-clamp-2 hover:text-[#7C3AED] transition-colors"
                             >
                               {product.name}
                             </Link>
@@ -296,7 +296,7 @@ export default function QuoteCart() {
                               <div className="flex items-center gap-1.5">
                                 <button
                                   onClick={() => updateQty(product.id, quantity - 1)}
-                                  className="flex h-7 w-7 items-center justify-center rounded-lg border border-slate-200 text-slate-500 transition-colors hover:border-[#4DB8A4] hover:text-[#4DB8A4]"
+                                  className="flex h-7 w-7 items-center justify-center rounded-lg border border-slate-200 text-slate-500 transition-colors hover:border-[#7C3AED] hover:text-[#7C3AED]"
                                   aria-label="Decrease quantity"
                                 >
                                   <Minus className="h-3 w-3" />
@@ -306,7 +306,7 @@ export default function QuoteCart() {
                                 </span>
                                 <button
                                   onClick={() => updateQty(product.id, quantity + 1)}
-                                  className="flex h-7 w-7 items-center justify-center rounded-lg border border-slate-200 text-slate-500 transition-colors hover:border-[#4DB8A4] hover:text-[#4DB8A4]"
+                                  className="flex h-7 w-7 items-center justify-center rounded-lg border border-slate-200 text-slate-500 transition-colors hover:border-[#7C3AED] hover:text-[#7C3AED]"
                                   aria-label="Increase quantity"
                                 >
                                   <Plus className="h-3 w-3" />
@@ -396,7 +396,7 @@ export default function QuoteCart() {
                     <textarea
                       rows={3}
                       placeholder="Branding requirements, event date, delivery notes, colours..."
-                      className="w-full resize-none rounded-xl border border-slate-200 px-3.5 py-2.5 text-sm outline-none transition-all focus:border-[#4DB8A4] focus:ring-2 focus:ring-[#4DB8A4]/20"
+                      className="w-full resize-none rounded-xl border border-slate-200 px-3.5 py-2.5 text-sm outline-none transition-all focus:border-[#7C3AED] focus:ring-2 focus:ring-[#7C3AED]/20"
                       {...field("remarks")}
                     />
                   </Field>
@@ -412,8 +412,8 @@ export default function QuoteCart() {
               {/* STEP: Success */}
               {step === "success" && (
                 <div className="flex flex-col items-center justify-center py-24 px-6 text-center">
-                  <div className="mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-[#E8F6F3]">
-                    <CheckCircle className="h-10 w-10 text-[#4DB8A4]" />
+                  <div className="mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-[#EDE9FE]">
+                    <CheckCircle className="h-10 w-10 text-[#7C3AED]" />
                   </div>
                   <h3 className="text-xl font-bold text-slate-900">
                     Quote Submitted!
@@ -431,7 +431,7 @@ export default function QuoteCart() {
                       reset();
                       closeDrawer();
                     }}
-                    className="mt-7 rounded-xl bg-[#4DB8A4] px-7 py-3 text-sm font-bold text-white shadow-md hover:bg-[#3A9A8D]"
+                    className="mt-7 rounded-xl bg-[#7C3AED] px-7 py-3 text-sm font-bold text-white shadow-md hover:bg-[#6D28D9]"
                   >
                     Continue Browsing
                   </button>
@@ -446,7 +446,7 @@ export default function QuoteCart() {
                   <>
                     <button
                       onClick={() => setStep("form")}
-                      className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#4DB8A4] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#4DB8A4]/20 transition-all hover:bg-[#3A9A8D]"
+                      className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#7C3AED] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#7C3AED]/20 transition-all hover:bg-[#6D28D9]"
                     >
                       Request A Quote
                       <ArrowRight className="h-4 w-4" />
@@ -461,7 +461,7 @@ export default function QuoteCart() {
                       <button
                         type="button"
                         onClick={() => setStep("cart")}
-                        className="flex-1 rounded-xl border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-600 transition-all hover:border-[#4DB8A4] hover:text-[#4DB8A4]"
+                        className="flex-1 rounded-xl border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-600 transition-all hover:border-[#7C3AED] hover:text-[#7C3AED]"
                       >
                         &#8592; Edit List
                       </button>
@@ -469,7 +469,7 @@ export default function QuoteCart() {
                         type="submit"
                         form="quote-form"
                         disabled={submitting}
-                        className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-[#4DB8A4] px-4 py-3 text-sm font-bold text-white shadow-md transition-all hover:bg-[#3A9A8D] disabled:cursor-not-allowed disabled:opacity-60"
+                        className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-[#7C3AED] px-4 py-3 text-sm font-bold text-white shadow-md transition-all hover:bg-[#6D28D9] disabled:cursor-not-allowed disabled:opacity-60"
                       >
                         {submitting && (
                           <Loader2 className="h-4 w-4 animate-spin" />

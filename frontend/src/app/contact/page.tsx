@@ -88,7 +88,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Content */}
-      <section className="bg-gradient-to-br from-[#B8E4DB] via-[#D9F0EB] to-[#E8D5A0] px-4 py-14 sm:py-16 lg:py-20">
+      <section className="bg-gradient-to-br from-[#C4B5FD] via-[#DDD6FE] to-[#E8D5A0] px-4 py-14 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-5 lg:gap-14">
             {/* Contact Info Column */}
@@ -113,7 +113,7 @@ export default function ContactPage() {
                   const content = (
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0">
-                        <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#4DB8A4]/10 text-[#4DB8A4]">
+                        <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#7C3AED]/10 text-[#7C3AED]">
                           <Icon className="h-5 w-5" />
                         </div>
                       </div>
@@ -162,7 +162,7 @@ export default function ContactPage() {
                       href={`https://maps.google.com/?q=${encodeURIComponent(siteConfig.address)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-2 inline-block text-xs font-semibold text-[#4DB8A4] hover:underline"
+                      className="mt-2 inline-block text-xs font-semibold text-[#7C3AED] hover:underline"
                     >
                       Open in Google Maps
                     </a>
