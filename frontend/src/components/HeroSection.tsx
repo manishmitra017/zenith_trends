@@ -117,7 +117,7 @@ export default function HeroSection() {
               exit={{ opacity: 0, y: -16 }}
               transition={{ duration: 0.45, ease: "easeOut" }}
             >
-              <span className="mb-3 inline-block rounded-full border border-[#7C3AED]/40 bg-[#7C3AED]/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-[#7C3AED] backdrop-blur-sm sm:text-sm">
+              <span className="mb-3 inline-block rounded-full bg-[#C62828] px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white shadow-lg sm:text-sm">
                 Zenith Trends Australia
               </span>
               <h1 className="mt-2 text-3xl font-extrabold leading-tight tracking-tight text-white drop-shadow-md sm:text-4xl lg:text-5xl">
