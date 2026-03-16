@@ -129,7 +129,7 @@ export default function HeroSection() {
               <div className="mt-7 flex flex-wrap gap-3">
                 <Link
                   href="/products"
-                  className="inline-flex items-center gap-2 rounded-xl bg-[#7C3AED] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-[#7C3AED]/25 transition-all hover:bg-[#6D28D9] hover:shadow-xl"
+                  className="inline-flex items-center gap-2 rounded-xl bg-[#C62828] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-[#C62828]/25 transition-all hover:bg-[#B71C1C] hover:shadow-xl"
                 >
                   Browse Products <ArrowRight className="h-4 w-4" />
                 </Link>

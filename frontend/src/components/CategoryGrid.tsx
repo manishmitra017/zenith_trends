@@ -24,7 +24,7 @@ const cardVariants = {
 
 export default function CategoryGrid() {
   return (
-    <section className="relative bg-gradient-to-br from-[#0F1D2F] via-[#163B4E] to-[#5B21B6] px-4 py-16 sm:py-20 lg:py-24">
+    <section className="relative bg-gradient-to-br from-[#B71C1C] via-[#7B1620] to-[#5B21B6] px-4 py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="mb-12 text-center">

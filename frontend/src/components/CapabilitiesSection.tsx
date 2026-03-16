@@ -41,7 +41,7 @@ const cardVariants = {
 
 export default function CapabilitiesSection() {
   return (
-    <section className="relative overflow-hidden bg-[#0F1D2F] px-4 py-16 sm:py-20 lg:py-24">
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#5B21B6] via-[#3A1078] to-[#B71C1C] px-4 py-16 sm:py-20 lg:py-24">
       {/* Decorative background */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute right-0 top-0 h-80 w-80 rounded-full bg-[#7C3AED]/5 blur-3xl" />

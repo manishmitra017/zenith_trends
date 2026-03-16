@@ -8,6 +8,13 @@
   --color-brand-light: #EDE9FE;
   --color-brand-50: #F5F3FF;
 
+  /* ── Red palette ───────────────────────────────────────── */
+  --color-red: #C62828;
+  --color-red-dark: #B71C1C;
+  --color-red-light: #FFEBEE;
+  --color-red-50: #FFF5F5;
+  --color-red-bright: #D32F2F;
+
   /* ── Accent (warm gold for CTAs and contrast) ────────────── */
   --color-accent: #D4A853;
   --color-accent-dark: #C4943D;
@@ -49,5 +56,5 @@ body {
 }
 
 .bg-gradient-cta {
-  background: linear-gradient(135deg, var(--color-brand-deeper) 0%, var(--color-brand) 40%, var(--color-brand-deeper) 100%);
+  background: linear-gradient(135deg, #B71C1C 0%, #D32F2F 40%, #B71C1C 100%);
 }

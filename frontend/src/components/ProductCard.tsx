@@ -80,7 +80,7 @@ export default function ProductCard({ product, showNewBadge }: ProductCardProps)
             className={`inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl px-3 py-2 text-xs font-bold transition-all ${
               inCart
                 ? "bg-emerald-50 text-emerald-600 hover:bg-emerald-100"
-                : "bg-[#7C3AED] text-white shadow-sm shadow-[#7C3AED]/20 hover:bg-[#6D28D9]"
+                : "bg-[#C62828] text-white shadow-sm shadow-[#C62828]/20 hover:bg-[#B71C1C]"
             }`}
           >
             {inCart ? (

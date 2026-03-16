@@ -52,7 +52,7 @@ export default function Header() {
       }`}
     >
       {/* Top Bar */}
-      <div className="bg-gradient-to-r from-[#0F1D2F] via-[#5B21B6] to-[#0F1D2F] text-white">
+      <div className="bg-gradient-to-r from-[#B71C1C] via-[#5B21B6] to-[#B71C1C] text-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2.5 text-xs sm:text-sm">
           <div className="flex items-center gap-4 sm:gap-6">
             <a
@@ -196,7 +196,7 @@ export default function Header() {
             {/* Request Quote CTA (desktop) */}
             <Link
               href="/contact"
-              className="hidden rounded-lg bg-[#7C3AED] px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-[#6D28D9] lg:inline-flex"
+              className="hidden rounded-lg bg-[#C62828] px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-[#B71C1C] lg:inline-flex"
             >
               Get a Quote
             </Link>
@@ -346,7 +346,7 @@ export default function Header() {
                 <Link
                   href="/contact"
                   onClick={() => setMobileOpen(false)}
-                  className="block w-full rounded-lg bg-[#7C3AED] py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-[#6D28D9]"
+                  className="block w-full rounded-lg bg-[#C62828] py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-[#B71C1C]"
                 >
                   Get a Quote
                 </Link>

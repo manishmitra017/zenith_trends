@@ -114,11 +114,11 @@ export default function HomePage() {
       <FeaturedProducts />
 
       {/* New Arrivals Teaser */}
-      <section className="bg-gradient-to-r from-[#B4A0F4] via-[#D8D0FC] to-[#B4A0F4] px-4 py-16 sm:py-20 lg:py-24">
+      <section className="bg-gradient-to-r from-[#FFCDD2] via-[#FFEBEE] to-[#FFCDD2] px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>
-              <span className="mb-2 inline-flex items-center gap-1.5 text-sm font-semibold uppercase tracking-widest text-[#7C3AED]">
+              <span className="mb-2 inline-flex items-center gap-1.5 text-sm font-semibold uppercase tracking-widest text-[#C62828]">
                 <Sparkles className="h-4 w-4" />
                 Just Arrived
               </span>
@@ -129,7 +129,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/new"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#7C3AED] transition-colors hover:text-[#6D28D9]"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#C62828] transition-colors hover:text-[#B71C1C]"
             >
               View All New Products <ArrowRight className="h-4 w-4" />
             </Link>
@@ -206,7 +206,7 @@ export default function HomePage() {
           <div className="mt-8 text-center">
             <Link
               href="/collections"
-              className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-[#7C3AED] hover:bg-[#7C3AED] hover:text-white"
+              className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-[#C62828] hover:bg-[#C62828] hover:text-white"
             >
               View All Collections <ArrowRight className="h-4 w-4" />
             </Link>
@@ -284,11 +284,11 @@ export default function HomePage() {
       </section>
 
       {/* Blog/News Preview */}
-      <section className="bg-gradient-to-r from-[#B4A0F4] via-[#D8D0FC] to-[#B4A0F4] px-4 py-16 sm:py-20 lg:py-24">
+      <section className="bg-gradient-to-r from-[#FFCDD2] via-[#FFEBEE] to-[#FFCDD2] px-4 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>
-              <span className="mb-2 inline-block text-sm font-semibold uppercase tracking-widest text-[#7C3AED]">
+              <span className="mb-2 inline-block text-sm font-semibold uppercase tracking-widest text-[#C62828]">
                 Latest Insights
               </span>
               <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
@@ -297,7 +297,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/blog"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#7C3AED] transition-colors hover:text-[#6D28D9]"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#C62828] transition-colors hover:text-[#B71C1C]"
             >
               View All Articles <ArrowRight className="h-4 w-4" />
             </Link>
@@ -325,18 +325,18 @@ export default function HomePage() {
                   </div>
                   <div className="p-5">
                     <div className="mb-2 flex items-center gap-3">
-                      <span className="rounded-full bg-[#7C3AED]/10 px-2.5 py-0.5 text-[11px] font-semibold text-[#6D28D9]">
+                      <span className="rounded-full bg-[#C62828]/10 px-2.5 py-0.5 text-[11px] font-semibold text-[#C62828]">
                         {post.category}
                       </span>
                       <span className="flex items-center gap-1 text-xs text-slate-400">
                         <Calendar className="h-3 w-3" />{post.date}
                       </span>
                     </div>
-                    <h3 className="text-sm font-bold text-slate-900 line-clamp-2 transition-colors group-hover:text-[#7C3AED] sm:text-base">
+                    <h3 className="text-sm font-bold text-slate-900 line-clamp-2 transition-colors group-hover:text-[#C62828] sm:text-base">
                       {post.title}
                     </h3>
                     <p className="mt-1.5 text-xs leading-relaxed text-slate-500 line-clamp-2">{post.excerpt}</p>
-                    <div className="mt-3 text-xs font-semibold text-[#7C3AED]">Read more &#8594;</div>
+                    <div className="mt-3 text-xs font-semibold text-[#C62828]">Read more &#8594;</div>
                   </div>
                 </Link>
               </motion.article>
