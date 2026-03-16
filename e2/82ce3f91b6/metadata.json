@@ -1,0 +1,31 @@
+{
+  "cli_version": "0.5.0",
+  "checkpoint_id": "e282ce3f91b6",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "frontend/src/app/globals.css",
+    "frontend/src/app/page.tsx",
+    "frontend/src/components/CapabilitiesSection.tsx",
+    "frontend/src/components/CategoryGrid.tsx",
+    "frontend/src/components/Header.tsx",
+    "frontend/src/components/HeroSection.tsx",
+    "frontend/src/components/ProductCard.tsx"
+  ],
+  "sessions": [
+    {
+      "metadata": "/e2/82ce3f91b6/0/metadata.json",
+      "transcript": "/e2/82ce3f91b6/0/full.jsonl",
+      "content_hash": "/e2/82ce3f91b6/0/content_hash.txt",
+      "prompt": "/e2/82ce3f91b6/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 4147,
+    "cache_creation_tokens": 2017208,
+    "cache_read_tokens": 45003143,
+    "output_tokens": 157524,
+    "api_call_count": 438
+  }
+}
