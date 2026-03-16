@@ -2902,15 +2902,21 @@ export function getSustainableProducts(): Product[] {
 export function getFeaturedProducts(): Product[] {
   const featuredSlugs = [
     "vistro-pen-classic",
-    "cafe-mug",
-    "cargo-bag",
     "bamboo-bluetooth-speaker",
-    "classic-cap",
-    "corporate-polo",
     "stress-ball",
-    "a5-notebook",
-    "golf-umbrella",
-    "pierre-cardin-pen",
+    "promotional-water-bottle",
+    "delta-tote-bag",
+    "vector-wireless-charger-round",
+    "bondi-bucket-hat-sale",
+    "swiss-peak-a5-notebook-and-pen-set",
+    "carnival-tumbler",
+    "city-shopper-heather-tote-bag",
+    "bluetooth-speaker-vacuum-bottle",
+    "melody-bluetooth-beanie",
+    "dalek-power-bank-sale",
+    "collapsible-bottle",
+    "byte-usb-hub",
+    "kora-notebook-small",
   ];
   return featuredSlugs.map((slug) => getProductBySlug(slug)).filter(Boolean) as Product[];
 }
