@@ -13,19 +13,20 @@ export class CertificateStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props: CertificateStackProps) {
     super(scope, id, props);
 
-    // Create ACM Certificate in us-east-1 for CloudFront
-    // DNS validation will require manual CNAME record creation at registrar
-    // OR if Route53 hosted zone already exists, use fromLookup
+    // Look up existing Route 53 hosted zone for automatic DNS validation
+    const hostedZone = route53.HostedZone.fromLookup(this, 'HostedZone', {
+      domainName: props.domainName,
+    });
+
     this.certificate = new acm.Certificate(this, 'Certificate', {
       domainName: props.domainName,
       subjectAlternativeNames: [`www.${props.domainName}`],
-      validation: acm.CertificateValidation.fromDns(),
+      validation: acm.CertificateValidation.fromDns(hostedZone),
     });
 
     new cdk.CfnOutput(this, 'CertificateArn', {
       value: this.certificate.certificateArn,
-      description: 'ACM Certificate ARN - paste this into bin/app.ts certificateArn',
-      exportName: 'ZenithTrendsCertificateArn',
+      description: 'ACM Certificate ARN',
     });
   }
 }

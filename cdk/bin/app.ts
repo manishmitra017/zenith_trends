@@ -12,17 +12,25 @@ if (!account) {
 }
 const domainName = 'zenithtrends.com.au';
 
-// Certificate ARN - deploy CertificateStack first, then paste the ARN here
-const certificateArn = app.node.tryGetContext('certificateArn') || '';
+// Certificate in us-east-1 (required for CloudFront)
+const certStack = new CertificateStack(app, 'ZenithTrendsCertificateStack', {
+  env: { account, region: 'us-east-1' },
+  domainName,
+  crossRegionReferences: true,
+  description: 'Zenith Trends - ACM Certificate in us-east-1 for CloudFront',
+  tags: {
+    Project: 'ZenithTrends',
+    Owner: 'Manish Mitra',
+    Environment: 'Production',
+  },
+});
 
 // Main website stack in ap-southeast-2
-new WebsiteStack(app, 'ZenithTrendsWebsiteStack', {
-  env: {
-    account: account,
-    region: 'ap-southeast-2',
-  },
+// Certificate ARN is automatically passed via cross-region reference
+const websiteStack = new WebsiteStack(app, 'ZenithTrendsWebsiteStack', {
+  env: { account, region: 'ap-southeast-2' },
   crossRegionReferences: true,
-  certificateArn: certificateArn || undefined,
+  certificateArn: certStack.certificate.certificateArn,
   description: 'Zenith Trends - S3 + CloudFront Static Website with Custom Domain',
   tags: {
     Project: 'ZenithTrends',
@@ -31,21 +39,6 @@ new WebsiteStack(app, 'ZenithTrendsWebsiteStack', {
   },
 });
 
-// Certificate stack in us-east-1 (required for CloudFront)
-// Deploy this first: npx cdk deploy ZenithTrendsCertificateStack
-// Then grab the certificate ARN and pass it via context or hardcode above
-new CertificateStack(app, 'ZenithTrendsCertificateStack', {
-  env: {
-    account: account,
-    region: 'us-east-1',
-  },
-  domainName: domainName,
-  description: 'Zenith Trends - ACM Certificate in us-east-1 for CloudFront',
-  tags: {
-    Project: 'ZenithTrends',
-    Owner: 'Manish Mitra',
-    Environment: 'Production',
-  },
-});
+websiteStack.addDependency(certStack);
 
 app.synth();

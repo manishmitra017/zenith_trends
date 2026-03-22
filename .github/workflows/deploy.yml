@@ -42,7 +42,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
-      # ── 1. Deploy infra first (so we get the API URL) ──────────
+      # ── 1. Deploy infra (cert + website stacks) ──────────────────
       - name: Install CDK dependencies
         working-directory: ./cdk
         run: npm install
@@ -51,29 +51,31 @@ jobs:
         working-directory: ./cdk
         run: npm run build
 
-      - name: Bootstrap CDK
+      - name: Bootstrap CDK (both regions)
         env:
           AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
-        run: npx cdk bootstrap "aws://$AWS_ACCOUNT_ID/$AWS_REGION"
+        run: |
+          npx cdk bootstrap "aws://$AWS_ACCOUNT_ID/$AWS_REGION"
+          npx cdk bootstrap "aws://$AWS_ACCOUNT_ID/us-east-1"
 
-      - name: Deploy CDK Stack
+      - name: Deploy all CDK Stacks
         working-directory: ./cdk
         env:
           AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
-        run: npx cdk deploy ZenithTrendsWebsiteStack --require-approval never --outputs-file outputs.json
+        run: npx cdk deploy --all --require-approval never --outputs-file outputs.json
 
       - name: Extract Stack Outputs
         id: stack-outputs
         working-directory: ./cdk
         run: |
-          BUCKET_NAME=$(jq -r '.[].BucketName // empty' outputs.json)
-          DISTRIBUTION_ID=$(jq -r '.[].DistributionId // empty' outputs.json)
-          QUOTE_API_URL=$(jq -r '.[].QuoteApiUrl // empty' outputs.json)
+          BUCKET_NAME=$(jq -r '.ZenithTrendsWebsiteStack.BucketName // empty' outputs.json)
+          DISTRIBUTION_ID=$(jq -r '.ZenithTrendsWebsiteStack.DistributionId // empty' outputs.json)
+          QUOTE_API_URL=$(jq -r '.ZenithTrendsWebsiteStack.QuoteApiUrl // empty' outputs.json)
           echo "bucket_name=$BUCKET_NAME" >> "$GITHUB_OUTPUT"
           echo "distribution_id=$DISTRIBUTION_ID" >> "$GITHUB_OUTPUT"
           echo "quote_api_url=$QUOTE_API_URL" >> "$GITHUB_OUTPUT"
 
-      # ── 2. Build frontend with the API URL injected ────────────
+      # ── 2. Build frontend with the API URL injected ───────────────
       - name: Install frontend dependencies
         working-directory: ./frontend
         run: pnpm install --frozen-lockfile
@@ -85,22 +87,17 @@ jobs:
           NEXT_PUBLIC_QUOTE_API_URL: ${{ steps.stack-outputs.outputs.quote_api_url }}
         run: pnpm run build
 
-      # ── 3. Deploy static files ─────────────────────────────────
+      # ── 3. Deploy static files ────────────────────────────────────
       - name: Sync static site to S3
         env:
           BUCKET_NAME: ${{ steps.stack-outputs.outputs.bucket_name }}
         run: |
-          # Boost parallel uploads: 20 concurrent transfers (default is 10)
           aws configure set default.s3.max_concurrent_requests 20
 
-          # Hashed assets (_next/static) — immutable, cache 1 year
-          # These filenames contain content hashes so --size-only is safe
           aws s3 sync frontend/out/_next/static "s3://$BUCKET_NAME/_next/static" \
             --size-only \
             --cache-control "public, max-age=31536000, immutable"
 
-          # Everything else (HTML pages, images, etc) — short cache
-          # No --size-only here: content can change without size changing (e.g. color hex swaps)
           aws s3 sync frontend/out "s3://$BUCKET_NAME" \
             --delete \
             --exclude "_next/static/*" \
@@ -117,12 +114,6 @@ jobs:
             --no-cli-pager
 
       - name: Deployment summary
-        env:
-          BUCKET_NAME: ${{ steps.stack-outputs.outputs.bucket_name }}
-          DISTRIBUTION_ID: ${{ steps.stack-outputs.outputs.distribution_id }}
-          QUOTE_API_URL: ${{ steps.stack-outputs.outputs.quote_api_url }}
         run: |
           echo "Deployment successful!"
-          echo "S3 Bucket: $BUCKET_NAME"
-          echo "CloudFront: $DISTRIBUTION_ID"
-          echo "Quote API: $QUOTE_API_URL"
+          echo "Website: https://zenithtrends.com.au"
