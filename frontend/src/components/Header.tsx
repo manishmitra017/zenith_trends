@@ -121,20 +121,22 @@ export default function Header() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 8 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute left-0 top-full z-50 w-72 rounded-xl border border-slate-100 bg-white p-2 shadow-xl shadow-black/8"
+                        className="absolute left-0 top-full z-50 w-[540px] rounded-xl border border-slate-100 bg-white p-2 shadow-xl shadow-black/8"
                       >
-                        {categories.map((cat) => (
-                          <Link
-                            key={cat.slug}
-                            href={`/products/${cat.slug}`}
-                            className="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm text-slate-600 transition-colors hover:bg-[#F5F3FF] hover:text-[#6D28D9]"
-                          >
-                            <span>{cat.name}</span>
-                            <span className="rounded-full bg-slate-100 px-2 py-0.5 text-xs text-slate-500">
-                              {cat.productCount}
-                            </span>
-                          </Link>
-                        ))}
+                        <div className="grid max-h-[70vh] grid-cols-2 gap-x-1 overflow-y-auto">
+                          {categories.map((cat) => (
+                            <Link
+                              key={cat.slug}
+                              href={`/products/${cat.slug}`}
+                              className="flex items-center justify-between rounded-lg px-3 py-2 text-sm text-slate-600 transition-colors hover:bg-[#F5F3FF] hover:text-[#6D28D9]"
+                            >
+                              <span className="truncate">{cat.name}</span>
+                              <span className="ml-2 flex-shrink-0 rounded-full bg-slate-100 px-2 py-0.5 text-xs text-slate-500">
+                                {cat.productCount}
+                              </span>
+                            </Link>
+                          ))}
+                        </div>
                       </motion.div>
                     )}
                   </AnimatePresence>
