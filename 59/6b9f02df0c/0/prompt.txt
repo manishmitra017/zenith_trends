@@ -1,0 +1,11 @@
+apart from email to manish.bvc@gmail.com , the quote should also go to
+
+---
+
+okay now in contact : 
+
+I want to show the google maps
+
+REDACTED
+
+Now make the change , i will test it in local , Have an .env value where i can add this and in gh it should be in secrerts , once i test it in local then you push
