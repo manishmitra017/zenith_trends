@@ -10,6 +10,7 @@ import {
   Clock,
 } from "lucide-react";
 import QuoteForm from "@/components/QuoteForm";
+import GoogleMap from "@/components/GoogleMap";
 import { siteConfig } from "@/data/content";
 
 const contactDetails = [
@@ -150,24 +151,9 @@ export default function ContactPage() {
                 })}
               </div>
 
-              {/* Map Placeholder */}
-              <div className="mt-8 overflow-hidden rounded-2xl border border-slate-200">
-                <div className="flex h-56 items-center justify-center bg-slate-200">
-                  <div className="text-center">
-                    <MapPin className="mx-auto mb-2 h-8 w-8 text-slate-400" />
-                    <p className="text-sm font-medium text-slate-500">
-                      Williams Landing, VIC 3027
-                    </p>
-                    <a
-                      href={`https://maps.google.com/?q=${encodeURIComponent(siteConfig.address)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-2 inline-block text-xs font-semibold text-[#7C3AED] hover:underline"
-                    >
-                      Open in Google Maps
-                    </a>
-                  </div>
-                </div>
+              {/* Google Map */}
+              <div className="mt-8">
+                <GoogleMap />
               </div>
             </motion.div>
 

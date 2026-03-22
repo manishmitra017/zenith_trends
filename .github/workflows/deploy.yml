@@ -85,6 +85,7 @@ jobs:
         env:
           NODE_ENV: production
           NEXT_PUBLIC_QUOTE_API_URL: ${{ steps.stack-outputs.outputs.quote_api_url }}
+          NEXT_PUBLIC_GOOGLE_MAPS_API_KEY: ${{ secrets.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY }}
         run: pnpm run build
 
       # ── 3. Deploy static files ────────────────────────────────────
