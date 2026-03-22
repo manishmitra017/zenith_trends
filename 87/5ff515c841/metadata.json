@@ -1,0 +1,27 @@
+{
+  "cli_version": "0.5.0",
+  "checkpoint_id": "875ff515c841",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 0,
+  "files_touched": [
+    "frontend/src/app/apple-icon.png",
+    "frontend/src/app/favicon.ico",
+    "frontend/src/app/icon.png"
+  ],
+  "sessions": [
+    {
+      "metadata": "/87/5ff515c841/0/metadata.json",
+      "transcript": "/87/5ff515c841/0/full.jsonl",
+      "content_hash": "/87/5ff515c841/0/content_hash.txt",
+      "prompt": "/87/5ff515c841/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 12,
+    "cache_creation_tokens": 3518,
+    "cache_read_tokens": 940785,
+    "output_tokens": 1945,
+    "api_call_count": 10
+  }
+}
