@@ -1,0 +1,20 @@
+Now I am moving this website from hostinger to AWS
+
+
+Can you help me ?
+
+---
+
+this is already deployed
+
+---
+
+A and esnure in future I dont have to do it , do directly in main for now , I will just code and checking and deployment should be automated
+
+---
+
+Wait one more thing , My domain name is still on Hostinger with my email in google worksapce , Just the hosting of the website in AWS
+
+---
+
+yeah sure

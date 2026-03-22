@@ -3,10 +3,11 @@
   "checkpoint_id": "7f7f199271d2",
   "strategy": "manual-commit",
   "branch": "main",
-  "checkpoints_count": 1,
+  "checkpoints_count": 3,
   "files_touched": [
     ".github/workflows/deploy.yml",
     "cdk/bin/app.ts",
+    "cdk/cdk.context.json",
     "cdk/lib/certificate-stack.ts"
   ],
   "sessions": [
@@ -15,13 +16,19 @@
       "transcript": "/7f/7f199271d2/0/full.jsonl",
       "content_hash": "/7f/7f199271d2/0/content_hash.txt",
       "prompt": "/7f/7f199271d2/0/prompt.txt"
+    },
+    {
+      "metadata": "/7f/7f199271d2/1/metadata.json",
+      "transcript": "/7f/7f199271d2/1/full.jsonl",
+      "content_hash": "/7f/7f199271d2/1/content_hash.txt",
+      "prompt": "/7f/7f199271d2/1/prompt.txt"
     }
   ],
   "token_usage": {
-    "input_tokens": 4155,
-    "cache_creation_tokens": 2023539,
-    "cache_read_tokens": 45756010,
-    "output_tokens": 158481,
-    "api_call_count": 444
+    "input_tokens": 4197,
+    "cache_creation_tokens": 2109755,
+    "cache_read_tokens": 47856865,
+    "output_tokens": 183067,
+    "api_call_count": 476
   }
 }
