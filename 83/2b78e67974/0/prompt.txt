@@ -3,3 +3,7 @@ can you fix the search , it doesnt search the products that i have
 ---
 
 can you fix the search , it doesnt search the products that i have
+
+---
+
+can you push this change , i will be able to search now?
