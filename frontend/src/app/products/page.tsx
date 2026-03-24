@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ChevronRight, Search } from "lucide-react";
-import { categories } from "@/data/products";
+import { categories, products } from "@/data/products";
 
 const containerVariants = {
   hidden: {},
@@ -26,12 +26,21 @@ const cardVariants = {
 
 export default function ProductsPage() {
   const [search, setSearch] = useState("");
+  const q = search.toLowerCase().trim();
 
   const filtered = categories.filter(
     (cat) =>
-      cat.name.toLowerCase().includes(search.toLowerCase()) ||
-      cat.description.toLowerCase().includes(search.toLowerCase())
+      cat.name.toLowerCase().includes(q) ||
+      cat.description.toLowerCase().includes(q)
   );
+
+  const matchedProducts = q
+    ? products.filter(
+        (p) =>
+          p.name.toLowerCase().includes(q) ||
+          p.category.toLowerCase().includes(q)
+      ).slice(0, 20)
+    : [];
 
   return (
     <>
@@ -86,7 +95,7 @@ export default function ProductsPage() {
                 type="text"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                placeholder="Search categories..."
+                placeholder="Search products and categories..."
                 className="w-full rounded-xl border border-slate-200 bg-white py-3 pl-12 pr-4 text-sm text-slate-700 shadow-sm outline-none transition-all placeholder:text-slate-400 focus:border-[#7C3AED] focus:ring-2 focus:ring-[#7C3AED]/20"
               />
             </div>
@@ -134,10 +143,41 @@ export default function ProductsPage() {
             ))}
           </motion.div>
 
-          {filtered.length === 0 && (
+          {/* Product Results (when searching) */}
+          {matchedProducts.length > 0 && (
+            <div className="mt-10">
+              <h2 className="mb-5 text-xl font-bold text-slate-800">
+                Products matching &ldquo;{search}&rdquo;
+              </h2>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                {matchedProducts.map((product) => (
+                  <Link
+                    key={product.id}
+                    href={`/products/${product.categorySlug}/${product.slug}`}
+                    className="group flex items-center gap-3 rounded-xl border border-slate-100 bg-white p-3 shadow-sm transition-all hover:shadow-md hover:shadow-black/5"
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="h-16 w-16 flex-shrink-0 rounded-lg object-cover"
+                    />
+                    <div className="min-w-0">
+                      <p className="truncate text-sm font-semibold text-slate-900 group-hover:text-[#7C3AED]">
+                        {product.name}
+                      </p>
+                      <p className="text-xs text-slate-500">{product.category}</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {filtered.length === 0 && matchedProducts.length === 0 && q && (
             <div className="py-16 text-center">
               <p className="text-lg font-medium text-slate-400">
-                No categories match your search.
+                No products or categories match your search.
               </p>
             </div>
           )}
