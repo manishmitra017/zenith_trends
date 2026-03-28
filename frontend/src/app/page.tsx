@@ -11,6 +11,7 @@ import CTABanner from "@/components/CTABanner";
 import ProductCard from "@/components/ProductCard";
 import { aboutContent } from "@/data/content";
 import { collections, getNewProducts } from "@/data/products";
+import { posts as allBlogPosts } from "@/data/blog";
 import { Presentation, Leaf as LeafIcon, Briefcase, Gift, Sun, Cpu, Tag } from "lucide-react";
 
 const collectionIcons: Record<string, React.ElementType> = {
@@ -23,32 +24,7 @@ const collectionIcons: Record<string, React.ElementType> = {
   Golf: Tag,
 };
 
-const blogPosts = [
-  {
-    slug: "2026-promotional-product-trends",
-    title: "2026 Promotional Product Trends",
-    excerpt: "In 2026, promotional products continue to evolve beyond simple giveaways. We explore the top trends driving brand engagement.",
-    date: "March 2026",
-    category: "Industry Trends",
-    image: "https://trends-assets.trends.nz/Images/ProductImg/116447-0.jpg",
-  },
-  {
-    slug: "sustainable-merchandise-guide",
-    title: "Your Complete Guide to Sustainable Branded Merchandise",
-    excerpt: "Here's how to build a merchandise programme that reflects your sustainability commitments without compromising on quality.",
-    date: "February 2026",
-    category: "Sustainability",
-    image: "https://trends-assets.trends.nz/Images/ProductImg/100648-0.jpg",
-  },
-  {
-    slug: "conference-kit-checklist",
-    title: "The Ultimate Conference Kit Checklist for 2026",
-    excerpt: "Planning a conference? We've put together the essential branded product checklist to make sure delegates leave impressed.",
-    date: "February 2026",
-    category: "Kitting & Events",
-    image: "https://trends-assets.trends.nz/Images/ProductImg/110799-0.jpg",
-  },
-];
+const blogPosts = allBlogPosts.slice(0, 3);
 
 const featureTiles = [
   {
@@ -313,7 +289,7 @@ export default function HomePage() {
                 transition={{ duration: 0.4, delay: i * 0.1 }}
                 className="group overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition-all hover:shadow-lg"
               >
-                <Link href="/blog">
+                <Link href={`/blog/${post.slug}`}>
                   <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img

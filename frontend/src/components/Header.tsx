@@ -67,6 +67,7 @@ export default function Header() {
     { label: "New", href: "/new" },
     { label: "Sale", href: "/sale" },
     { label: "Kitting", href: "/kitting" },
+    { label: "Blog", href: "/blog" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ];
