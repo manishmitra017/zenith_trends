@@ -92,6 +92,42 @@ const posts: BlogPost[] = [
     category: "Industry Trends",
     image: "https://trends-assets.trends.nz/Images/ProductImg/120156-0.jpg",
   },
+  {
+    slug: "branded-merchandise-roi",
+    title: "How Branded Merchandise Drives Real ROI",
+    excerpt: "Think promotional products are just trinkets? The data tells a different story. We break down exactly how branded merchandise generates measurable returns — from brand recall to pipeline acceleration.",
+    date: "20 March 2026",
+    readTime: "6 min read",
+    category: "Strategy",
+    image: "https://trends-assets.trends.nz/Images/ProductImg/116447-0.jpg",
+  },
+  {
+    slug: "corporate-gifting-nz-budget-guide",
+    title: "Corporate Gifting in NZ: A Budget Guide for Every Relationship",
+    excerpt: "Not every corporate gift should cost the same. Here's how to set the right budget based on who you're gifting — from key clients to new prospects — and what to choose at each tier.",
+    date: "10 March 2026",
+    readTime: "5 min read",
+    category: "Corporate Gifting",
+    image: "https://trends-assets.trends.nz/Images/ProductImg/117823-0.jpg",
+  },
+  {
+    slug: "wellness-gifts-corporate-nz",
+    title: "Why Wellness Gifts Are Winning in Corporate New Zealand",
+    excerpt: "Wellness-themed merchandise has moved from niche to mainstream in NZ's corporate gifting scene. Here's why brands are shifting budget towards wellbeing products — and how to get it right.",
+    date: "14 February 2026",
+    readTime: "5 min read",
+    category: "Trends",
+    image: "https://trends-assets.trends.nz/Images/ProductImg/100648-0.jpg",
+  },
+  {
+    slug: "promotional-product-mistakes",
+    title: "5 Promotional Product Mistakes That Are Costing Your Brand",
+    excerpt: "From ordering too many to choosing style over utility, these are the five most common promotional product errors we see — and how to fix them before they drain your marketing budget.",
+    date: "15 January 2026",
+    readTime: "4 min read",
+    category: "Strategy",
+    image: "https://trends-assets.trends.nz/Images/ProductImg/110799-0.jpg",
+  },
 ];
 
 const allCategories = ["All", ...Array.from(new Set(posts.map((p) => p.category)))];
@@ -152,41 +188,42 @@ export default function BlogPage() {
           <h2 className="mb-8 text-xl font-bold text-slate-900">Featured Articles</h2>
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
             {featured.map((post, i) => (
-              <motion.article
-                key={post.slug}
-                custom={i}
-                initial="hidden"
-                animate="visible"
-                variants={cardVariants}
-                className="group overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition-all hover:shadow-xl hover:shadow-black/8"
-              >
-                <div className="relative aspect-[16/8] overflow-hidden bg-slate-100">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
-                    className="transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                  <span className="absolute left-4 top-4 rounded-full bg-[#7C3AED] px-3 py-1 text-xs font-semibold text-white">
-                    {post.category}
-                  </span>
-                </div>
-                <div className="p-6">
-                  <div className="mb-3 flex items-center gap-4 text-xs text-slate-400">
-                    <span className="flex items-center gap-1"><Calendar className="h-3.5 w-3.5" />{post.date}</span>
-                    <span className="flex items-center gap-1"><Clock className="h-3.5 w-3.5" />{post.readTime}</span>
+              <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">
+                <motion.article
+                  custom={i}
+                  initial="hidden"
+                  animate="visible"
+                  variants={cardVariants}
+                  className="overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition-all hover:shadow-xl hover:shadow-black/8 h-full"
+                >
+                  <div className="relative aspect-[16/8] overflow-hidden bg-slate-100">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+                      className="transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                    <span className="absolute left-4 top-4 rounded-full bg-[#7C3AED] px-3 py-1 text-xs font-semibold text-white">
+                      {post.category}
+                    </span>
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 transition-colors group-hover:text-[#7C3AED]">
-                    {post.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-500 line-clamp-3">{post.excerpt}</p>
-                  <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#7C3AED]">
-                    Read article <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  <div className="p-6">
+                    <div className="mb-3 flex items-center gap-4 text-xs text-slate-400">
+                      <span className="flex items-center gap-1"><Calendar className="h-3.5 w-3.5" />{post.date}</span>
+                      <span className="flex items-center gap-1"><Clock className="h-3.5 w-3.5" />{post.readTime}</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-slate-900 transition-colors group-hover:text-[#7C3AED]">
+                      {post.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-slate-500 line-clamp-3">{post.excerpt}</p>
+                    <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#7C3AED]">
+                      Read article <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </div>
                   </div>
-                </div>
-              </motion.article>
+                </motion.article>
+              </Link>
             ))}
           </div>
         </div>
@@ -216,41 +253,44 @@ export default function BlogPage() {
           {/* Posts Grid */}
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {filtered.map((post, i) => (
-              <motion.article
-                key={post.slug}
-                custom={i}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={cardVariants}
-                className="group overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition-all hover:shadow-lg"
-              >
-                <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
-                    className="transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-5">
-                  <div className="mb-2 flex items-center gap-3 text-xs text-slate-400">
-                    <span className="rounded-full bg-[#7C3AED]/10 px-2.5 py-0.5 text-xs font-semibold text-[#7C3AED]">
-                      {post.category}
-                    </span>
-                    <span className="flex items-center gap-1"><Clock className="h-3 w-3" />{post.readTime}</span>
+              <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">
+                <motion.article
+                  custom={i}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={cardVariants}
+                  className="overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition-all hover:shadow-lg h-full"
+                >
+                  <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+                      className="transition-transform duration-500 group-hover:scale-105"
+                    />
                   </div>
-                  <h3 className="text-base font-bold text-slate-900 line-clamp-2 transition-colors group-hover:text-[#7C3AED]">
-                    {post.title}
-                  </h3>
-                  <p className="mt-2 text-xs leading-relaxed text-slate-500 line-clamp-3">{post.excerpt}</p>
-                  <div className="mt-3 flex items-center justify-between">
-                    <span className="text-xs text-slate-400">{post.date}</span>
-                    <span className="text-xs font-semibold text-[#7C3AED]">Read →</span>
+                  <div className="p-5">
+                    <div className="mb-2 flex items-center gap-3 text-xs text-slate-400">
+                      <span className="rounded-full bg-[#7C3AED]/10 px-2.5 py-0.5 text-xs font-semibold text-[#7C3AED]">
+                        {post.category}
+                      </span>
+                      <span className="flex items-center gap-1"><Clock className="h-3 w-3" />{post.readTime}</span>
+                    </div>
+                    <h3 className="text-base font-bold text-slate-900 line-clamp-2 transition-colors group-hover:text-[#7C3AED]">
+                      {post.title}
+                    </h3>
+                    <p className="mt-2 text-xs leading-relaxed text-slate-500 line-clamp-3">{post.excerpt}</p>
+                    <div className="mt-3 flex items-center justify-between">
+                      <span className="flex items-center gap-1 text-xs text-slate-400">
+                        <Calendar className="h-3 w-3" />{post.date}
+                      </span>
+                      <span className="text-xs font-semibold text-[#7C3AED]">Read →</span>
+                    </div>
                   </div>
-                </div>
-              </motion.article>
+                </motion.article>
+              </Link>
             ))}
           </div>
 
