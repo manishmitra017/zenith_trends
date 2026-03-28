@@ -5,132 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ChevronRight, ArrowRight, Calendar, Clock, Tag } from "lucide-react";
 import CTABanner from "@/components/CTABanner";
-
-interface BlogPost {
-  slug: string;
-  title: string;
-  excerpt: string;
-  date: string;
-  readTime: string;
-  category: string;
-  image: string;
-  featured?: boolean;
-}
-
-const posts: BlogPost[] = [
-  {
-    slug: "2026-promotional-product-trends",
-    title: "2026 Promotional Product Trends: What's Shaping How Brands Connect",
-    excerpt: "In 2026, promotional products continue to evolve beyond simple giveaways. We explore the top trends driving brand engagement — from smart tech accessories to hyper-personalised eco kits.",
-    date: "March 2026",
-    readTime: "5 min read",
-    category: "Industry Trends",
-    image: "https://trends-assets.trends.nz/Images/ProductImg/116447-0.jpg",
-    featured: true,
-  },
-  {
-    slug: "sustainable-merchandise-guide",
-    title: "Your Complete Guide to Sustainable Branded Merchandise",
-    excerpt: "Consumers and clients are increasingly scrutinising brand values. Here's how to build a merchandise programme that reflects your sustainability commitments without compromising on quality or impact.",
-    date: "February 2026",
-    readTime: "7 min read",
-    category: "Sustainability",
-    image: "https://trends-assets.trends.nz/Images/ProductImg/100648-0.jpg",
-    featured: true,
-  },
-  {
-    slug: "conference-kit-checklist",
-    title: "The Ultimate Conference Kit Checklist for 2026",
-    excerpt: "Planning a conference or trade show? We've put together the essential branded product checklist to make sure your delegates leave with something they'll actually use.",
-    date: "February 2026",
-    readTime: "4 min read",
-    category: "Kitting & Events",
-    image: "https://trends-assets.trends.nz/Images/ProductImg/110799-0.jpg",
-  },
-  {
-    slug: "golf-day-merchandise",
-    title: "How to Nail Your Corporate Golf Day Merchandise",
-    excerpt: "Golf days are prime brand territory. From on-course essentials to post-round gifts, we share the products that make your golf day branding unforgettable.",
-    date: "January 2026",
-    readTime: "4 min read",
-    category: "Collections",
-    image: "https://trends-assets.trends.nz/Images/ProductImg/108432-0.jpg",
-  },
-  {
-    slug: "faux-embroidery-technique",
-    title: "Faux Embroidery: Achieve the Stitched Look Without the Limitations",
-    excerpt: "Our faux embroidery technique delivers the premium look of embroidered branding with the versatility of full-colour digital print. Discover how it works and where it excels.",
-    date: "January 2026",
-    readTime: "3 min read",
-    category: "Branding Techniques",
-    image: "https://trends-assets.trends.nz/Images/ProductImg/112501-0.jpg",
-  },
-  {
-    slug: "executive-gift-ideas",
-    title: "10 Executive Gift Ideas That Actually Impress in 2026",
-    excerpt: "Generic corporate gifts no longer cut it. We've rounded up 10 premium branded gift options that your VIP clients and top-performing staff will genuinely appreciate.",
-    date: "December 2025",
-    readTime: "6 min read",
-    category: "Corporate Gifts",
-    image: "https://trends-assets.trends.nz/Images/ProductImg/117823-0.jpg",
-  },
-  {
-    slug: "kitting-vs-individual-delivery",
-    title: "Kitting vs Individual Delivery: Which Is Right for Your Campaign?",
-    excerpt: "When launching a branded merchandise campaign, the fulfilment method matters as much as the product. We break down the pros and cons of kit bundles versus individual delivery.",
-    date: "December 2025",
-    readTime: "5 min read",
-    category: "Kitting & Events",
-    image: "https://trends-assets.trends.nz/Images/ProductImg/103944-0.jpg",
-  },
-  {
-    slug: "power-of-branded-tech",
-    title: "Why Branded Tech Products Are Dominating the Promo Space",
-    excerpt: "Bluetooth trackers, wireless earbuds and charging pads — tech products now dominate the promotional merchandise landscape. Here's why they work and how to use them effectively.",
-    date: "November 2025",
-    readTime: "4 min read",
-    category: "Industry Trends",
-    image: "https://trends-assets.trends.nz/Images/ProductImg/120156-0.jpg",
-  },
-  {
-    slug: "branded-merchandise-roi",
-    title: "How Branded Merchandise Drives Real ROI",
-    excerpt: "Think promotional products are just trinkets? The data tells a different story. We break down exactly how branded merchandise generates measurable returns — from brand recall to pipeline acceleration.",
-    date: "20 March 2026",
-    readTime: "6 min read",
-    category: "Strategy",
-    image: "https://trends-assets.trends.nz/Images/ProductImg/116447-0.jpg",
-  },
-  {
-    slug: "corporate-gifting-nz-budget-guide",
-    title: "Corporate Gifting in NZ: A Budget Guide for Every Relationship",
-    excerpt: "Not every corporate gift should cost the same. Here's how to set the right budget based on who you're gifting — from key clients to new prospects — and what to choose at each tier.",
-    date: "10 March 2026",
-    readTime: "5 min read",
-    category: "Corporate Gifting",
-    image: "https://trends-assets.trends.nz/Images/ProductImg/117823-0.jpg",
-  },
-  {
-    slug: "wellness-gifts-corporate-nz",
-    title: "Why Wellness Gifts Are Winning in Corporate New Zealand",
-    excerpt: "Wellness-themed merchandise has moved from niche to mainstream in NZ's corporate gifting scene. Here's why brands are shifting budget towards wellbeing products — and how to get it right.",
-    date: "14 February 2026",
-    readTime: "5 min read",
-    category: "Trends",
-    image: "https://trends-assets.trends.nz/Images/ProductImg/100648-0.jpg",
-  },
-  {
-    slug: "promotional-product-mistakes",
-    title: "5 Promotional Product Mistakes That Are Costing Your Brand",
-    excerpt: "From ordering too many to choosing style over utility, these are the five most common promotional product errors we see — and how to fix them before they drain your marketing budget.",
-    date: "15 January 2026",
-    readTime: "4 min read",
-    category: "Strategy",
-    image: "https://trends-assets.trends.nz/Images/ProductImg/110799-0.jpg",
-  },
-];
-
-const allCategories = ["All", ...Array.from(new Set(posts.map((p) => p.category)))];
+import { posts, allCategories } from "@/data/blog";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 24 },
@@ -188,14 +63,15 @@ export default function BlogPage() {
           <h2 className="mb-8 text-xl font-bold text-slate-900">Featured Articles</h2>
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
             {featured.map((post, i) => (
-              <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">
-                <motion.article
-                  custom={i}
-                  initial="hidden"
-                  animate="visible"
-                  variants={cardVariants}
-                  className="overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition-all hover:shadow-xl hover:shadow-black/8 h-full"
-                >
+              <motion.article
+                key={post.slug}
+                custom={i}
+                initial="hidden"
+                animate="visible"
+                variants={cardVariants}
+                className="group overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition-all hover:shadow-xl hover:shadow-black/8"
+              >
+                <Link href={`/blog/${post.slug}`}>
                   <div className="relative aspect-[16/8] overflow-hidden bg-slate-100">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
@@ -222,8 +98,8 @@ export default function BlogPage() {
                       Read article <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </div>
                   </div>
-                </motion.article>
-              </Link>
+                </Link>
+              </motion.article>
             ))}
           </div>
         </div>
@@ -253,15 +129,16 @@ export default function BlogPage() {
           {/* Posts Grid */}
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {filtered.map((post, i) => (
-              <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">
-                <motion.article
-                  custom={i}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={cardVariants}
-                  className="overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition-all hover:shadow-lg h-full"
-                >
+              <motion.article
+                key={post.slug}
+                custom={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={cardVariants}
+                className="group overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition-all hover:shadow-lg"
+              >
+                <Link href={`/blog/${post.slug}`}>
                   <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
@@ -283,14 +160,12 @@ export default function BlogPage() {
                     </h3>
                     <p className="mt-2 text-xs leading-relaxed text-slate-500 line-clamp-3">{post.excerpt}</p>
                     <div className="mt-3 flex items-center justify-between">
-                      <span className="flex items-center gap-1 text-xs text-slate-400">
-                        <Calendar className="h-3 w-3" />{post.date}
-                      </span>
+                      <span className="text-xs text-slate-400">{post.date}</span>
                       <span className="text-xs font-semibold text-[#7C3AED]">Read →</span>
                     </div>
                   </div>
-                </motion.article>
-              </Link>
+                </Link>
+              </motion.article>
             ))}
           </div>
 
