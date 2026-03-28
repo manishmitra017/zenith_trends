@@ -25,6 +25,14 @@ const collectionIcons: Record<string, React.ElementType> = {
 
 const blogPosts = [
   {
+    slug: "branded-merchandise-roi",
+    title: "How Branded Merchandise Drives Real ROI",
+    excerpt: "Promotional products are one of the most cost-effective marketing channels available. We break down the data on recall, impressions, and revenue impact.",
+    date: "March 2026",
+    category: "Industry Trends",
+    image: "https://trends-assets.trends.nz/Images/ProductImg/100134-0.jpg",
+  },
+  {
     slug: "2026-promotional-product-trends",
     title: "2026 Promotional Product Trends",
     excerpt: "In 2026, promotional products continue to evolve beyond simple giveaways. We explore the top trends driving brand engagement.",
@@ -33,20 +41,12 @@ const blogPosts = [
     image: "https://trends-assets.trends.nz/Images/ProductImg/116447-0.jpg",
   },
   {
-    slug: "sustainable-merchandise-guide",
-    title: "Your Complete Guide to Sustainable Branded Merchandise",
-    excerpt: "Here's how to build a merchandise programme that reflects your sustainability commitments without compromising on quality.",
-    date: "February 2026",
-    category: "Sustainability",
-    image: "https://trends-assets.trends.nz/Images/ProductImg/100648-0.jpg",
-  },
-  {
-    slug: "conference-kit-checklist",
-    title: "The Ultimate Conference Kit Checklist for 2026",
-    excerpt: "Planning a conference? We've put together the essential branded product checklist to make sure delegates leave impressed.",
-    date: "February 2026",
-    category: "Kitting & Events",
-    image: "https://trends-assets.trends.nz/Images/ProductImg/110799-0.jpg",
+    slug: "corporate-gifting-budget-guide",
+    title: "Corporate Gifting in NZ: A Budget Guide",
+    excerpt: "From $10 event giveaways to $500 VIP hampers — how to allocate your branded merchandise budget for maximum impact.",
+    date: "March 2026",
+    category: "Corporate Gifts",
+    image: "https://trends-assets.trends.nz/Images/ProductImg/100130-0.jpg",
   },
 ];
 
